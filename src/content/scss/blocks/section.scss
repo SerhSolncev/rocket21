@@ -1,0 +1,10 @@
+.section {
+
+	&--standings {
+		margin: rem(27) 0 0;
+
+		@media(min-width: 1024px) {
+			margin: rem(47) 0 0;
+		}
+	}
+}

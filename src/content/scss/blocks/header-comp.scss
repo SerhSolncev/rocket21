@@ -1,0 +1,184 @@
+.header-comp {
+	padding: rem(26) 0;
+
+	@media(max-width: 1024px) {
+		padding: rem(53) 0;
+	}
+
+	.logo-mob {
+
+		@media(min-width: 768px) {
+			display: none;
+		}
+	}
+
+	&__body {
+		display: flex;
+		align-items: flex-end;
+		gap: rem(53);
+
+		@media(max-width: 1060px) {
+			gap: rem(24);
+			align-items: center;
+		}
+
+		@media(max-width: 767px) {
+			display: grid;
+			grid-template-columns: rem(54) 1fr rem(54);
+		}
+	}
+
+	&__left {
+		flex-shrink: 0;
+
+		.title {
+
+			@media(max-width: 1024px) {
+				font-size: rem(26);
+			}
+
+			@media(max-width: 560px) {
+				font-size: rem(20);
+				font-weight: 500;
+			}
+		}
+
+		@media(max-width: 767px) {
+			text-align: center;
+		}
+	}
+
+	&__right {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: rem(24);
+
+		@media(max-width: 767px) {
+			display: none;
+		}
+
+		.button-icon {
+			margin: 0 0 0 auto;
+		}
+
+		> *:not(.search-block) {
+			flex-shrink: 0;
+		}
+	}
+
+	&__text {
+		display: flex;
+		align-items: center;
+		font-size: rem(14);
+		line-height: 1;
+		margin: rem(8) 0 0;
+
+		@media(max-width: 1060px) {
+			display: none;
+		}
+
+		span {
+
+			&:nth-child(1) {
+				display: flex;
+				align-items: center;
+				color: #929292;
+
+				&::after {
+					content: '/';
+					display: block;
+					margin: 0 10px;
+				}
+			}
+
+			&:nth-child(2) {
+				display: block;
+				color: #fff;
+			}
+		}
+	}
+
+	.burger {
+		margin: 0 0 0 auto;
+
+		@media(min-width: 768px) {
+			display: none;
+		}
+	}
+
+	.search-block {
+		@media(max-width: 767px) {
+			display: none;
+		}
+	}
+}
+
+.search-block {
+	width: 100%;
+	max-width: rem(399);
+	height: rem(40);
+	position: relative;
+
+	@media(max-width: 1060px) {
+		height: rem(36);
+	}
+
+	&__icon {
+		width: rem(24);
+		height: rem(24);
+		color: #dfdfec;
+		position: absolute;
+		top: 50%;
+		left: 20px;
+		transform: translateY(-50%);
+		z-index: 1;
+
+		@media(max-width: 1060px) {
+			width: rem(18);
+			height: rem(18);
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+		}
+
+		&:hover {
+			color: #EC1D40;
+		}
+	}
+
+	input {
+		width: 100%;
+		height: 100%;
+		background-color: #171717;
+		border: 1px solid #404040;
+		border-radius: rem(40);
+		font-size: rem(16);
+		color: #9a9494;
+		line-height: 1;
+		padding: 0 0 rem(3) rem(51);
+		transition: border-color 0.2s linear;
+
+		&::-webkit-search-cancel-button {
+			display: none;
+		}
+
+		&::placeholder {
+			font-family: $mainFont;
+			font-size: rem(16);
+			color: #9a9494;
+			line-height: 1;
+		}
+	}
+
+	&:hover {
+
+		input {
+			border-color: rgba(#fff, 0.5);
+		}
+
+	}
+}

@@ -1,0 +1,57 @@
+.button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+	font-weight: 500;
+	position: relative;
+	transition: background-color 0.3s linear, color 0.3s linear, border-color 0.1s linear;
+	cursor: pointer;
+}
+
+.button-icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #929292;
+	width: rem(24);
+	height: rem(24);
+
+	svg {
+		width: 100%;
+		height: 100%;
+	}
+
+	&:hover {
+		color: #ec1d40;
+	}
+
+	&.is-active {
+		color: #ec1d40;
+	}
+}
+
+
+.red-btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #ffffff;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+	padding: rem(10) rem(24);
+	font-size: rem(20);
+	line-height: 1;
+	border-radius: rem(40);
+	background-color: #ec1d40;
+	transition: background-color 0.2s linear;
+
+	@media(max-width: 1060px) {
+		font-size: rem(16);
+	}
+
+	&:hover {
+		background-color: #b70a27;
+	}
+}

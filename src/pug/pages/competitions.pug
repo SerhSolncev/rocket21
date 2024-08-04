@@ -1,0 +1,972 @@
+extends ../layout/base
+
+block variables
+
+    - var title='';
+    - var description='';
+    - var pageClass='main';
+    - var innerHeader = true;
+    - var select2Css = true
+block content
+    section.section.section--standings
+        .container.js-tabs-wrapper
+            .standings-top
+                .standings-top__titles
+                    h2.title.title--small.title--ttu.title--red ROCKET 21 OCTOBER
+                    h1.title.title--big.title--ttu.title--bold.title--white competition standings
+                .standings-top__bottom
+                    .time-remaining
+                        .time-remaining__title Time Remaining
+                        .time-remaining__grid(data-date-finish="2024-10-31T23:59:59").js-timer-block
+                            .time-item
+                                .time-item__numb(data-days) 0
+                                .time-item__title DAYS
+                            .time-item
+                                .time-item__numb(data-hrs) 0
+                                .time-item__title HRS
+                            .time-item
+                                .time-item__numb(data-mins) 0
+                                .time-item__title MIN
+                    .comp-boards
+                        .board-item
+                            .board-item__sub Prize pool
+                            .board-item__title.board-item__title--min FREE CHALLENGE ACCOUNT
+                        .board-item
+                            .board-item__sub Contestants
+                            .board-item__title 6150
+                        .board-item
+                            .board-item__sub Prize pool
+                            .board-item__title FERNANDO R.
+            .chart-wrap
+                .chart-wrap__left
+                    h3.title.title--mid.title--ttu.title--bold.title--white competition standings
+                    .winners-block
+                        .winners-block__back
+                            img(src='content/images/icons/back-winners.svg' width="42" height="38")
+                        .winners-block__body
+                            .winners-item
+                                .winners-item__top
+                                    .winners-item__head
+                                        img(src='content/images/icons/second-place.svg' width="42" height="38")
+                                    .winners-item__ava
+                                        img(src='content/images/pics/man1.png' width="96" height="96")
+                                    .winners-item__flag
+                                        img(src='content/images/pics/flag3.jpg' width="43" height="28")
+                                .winners-item__body-wrap
+                                    .winners-item__body
+                                        .winners-item__title SOKO15
+                                        .winners-item__summ $26,985.55
+                                        .winners-item__prof PROFIT
+                                        .winners-item__medal
+                                            img(src='content/images/icons/second-place-medal.svg' width="38" height="38")
+                            .winners-item.winners-item--big
+                                .winners-item__top
+                                    .winners-item__head
+                                        img(src='content/images/icons/first-place.svg' width="42" height="38")
+                                    .winners-item__ava
+                                        img(src='content/images/pics/man2.png' width="96" height="96")
+                                    .winners-item__flag
+                                        img(src='content/images/pics/flag1.jpg' width="43" height="28")
+                                .winners-item__body-wrap
+                                    .winners-item__body
+                                        .winners-item__title FERNANDO F
+                                        .winners-item__summ $26,985.55
+                                        .winners-item__prof PROFIT
+                                        .winners-item__medal
+                                            img(src='content/images/icons/first-place-medal.svg' width="45" height="47")
+                            .winners-item
+                                .winners-item__top
+                                    .winners-item__head
+                                        img(src='content/images/icons/third-place.svg' width="42" height="38")
+                                    .winners-item__ava
+                                        img(src='content/images/pics/man3.png' width="96" height="96")
+                                    .winners-item__flag
+                                        img(src='content/images/pics/flag2.jpg' width="43" height="28")
+                                .winners-item__body-wrap
+                                    .winners-item__body
+                                        .winners-item__title KOFI
+                                        .winners-item__summ $26,985.55
+                                        .winners-item__prof PROFIT
+                                        .winners-item__medal
+                                            img(src='content/images/icons/third-place-medal.svg' width="38" height="38")
+                    .users-list
+                        .swiper.js-users-swiper
+                            .swiper-wrapper
+                                .swiper-slide
+                                    .user-col
+                                        .user-col__top
+                                            span Rank
+                                            span Username
+                                        -
+                                            var rows = [
+                                                { data: [150, 200, 300, 200, 100, 150, 250] },
+                                                { data: [300, 400, 200, 300, 400, 300, 200] },
+                                                { data: [100, 150, 200, 150, 100, 200, 150] },
+                                                { data: [250, 100, 300, 400, 200, 100, 300] },
+                                                { data: [400, 200, 250, 300, 120, 410, 160] },
+                                                { data: [500, 350, 220, 310, 150, 100, 240] }
+                                            ]
+                                        each row, index in rows
+                                            .user-col__row.js-chart-btn.js-tabs-button(data-id="row"+index data-data=JSON.stringify(row.data) class=index === 0 ? 'opened' : '')
+                                                .user-col__rank 4
+                                                .user-col__text Nova700
+                                .swiper-slide
+                                    .user-col
+                                        .user-col__top
+                                            span Return (%)
+                                            span Back (%)
+                                        -
+                                            var rows = [
+                                                { data: [150, 200, 300, 200, 100, 150, 250] },
+                                                { data: [300, 400, 200, 300, 400, 300, 200] },
+                                                { data: [100, 150, 200, 150, 100, 200, 150] },
+                                                { data: [250, 100, 300, 400, 200, 100, 300] },
+                                                { data: [400, 200, 250, 300, 120, 410, 160] },
+                                                { data: [500, 350, 220, 310, 150, 100, 240] }
+                                            ]
+                                        each row, index in rows
+                                            .user-col__row.js-chart-btn.js-tabs-button(data-id="row"+index data-data=JSON.stringify(row.data) class=index === 0 ? 'opened' : '')
+                                                .user-col__text 17.44
+                                                .user-col__text 122%
+                                .swiper-slide
+                                    .user-col
+                                        .user-col__top
+                                            span Prize
+                                        -
+                                            var rows = [
+                                                { data: [150, 200, 300, 200, 100, 150, 250] },
+                                                { data: [300, 400, 200, 300, 400, 300, 200] },
+                                                { data: [100, 150, 200, 150, 100, 200, 150] },
+                                                { data: [250, 100, 300, 400, 200, 100, 300] },
+                                                { data: [400, 200, 250, 300, 120, 410, 160] },
+                                                { data: [500, 350, 220, 310, 150, 100, 240] }
+                                            ]
+                                        each row, index in rows
+                                            .user-col__row.js-chart-btn.js-tabs-button(data-id="row"+index data-data=JSON.stringify(row.data) class=index === 0 ? 'opened' : '')
+                                                .user-col__text 1st Place - 100k Challenge
+                        .swiper-button-next.users-list__arrow.js-user-next
+                            img(src='content/images/icons/next.svg' width="16" height="12")
+                        .swiper-button-prev.users-list__arrow.js-user-prev
+                            img(src='content/images/icons/prev.svg' width="16" height="12")
+                    .last-update
+                        .last-update__icon
+                            img(src='content/images/icons/reload.svg' width="20" height="20")
+                        span Last updated: 3 minutes ago
+                .chart-wrap__right
+                    .user-info.js-tabs-block(data-id="row0").opened
+                        h3.title.title--mid.title--bold.title--white Fernando F. – Performance
+                        .user-info__table
+                            .user-info__item
+                                span CURRENT BALANCE
+                                span $0000.00
+                            .user-info__item
+                                span CUMULATIVE P&L
+                                span $0000.00
+                            .user-info__item
+                                span CURRENT EQUITY
+                                span $0000.00
+                            .user-info__item
+                                span RETURN
+                                span $0000.00
+                            .user-info__item
+                                span HIGHEST RANK
+                                span 1ST
+                            .user-info__item
+                                span WIN RATE
+                                span 44.59%
+                            .user-info__item
+                                span MOST TRADED PRODUCT
+                                span XAUUSD
+                            .user-info__item
+                                span LOSS RATE
+                                span LOSS RATE 55.41%
+                    .user-info.js-tabs-block(data-id="row1")
+                        h3.title.title--mid.title--bold.title--white Aleksandr F. – Performance
+                        .user-info__table
+                            .user-info__item
+                                span CURRENT BALANCE
+                                span $300.00
+                            .user-info__item
+                                span CUMULATIVE P&L
+                                span $0000.00
+                            .user-info__item
+                                span CURRENT EQUITY
+                                span $0000.00
+                            .user-info__item
+                                span RETURN
+                                span $0800.00
+                            .user-info__item
+                                span HIGHEST RANK
+                                span 1ST
+                            .user-info__item
+                                span WIN RATE
+                                span 44.59%
+                            .user-info__item
+                                span MOST TRADED PRODUCT
+                                span XAUUSD
+                            .user-info__item
+                                span LOSS RATE
+                                span LOSS RATE 55.41%
+                    .user-info.js-tabs-block(data-id="row2")
+                        h3.title.title--mid.title--bold.title--white Serh F. – Performance
+                        .user-info__table
+                            .user-info__item
+                                span CURRENT BALANCE
+                                span $300.00
+                            .user-info__item
+                                span CUMULATIVE P&L
+                                span $0000.00
+                            .user-info__item
+                                span CURRENT EQUITY
+                                span $0000.00
+                            .user-info__item
+                                span RETURN
+                                span $0800.00
+                            .user-info__item
+                                span HIGHEST RANK
+                                span 1ST
+                            .user-info__item
+                                span WIN RATE
+                                span 44.59%
+                            .user-info__item
+                                span MOST TRADED PRODUCT
+                                span XAUUSD
+                            .user-info__item
+                                span LOSS RATE
+                                span LOSS RATE 55.41%
+                    .user-info.js-tabs-block(data-id="row3")
+                        h3.title.title--mid.title--bold.title--white Igor F. – Performance
+                        .user-info__table
+                            .user-info__item
+                                span CURRENT BALANCE
+                                span $300.00
+                            .user-info__item
+                                span CUMULATIVE P&L
+                                span $0000.00
+                            .user-info__item
+                                span CURRENT EQUITY
+                                span $0000.00
+                            .user-info__item
+                                span RETURN
+                                span $0800.00
+                            .user-info__item
+                                span HIGHEST RANK
+                                span 1ST
+                            .user-info__item
+                                span WIN RATE
+                                span 44.59%
+                            .user-info__item
+                                span MOST TRADED PRODUCT
+                                span XAUUSD
+                            .user-info__item
+                                span LOSS RATE
+                                span LOSS RATE 55.41%
+                    .user-info.js-tabs-block(data-id="row4")
+                        h3.title.title--mid.title--bold.title--white Ivan F. – Performance
+                        .user-info__table
+                            .user-info__item
+                                span CURRENT BALANCE
+                                span $300.00
+                            .user-info__item
+                                span CUMULATIVE P&L
+                                span $0000.00
+                            .user-info__item
+                                span CURRENT EQUITY
+                                span $0000.00
+                            .user-info__item
+                                span RETURN
+                                span $0800.00
+                            .user-info__item
+                                span HIGHEST RANK
+                                span 1ST
+                            .user-info__item
+                                span WIN RATE
+                                span 44.59%
+                            .user-info__item
+                                span MOST TRADED PRODUCT
+                                span XAUUSD
+                            .user-info__item
+                                span LOSS RATE
+                                span LOSS RATE 55.41%
+                    .user-info.js-tabs-block(data-id="row5")
+                        h3.title.title--mid.title--bold.title--white Anatoliy F. – Performance
+                        .user-info__table
+                            .user-info__item
+                                span CURRENT BALANCE
+                                span $300.00
+                            .user-info__item
+                                span CUMULATIVE P&L
+                                span $0000.00
+                            .user-info__item
+                                span CURRENT EQUITY
+                                span $0000.00
+                            .user-info__item
+                                span RETURN
+                                span $0800.00
+                            .user-info__item
+                                span HIGHEST RANK
+                                span 1ST
+                            .user-info__item
+                                span WIN RATE
+                                span 44.59%
+                            .user-info__item
+                                span MOST TRADED PRODUCT
+                                span XAUUSD
+                            .user-info__item
+                                span LOSS RATE
+                                span LOSS RATE 55.41%
+                    .chart-canvas(data-labels='["12 AM", "4 AM", "8 AM", "4 PM", "11 PM", "8 PM"]' data-data="[150, 200, 300, 200, 100, 150, 250]")
+                        canvas#myChart(width="400" height="400")
+            .trading-log.js-tabs-block(data-id="row0").opened
+                h3.title.title--mid.title--bold.title--white Fernando R. - Trading Log
+                .trading-log__slider
+                    .swiper.js-logs-swiper
+                        .swiper-wrapper
+                            .swiper-slide
+                                .log-col
+                                    .log-col__top
+                                        span OPEN TIME (UTC)
+                                        span SYMBOL
+                                    -
+                                        var rows = []
+                                        for (let i = 0; i < 6; i++) {
+                                            rows.push({});
+                                        }
+                                    each row, index in rows
+                                        .log-col__row
+                                            .log-col__text Jul 19, 2024 @ 03:46:30
+                                            .log-col__text XAUUSD.TTF
+                            .swiper-slide
+                                .log-col
+                                    .log-col__top
+                                        span Position ID
+                                        span TYPE
+                                    -
+                                        var rows = []
+                                        for (let i = 0; i < 6; i++) {
+                                            rows.push({});
+                                        }
+                                    each row, index in rows
+                                        .log-col__row
+                                            .log-col__text #7782220156097933096
+                                            .log-col__text.red SELL
+                            .swiper-slide
+                                .log-col
+                                    .log-col__top
+                                        span VOLUME
+                                        span OPEN PRICE
+                                    -
+                                        var rows = []
+                                        for (let i = 0; i < 6; i++) {
+                                            rows.push({});
+                                        }
+                                    each row, index in rows
+                                        .log-col__row
+                                            .log-col__text 20
+                                            .log-col__text.red 2428.67
+                            .swiper-slide
+                                .log-col
+                                    .log-col__top
+                                        span CLOSE TIME (UTC)
+                                        span CLOSE PRICE
+                                    -
+                                        var rows = []
+                                        for (let i = 0; i < 6; i++) {
+                                            rows.push({});
+                                        }
+                                    each row, index in rows
+                                        .log-col__row
+                                            .log-col__text 18833.5
+                                            .log-col__text.green $1,154.00
+                            .swiper-slide
+                                .log-col
+                                    .log-col__top
+                                        span CHANGE
+                                    -
+                                        var rows = []
+                                        for (let i = 0; i < 6; i++) {
+                                            rows.push({});
+                                        }
+                                    each row, index in rows
+                                        .log-col__row
+                                            .log-col__text 0.61%
+                    .swiper-button-next.trading-log__arrow.js-log-next
+                        img(src='content/images/icons/next.svg' width="16" height="12")
+                    .swiper-button-prev.trading-log__arrow.js-log-prev
+                        img(src='content/images/icons/prev.svg' width="16" height="12")
+                .trading-log__bottom
+                    .trading-log__select
+                        span Show entries
+                        select(name="select1").js-select
+                            option(value="12") 12
+                            option(value="14") 14
+                            option(value="16") 16
+                    .pagination
+                        a(href="#").pagination__link.pagination__link--arrow
+                            img(src='content/images/icons/prev-sec.svg' width="10" height="14")
+                        a(href="#").pagination__link 1
+                        a(href="#").pagination__link 2
+                        a(href="#").pagination__link 3
+                        a(href="#").pagination__link ...
+                        a(href="#").pagination__link 50
+                        a(href="#").pagination__link.pagination__link--arrow
+                            img(src='content/images/icons/next-sec.svg' width="10" height="14")
+
+            .trading-log.js-tabs-block(data-id="row1")
+                h3.title.title--mid.title--bold.title--white Aleksandr F. – Performance
+                .trading-log__slider
+                    .swiper.js-logs-swiper
+                        .swiper-wrapper
+                            .swiper-slide
+                                .log-col
+                                    .log-col__top
+                                        span OPEN TIME (UTC)
+                                        span SYMBOL
+                                    -
+                                        var rows = []
+                                        for (let i = 0; i < 6; i++) {
+                                            rows.push({});
+                                        }
+                                    each row, index in rows
+                                        .log-col__row
+                                            .log-col__text Jul 19, 2024 @ 03:46:30
+                                            .log-col__text XAUUSD.TTF
+                            .swiper-slide
+                                .log-col
+                                    .log-col__top
+                                        span Position ID
+                                        span TYPE
+                                    -
+                                        var rows = []
+                                        for (let i = 0; i < 6; i++) {
+                                            rows.push({});
+                                        }
+                                    each row, index in rows
+                                        .log-col__row
+                                            .log-col__text #7782220156097933096
+                                            .log-col__text.red SELL
+                            .swiper-slide
+                                .log-col
+                                    .log-col__top
+                                        span VOLUME
+                                        span OPEN PRICE
+                                    -
+                                        var rows = []
+                                        for (let i = 0; i < 6; i++) {
+                                            rows.push({});
+                                        }
+                                    each row, index in rows
+                                        .log-col__row
+                                            .log-col__text 20
+                                            .log-col__text.red 2428.67
+                            .swiper-slide
+                                .log-col
+                                    .log-col__top
+                                        span CLOSE TIME (UTC)
+                                        span CLOSE PRICE
+                                    -
+                                        var rows = []
+                                        for (let i = 0; i < 6; i++) {
+                                            rows.push({});
+                                        }
+                                    each row, index in rows
+                                        .log-col__row
+                                            .log-col__text 18833.5
+                                            .log-col__text.green $1,154.00
+                            .swiper-slide
+                                .log-col
+                                    .log-col__top
+                                        span CHANGE
+                                    -
+                                        var rows = []
+                                        for (let i = 0; i < 6; i++) {
+                                            rows.push({});
+                                        }
+                                    each row, index in rows
+                                        .log-col__row
+                                            .log-col__text 0.61%
+                    .swiper-button-next.trading-log__arrow.js-log-next
+                        img(src='content/images/icons/next.svg' width="16" height="12")
+                    .swiper-button-prev.trading-log__arrow.js-log-prev
+                        img(src='content/images/icons/prev.svg' width="16" height="12")
+                .trading-log__bottom
+                    .trading-log__select
+                        span Show entries
+                        select(name="select1").js-select
+                            option(value="12") 12
+                            option(value="14") 14
+                            option(value="16") 16
+                    .pagination
+                        a(href="#").pagination__link.pagination__link--arrow
+                            img(src='content/images/icons/prev-sec.svg' width="10" height="14")
+                        a(href="#").pagination__link 1
+                        a(href="#").pagination__link 2
+                        a(href="#").pagination__link 3
+                        a(href="#").pagination__link ...
+                        a(href="#").pagination__link 50
+                        a(href="#").pagination__link.pagination__link--arrow
+                            img(src='content/images/icons/next-sec.svg' width="10" height="14")
+
+            .trading-log.js-tabs-block(data-id="row2")
+                h3.title.title--mid.title--bold.title--white Serh F. – Performance
+                .trading-log__slider
+                    .swiper.js-logs-swiper
+                        .swiper-wrapper
+                            .swiper-slide
+                                .log-col
+                                    .log-col__top
+                                        span OPEN TIME (UTC)
+                                        span SYMBOL
+                                    -
+                                        var rows = []
+                                        for (let i = 0; i < 6; i++) {
+                                            rows.push({});
+                                        }
+                                    each row, index in rows
+                                        .log-col__row
+                                            .log-col__text Jul 19, 2024 @ 03:46:30
+                                            .log-col__text XAUUSD.TTF
+                            .swiper-slide
+                                .log-col
+                                    .log-col__top
+                                        span Position ID
+                                        span TYPE
+                                    -
+                                        var rows = []
+                                        for (let i = 0; i < 6; i++) {
+                                            rows.push({});
+                                        }
+                                    each row, index in rows
+                                        .log-col__row
+                                            .log-col__text #7782220156097933096
+                                            .log-col__text.red SELL
+                            .swiper-slide
+                                .log-col
+                                    .log-col__top
+                                        span VOLUME
+                                        span OPEN PRICE
+                                    -
+                                        var rows = []
+                                        for (let i = 0; i < 6; i++) {
+                                            rows.push({});
+                                        }
+                                    each row, index in rows
+                                        .log-col__row
+                                            .log-col__text 20
+                                            .log-col__text.red 2428.67
+                            .swiper-slide
+                                .log-col
+                                    .log-col__top
+                                        span CLOSE TIME (UTC)
+                                        span CLOSE PRICE
+                                    -
+                                        var rows = []
+                                        for (let i = 0; i < 6; i++) {
+                                            rows.push({});
+                                        }
+                                    each row, index in rows
+                                        .log-col__row
+                                            .log-col__text 18833.5
+                                            .log-col__text.green $1,154.00
+                            .swiper-slide
+                                .log-col
+                                    .log-col__top
+                                        span CHANGE
+                                    -
+                                        var rows = []
+                                        for (let i = 0; i < 6; i++) {
+                                            rows.push({});
+                                        }
+                                    each row, index in rows
+                                        .log-col__row
+                                            .log-col__text 0.61%
+                    .swiper-button-next.trading-log__arrow.js-log-next
+                        img(src='content/images/icons/next.svg' width="16" height="12")
+                    .swiper-button-prev.trading-log__arrow.js-log-prev
+                        img(src='content/images/icons/prev.svg' width="16" height="12")
+                .trading-log__bottom
+                    .trading-log__select
+                        span Show entries
+                        select(name="select1").js-select
+                            option(value="12") 12
+                            option(value="14") 14
+                            option(value="16") 16
+                    .pagination
+                        a(href="#").pagination__link.pagination__link--arrow
+                            img(src='content/images/icons/prev-sec.svg' width="10" height="14")
+                        a(href="#").pagination__link 1
+                        a(href="#").pagination__link 2
+                        a(href="#").pagination__link 3
+                        a(href="#").pagination__link ...
+                        a(href="#").pagination__link 50
+                        a(href="#").pagination__link.pagination__link--arrow
+                            img(src='content/images/icons/next-sec.svg' width="10" height="14")
+
+            .trading-log.js-tabs-block(data-id="row3")
+                h3.title.title--mid.title--bold.title--white Igor F. – Performance
+                .trading-log__slider
+                    .swiper.js-logs-swiper
+                        .swiper-wrapper
+                            .swiper-slide
+                                .log-col
+                                    .log-col__top
+                                        span OPEN TIME (UTC)
+                                        span SYMBOL
+                                    -
+                                        var rows = []
+                                        for (let i = 0; i < 6; i++) {
+                                            rows.push({});
+                                        }
+                                    each row, index in rows
+                                        .log-col__row
+                                            .log-col__text Jul 19, 2024 @ 03:46:30
+                                            .log-col__text XAUUSD.TTF
+                            .swiper-slide
+                                .log-col
+                                    .log-col__top
+                                        span Position ID
+                                        span TYPE
+                                    -
+                                        var rows = []
+                                        for (let i = 0; i < 6; i++) {
+                                            rows.push({});
+                                        }
+                                    each row, index in rows
+                                        .log-col__row
+                                            .log-col__text #7782220156097933096
+                                            .log-col__text.red SELL
+                            .swiper-slide
+                                .log-col
+                                    .log-col__top
+                                        span VOLUME
+                                        span OPEN PRICE
+                                    -
+                                        var rows = []
+                                        for (let i = 0; i < 6; i++) {
+                                            rows.push({});
+                                        }
+                                    each row, index in rows
+                                        .log-col__row
+                                            .log-col__text 20
+                                            .log-col__text.red 2428.67
+                            .swiper-slide
+                                .log-col
+                                    .log-col__top
+                                        span CLOSE TIME (UTC)
+                                        span CLOSE PRICE
+                                    -
+                                        var rows = []
+                                        for (let i = 0; i < 6; i++) {
+                                            rows.push({});
+                                        }
+                                    each row, index in rows
+                                        .log-col__row
+                                            .log-col__text 18833.5
+                                            .log-col__text.green $1,154.00
+                            .swiper-slide
+                                .log-col
+                                    .log-col__top
+                                        span CHANGE
+                                    -
+                                        var rows = []
+                                        for (let i = 0; i < 6; i++) {
+                                            rows.push({});
+                                        }
+                                    each row, index in rows
+                                        .log-col__row
+                                            .log-col__text 0.61%
+                    .swiper-button-next.trading-log__arrow.js-log-next
+                        img(src='content/images/icons/next.svg' width="16" height="12")
+                    .swiper-button-prev.trading-log__arrow.js-log-prev
+                        img(src='content/images/icons/prev.svg' width="16" height="12")
+                .trading-log__bottom
+                    .trading-log__select
+                        span Show entries
+                        select(name="select1").js-select
+                            option(value="12") 12
+                            option(value="14") 14
+                            option(value="16") 16
+                    .pagination
+                        a(href="#").pagination__link.pagination__link--arrow
+                            img(src='content/images/icons/prev-sec.svg' width="10" height="14")
+                        a(href="#").pagination__link 1
+                        a(href="#").pagination__link 2
+                        a(href="#").pagination__link 3
+                        a(href="#").pagination__link ...
+                        a(href="#").pagination__link 50
+                        a(href="#").pagination__link.pagination__link--arrow
+                            img(src='content/images/icons/next-sec.svg' width="10" height="14")
+
+            .trading-log.js-tabs-block(data-id="row4")
+                h3.title.title--mid.title--bold.title--white Ivan F. – Performance
+                .trading-log__slider
+                    .swiper.js-logs-swiper
+                        .swiper-wrapper
+                            .swiper-slide
+                                .log-col
+                                    .log-col__top
+                                        span OPEN TIME (UTC)
+                                        span SYMBOL
+                                    -
+                                        var rows = []
+                                        for (let i = 0; i < 6; i++) {
+                                            rows.push({});
+                                        }
+                                    each row, index in rows
+                                        .log-col__row
+                                            .log-col__text Jul 19, 2024 @ 03:46:30
+                                            .log-col__text XAUUSD.TTF
+                            .swiper-slide
+                                .log-col
+                                    .log-col__top
+                                        span Position ID
+                                        span TYPE
+                                    -
+                                        var rows = []
+                                        for (let i = 0; i < 6; i++) {
+                                            rows.push({});
+                                        }
+                                    each row, index in rows
+                                        .log-col__row
+                                            .log-col__text #7782220156097933096
+                                            .log-col__text.red SELL
+                            .swiper-slide
+                                .log-col
+                                    .log-col__top
+                                        span VOLUME
+                                        span OPEN PRICE
+                                    -
+                                        var rows = []
+                                        for (let i = 0; i < 6; i++) {
+                                            rows.push({});
+                                        }
+                                    each row, index in rows
+                                        .log-col__row
+                                            .log-col__text 20
+                                            .log-col__text.red 2428.67
+                            .swiper-slide
+                                .log-col
+                                    .log-col__top
+                                        span CLOSE TIME (UTC)
+                                        span CLOSE PRICE
+                                    -
+                                        var rows = []
+                                        for (let i = 0; i < 6; i++) {
+                                            rows.push({});
+                                        }
+                                    each row, index in rows
+                                        .log-col__row
+                                            .log-col__text 18833.5
+                                            .log-col__text.green $1,154.00
+                            .swiper-slide
+                                .log-col
+                                    .log-col__top
+                                        span CHANGE
+                                    -
+                                        var rows = []
+                                        for (let i = 0; i < 6; i++) {
+                                            rows.push({});
+                                        }
+                                    each row, index in rows
+                                        .log-col__row
+                                            .log-col__text 0.61%
+                    .swiper-button-next.trading-log__arrow.js-log-next
+                        img(src='content/images/icons/next.svg' width="16" height="12")
+                    .swiper-button-prev.trading-log__arrow.js-log-prev
+                        img(src='content/images/icons/prev.svg' width="16" height="12")
+                .trading-log__bottom
+                    .trading-log__select
+                        span Show entries
+                        select(name="select1").js-select
+                            option(value="12") 12
+                            option(value="14") 14
+                            option(value="16") 16
+                    .pagination
+                        a(href="#").pagination__link.pagination__link--arrow
+                            img(src='content/images/icons/prev-sec.svg' width="10" height="14")
+                        a(href="#").pagination__link 1
+                        a(href="#").pagination__link 2
+                        a(href="#").pagination__link 3
+                        a(href="#").pagination__link ...
+                        a(href="#").pagination__link 50
+                        a(href="#").pagination__link.pagination__link--arrow
+                            img(src='content/images/icons/next-sec.svg' width="10" height="14")
+
+            .trading-log.js-tabs-block(data-id="row5")
+                h3.title.title--mid.title--bold.title--white Anatoliy F. – Performance
+                .trading-log__slider
+                    .swiper.js-logs-swiper
+                        .swiper-wrapper
+                            .swiper-slide
+                                .log-col
+                                    .log-col__top
+                                        span OPEN TIME (UTC)
+                                        span SYMBOL
+                                    -
+                                        var rows = []
+                                        for (let i = 0; i < 6; i++) {
+                                            rows.push({});
+                                        }
+                                    each row, index in rows
+                                        .log-col__row
+                                            .log-col__text Jul 19, 2024 @ 03:46:30
+                                            .log-col__text XAUUSD.TTF
+                            .swiper-slide
+                                .log-col
+                                    .log-col__top
+                                        span Position ID
+                                        span TYPE
+                                    -
+                                        var rows = []
+                                        for (let i = 0; i < 6; i++) {
+                                            rows.push({});
+                                        }
+                                    each row, index in rows
+                                        .log-col__row
+                                            .log-col__text #7782220156097933096
+                                            .log-col__text.red SELL
+                            .swiper-slide
+                                .log-col
+                                    .log-col__top
+                                        span VOLUME
+                                        span OPEN PRICE
+                                    -
+                                        var rows = []
+                                        for (let i = 0; i < 6; i++) {
+                                            rows.push({});
+                                        }
+                                    each row, index in rows
+                                        .log-col__row
+                                            .log-col__text 20
+                                            .log-col__text.red 2428.67
+                            .swiper-slide
+                                .log-col
+                                    .log-col__top
+                                        span CLOSE TIME (UTC)
+                                        span CLOSE PRICE
+                                    -
+                                        var rows = []
+                                        for (let i = 0; i < 6; i++) {
+                                            rows.push({});
+                                        }
+                                    each row, index in rows
+                                        .log-col__row
+                                            .log-col__text 18833.5
+                                            .log-col__text.green $1,154.00
+                            .swiper-slide
+                                .log-col
+                                    .log-col__top
+                                        span CHANGE
+                                    -
+                                        var rows = []
+                                        for (let i = 0; i < 6; i++) {
+                                            rows.push({});
+                                        }
+                                    each row, index in rows
+                                        .log-col__row
+                                            .log-col__text 0.61%
+                    .swiper-button-next.trading-log__arrow.js-log-next
+                        img(src='content/images/icons/next.svg' width="16" height="12")
+                    .swiper-button-prev.trading-log__arrow.js-log-prev
+                        img(src='content/images/icons/prev.svg' width="16" height="12")
+                .trading-log__bottom
+                    .trading-log__select
+                        span Show entries
+                        select(name="select1").js-select
+                            option(value="12") 12
+                            option(value="14") 14
+                            option(value="16") 16
+                    .pagination
+                        a(href="#").pagination__link.pagination__link--arrow
+                            img(src='content/images/icons/prev-sec.svg' width="10" height="14")
+                        a(href="#").pagination__link 1
+                        a(href="#").pagination__link 2
+                        a(href="#").pagination__link 3
+                        a(href="#").pagination__link ...
+                        a(href="#").pagination__link 50
+                        a(href="#").pagination__link.pagination__link--arrow
+                            img(src='content/images/icons/next-sec.svg' width="10" height="14")
+
+            // M CARDS
+            .m-cards-wrap
+                .m-card
+                    .m-card__body
+                        .m-card__img
+                            img(src='content/images/pics/pic1.png' width="210" height="190")
+                        .m-card__title October competitions
+                        .m-card__list
+                            .m-itm
+                                .m-itm__icon
+                                    img(src='content/images/icons/m1.svg' width="28" height="24")
+                                .m-itm__title 4720
+                                .m-itm__title-sec CONTESTANTS
+                            .m-itm
+                                .m-itm__icon
+                                    img(src='content/images/icons/m2.svg' width="28" height="28")
+                                .m-itm__title FREE CHALLENGE
+                                .m-itm__title-sec ACCOUNTS
+                            .m-itm
+                                .m-itm__icon
+                                    img(src='content/images/icons/m3.svg' width="28" height="20")
+                                .m-itm__title IN
+                                .m-itm__title-sec PROGRESS
+                        .m-table
+                            .m-table__title Time Remaining
+                            .m-table__list(data-date-finish="2024-11-31T22:10:59").js-timer-block
+                                .m-table__itm
+                                    span(data-days) 0
+                                    span DAYS
+                                .m-table__itm
+                                    span(data-hrs) 22
+                                    span HRS
+                                .m-table__itm
+                                    span(data-mins) 22
+                                    span MIN
+                        a(href="#").red-btn
+                            .red-btn__text standings
+                        .m-card__back
+                            img(src='content/images/icons/m-back.svg' width="75" height="19")
+                    .m-card__bottom
+                        a(href="#").m-card__link.dark LEARN MORE
+                        a(href="#").m-card__link.white REGISTER
+                .m-card
+                    .m-card__body
+                        .m-card__img
+                            img(src='content/images/pics/pic1.png' width="210" height="190")
+                        .m-card__title October competitions
+                        .m-card__list
+                            .m-itm
+                                .m-itm__icon
+                                    img(src='content/images/icons/m1.svg' width="28" height="24")
+                                .m-itm__title 4720
+                                .m-itm__title-sec CONTESTANTS
+                            .m-itm
+                                .m-itm__icon
+                                    img(src='content/images/icons/m2.svg' width="28" height="28")
+                                .m-itm__title FREE CHALLENGE
+                                .m-itm__title-sec ACCOUNTS
+                            .m-itm
+                                .m-itm__icon
+                                    img(src='content/images/icons/m3.svg' width="28" height="20")
+                                .m-itm__title IN
+                                .m-itm__title-sec PROGRESS
+                        .m-table
+                            .m-table__title Time Remaining
+                            .m-table__list(data-date-finish="2024-12-31T23:45:59").js-timer-block
+                                .m-table__itm
+                                    span(data-days) 0
+                                    span DAYS
+                                .m-table__itm
+                                    span(data-hrs) 22
+                                    span HRS
+                                .m-table__itm
+                                    span(data-mins) 22
+                                    span MIN
+                        a(href="#").red-btn
+                            .red-btn__text standings
+                        .m-card__back
+                            img(src='content/images/icons/m-back.svg' width="75" height="19")
+                    .m-card__bottom
+                        a(href="#").m-card__link.dark LEARN MORE
+                        a(href="#").m-card__link.white REGISTER
+block script

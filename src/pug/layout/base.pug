@@ -1,0 +1,24 @@
+include ../utils/mixins
+
+
+block variables
+    - var innerHeader;
+doctype html
+html(lang='eng')
+    head
+        meta(charset='utf-8')
+        title #{title}
+        meta(name="description", content=description)
+        meta(name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no")
+        if select2Css
+            link(rel="stylesheet" href="scripts/modules/select2.min.css")
+    body(class=pageClass)
+        if innerHeader
+            include ../includes/modules/header-competitions
+        else
+            include ../includes/modules/header
+        main
+            block content
+        include ../includes/modules/footer
+
+    block script

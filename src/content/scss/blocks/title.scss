@@ -1,0 +1,38 @@
+.title {
+	margin: 0;
+
+	&--mid {
+		font-size: rem(32);
+		line-height: 1;
+
+		@media(max-width: 767px) {
+		    font-size: rem(24);
+		}
+	}
+
+	&--big {
+		font-size: rem(39);
+		line-height: 1;
+	}
+
+	&--small {
+		font-size: rem(20);
+		line-height: 1;
+	}
+
+	&--ttu {
+		text-transform: uppercase;
+	}
+
+	&--bold {
+		font-weight: 500;
+	}
+
+	&--white {
+		color: #ffffff;
+	}
+
+	&--red {
+		color: #ec1d40;
+	}
+}
