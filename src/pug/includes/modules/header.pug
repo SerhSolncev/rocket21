@@ -1,5 +1,44 @@
 header.header.js-header
-
+    .container
+        .header__body
+            .logo.logo--header
+                picture
+                    source(media='(min-width: 1025px)', srcset='content/images/icons/logo.svg')
+                    img(src='content/images/icons/logo-mob.png' width="189" height="35" alt="logo")
+            .header__home Home
+            ul
+                li
+                    a(href="#")
+                        span FUNDED TRADERS
+                li
+                    a(href="#")
+                        span COMMUNITY
+                        img(src='content/images/icons/mini-arr.svg' width="12" height="9" alt="mini-arr")
+                    ul
+                        li
+                            a(href="#") item1
+                        li
+                            a(href="#") long item
+                        li
+                            a(href="#") most longer item
+                li
+                    a(href="#")
+                        span AFFILIATE
+                li
+                    a(href="#")
+                        span ABOUT US
+                        img(src='content/images/icons/mini-arr.svg' width="12" height="9" alt="mini-arr")
+                    ul
+                        li
+                            a(href="#") item1
+                        li
+                            a(href="#") long item
+                        li
+                            a(href="#") most longer item
+            button.burger
+                img(src='content/images/icons/burger.svg' width="37" height="25")
+            a(href="#").red-btn
+                .red-btn__text start now!
 //.mobile-menu
 //    .mobile-menu__top.js-close-menu
 //        img(src="content/images/icons/close.svg" width="30" height="30")

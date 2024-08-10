@@ -3,6 +3,7 @@ include ../utils/mixins
 
 block variables
     - var innerHeader;
+    - var footer;
 doctype html
 html(lang='eng')
     head
@@ -19,6 +20,8 @@ html(lang='eng')
             include ../includes/modules/header
         main
             block content
-        include ../includes/modules/footer
-
+        if footer
+            include ../includes/modules/footer
+        else
+            include ../includes/modules/scripts
     block script

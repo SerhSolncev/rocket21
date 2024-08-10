@@ -35,7 +35,6 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-
   @media(max-width: 767px) {
     background-color: #000;
   }
@@ -56,6 +55,15 @@ body {
       background-color: #000;
     }
   }
+
+
+  &.main {
+    background-color: #000;
+    &::after {
+      background-color: #000;
+    }
+  }
+
 
   &.loading {
 

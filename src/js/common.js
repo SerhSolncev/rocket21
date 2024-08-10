@@ -14,6 +14,28 @@ document.addEventListener('DOMContentLoaded', (event) => {
     document.body.classList.add('loaded');
   }, 500)
 
+  const jsHeader = document.querySelector('.header');
+
+  if(jsHeader !== null) {
+    if($(window).scrollTop() >  5 ){
+      jsHeader.classList.add('scroll')
+    }
+    if($(window).scrollTop() <  5){
+      jsHeader.classList.remove('scroll')
+    }
+
+    $(window).on('scroll', function () {
+      if($(window).scrollTop() >  5 ){
+        jsHeader.classList.add('scroll')
+      }
+      if($(window).scrollTop() <  5){
+        jsHeader.classList.remove('scroll')
+      }
+    })
+
+  }
+
+
   // "modernizr" func"
   function isTouchDevice() {
     return 'ontouchstart' in window || navigator.maxTouchPoints;
@@ -23,6 +45,33 @@ document.addEventListener('DOMContentLoaded', (event) => {
   const el = document.querySelectorAll('.lazy');
   window.observer = lozad(el);
   window.observer.observe();
+
+  // swiper users
+  let swiperAdvanture = null;
+
+  function initSwiperAdvanture() {
+    const screenWidth = window.innerWidth;
+    if (screenWidth >= 768 && swiperAdvanture) {
+      swiperAdvanture.destroy(true, true);
+      swiperAdvanture = null;
+    } else if (screenWidth < 768 && !swiperAdvanture) {
+      swiperAdvanture = new Swiper('.js-adv-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.js-user-next',
+          prevEl: '.js-user-prev',
+        }
+      });
+    }
+  }
+
+  window.addEventListener('load', initSwiperAdvanture);
+  window.addEventListener('resize', initSwiperAdvanture);
 
 
   // swiper users
@@ -48,6 +97,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
       });
     }
   }
+
+  window.addEventListener('load', initSwiperUsers);
+  window.addEventListener('resize', initSwiperUsers);
 
   // swiper logs
   let swiperLogs = null;
@@ -76,6 +128,33 @@ document.addEventListener('DOMContentLoaded', (event) => {
   window.addEventListener('load', initSwiperLogs);
   window.addEventListener('resize', initSwiperLogs);
 
+
+  // swiper challenge
+  let swiperChallenge = null;
+
+  function initSwiperChallenge() {
+    const screenWidth = window.innerWidth;
+    if (screenWidth >= 768 && swiperChallenge) {
+      swiperChallenge.destroy(true, true);
+      swiperChallenge = null;
+    } else if (screenWidth < 768 && !swiperChallenge) {
+      swiperChallenge = new Swiper('.js-challenge-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.js-user-next',
+          prevEl: '.js-user-prev',
+        }
+      });
+    }
+  }
+
+  window.addEventListener('load', initSwiperChallenge);
+  window.addEventListener('resize', initSwiperChallenge);
   // tabs
   document.addEventListener('click', (event) => {
     const tabsParent = event.target.closest('.js-tabs-wrapper');
@@ -180,102 +259,106 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
   // chart js
 
-  const ctx = document.getElementById('myChart').getContext('2d');
-  const chartCanvas = document.querySelector('.chart-canvas');
-  const chartBtns = document.querySelectorAll('.js-chart-btn');
-  const labels = JSON.parse(chartCanvas.getAttribute('data-labels'));
-  let data = JSON.parse(chartCanvas.getAttribute('data-data'));
+  const ctxWrap = document.getElementById('myChart');
 
-  const yGridGradient = ctx.createLinearGradient(0, 0, 0, ctx.canvas.height);
-  yGridGradient.addColorStop(0, 'rgba(255, 181, 193, 0.1)');
-  yGridGradient.addColorStop(1, 'rgba(253, 251, 251, 0.1)');
+  if(ctxWrap !== null) {
+    const ctx = ctxWrap.getContext('2d');
+    const chartCanvas = document.querySelector('.chart-canvas');
+    const chartBtns = document.querySelectorAll('.js-chart-btn');
+    const labels = JSON.parse(chartCanvas.getAttribute('data-labels'));
+    let data = JSON.parse(chartCanvas.getAttribute('data-data'));
 
-  const xGridGradient = ctx.createLinearGradient(0, 0, ctx.canvas.width, 0);
-  xGridGradient.addColorStop(0, 'rgba(255, 181, 193, 0.1)');
-  xGridGradient.addColorStop(1, 'rgba(253, 251, 251, 0.1)');
+    const yGridGradient = ctx.createLinearGradient(0, 0, 0, ctx.canvas.height);
+    yGridGradient.addColorStop(0, 'rgba(255, 181, 193, 0.1)');
+    yGridGradient.addColorStop(1, 'rgba(253, 251, 251, 0.1)');
 
-  const dataConfig = {
-    labels: labels,
-    datasets: [{
-      label: 'Points',
-      data: data,
-      borderWidth: 1,
-      borderColor: 'rgba(255, 99, 132, 1)',
-      backgroundColor: 'rgba(255, 99, 132, 0.2)',
-      fill: true,
-      tension: 0.1,
-      pointRadius: 0,
-      pointHoverRadius: 0
-    }],
-  };
+    const xGridGradient = ctx.createLinearGradient(0, 0, ctx.canvas.width, 0);
+    xGridGradient.addColorStop(0, 'rgba(255, 181, 193, 0.1)');
+    xGridGradient.addColorStop(1, 'rgba(253, 251, 251, 0.1)');
 
-  const optionsConfig = {
-    scales: {
-      y: {
-        beginAtZero: true,
-        grid: {
-          color: yGridGradient
+    const dataConfig = {
+      labels: labels,
+      datasets: [{
+        label: 'Points',
+        data: data,
+        borderWidth: 1,
+        borderColor: 'rgba(255, 99, 132, 1)',
+        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+        fill: true,
+        tension: 0.1,
+        pointRadius: 0,
+        pointHoverRadius: 0
+      }],
+    };
+
+    const optionsConfig = {
+      scales: {
+        y: {
+          beginAtZero: true,
+          grid: {
+            color: yGridGradient
+          },
+          ticks: {
+            color: '#9A9494'
+          }
         },
-        ticks: {
-          color: '#9A9494'
+        x: {
+          grid: {
+            color: xGridGradient,
+          },
+          border: {
+            dash: [8],
+          },
+          ticks: {
+            color: '#9A9494'
+          },
+          // offset: 1 // Добавляем отступы по бокам
         }
       },
-      x: {
-        grid: {
-          color: xGridGradient,
-        },
-        border: {
-          dash: [8],
-        },
-        ticks: {
-          color: '#9A9494'
-        },
-        // offset: 1 // Добавляем отступы по бокам
+      plugins: {
+        legend: {
+          display: false // Скрываем легенду
+        }
       }
-    },
-    plugins: {
-      legend: {
-        display: false // Скрываем легенду
-      }
-    }
-  };
+    };
 
 
-  let myChart = new Chart(ctx, {
-    type: 'line',
-    data: dataConfig,
-    options: optionsConfig
-  });
-
-
-  chartBtns.forEach((btn) => {
-    btn.addEventListener('click', (event) => {
-      myChart.data.datasets[0].data = JSON.parse(btn.getAttribute('data-data'));
-      myChart.update();
-
-      let target = document.querySelector('.chart-wrap__right');
-      let targetPosition = target.getBoundingClientRect().top + window.scrollY - 30;
-
-      window.scrollTo({
-        top: targetPosition,
-        behavior: 'smooth'
-      });
+    let myChart = new Chart(ctx, {
+      type: 'line',
+      data: dataConfig,
+      options: optionsConfig
     });
 
-    btn.addEventListener('mouseover', () => {
-      const dataId = btn.getAttribute('data-id');
-      document.querySelectorAll(`[data-id="${dataId}"]`).forEach(el => {
-        el.classList.add('data-item-hover');
-      });
-    });
 
-    btn.addEventListener('mouseout', () => {
-      const dataId = btn.getAttribute('data-id');
-      document.querySelectorAll(`[data-id="${dataId}"]`).forEach(el => {
-        el.classList.remove('data-item-hover');
+    chartBtns.forEach((btn) => {
+      btn.addEventListener('click', (event) => {
+        myChart.data.datasets[0].data = JSON.parse(btn.getAttribute('data-data'));
+        myChart.update();
+
+        let target = document.querySelector('.chart-wrap__right');
+        let targetPosition = target.getBoundingClientRect().top + window.scrollY - 30;
+
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
       });
-    });
-  })
+
+      btn.addEventListener('mouseover', () => {
+        const dataId = btn.getAttribute('data-id');
+        document.querySelectorAll(`[data-id="${dataId}"]`).forEach(el => {
+          el.classList.add('data-item-hover');
+        });
+      });
+
+      btn.addEventListener('mouseout', () => {
+        const dataId = btn.getAttribute('data-id');
+        document.querySelectorAll(`[data-id="${dataId}"]`).forEach(el => {
+          el.classList.remove('data-item-hover');
+        });
+      });
+    })
+  }
 
   const timerBlocks = document.querySelectorAll('.js-timer-block');
 
@@ -309,4 +392,105 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const timerInterval = setInterval(updateTimer, 1000);
     updateTimer();
   });
+
+  const starsContainer = document.querySelector('.js-stars');
+  const numStars = 80;
+  if(starsContainer !== null) {
+    for (let i = 0; i < numStars; i++) {
+      const star = document.createElement('div');
+      star.classList.add('star');
+      star.style.top = `${Math.random() * 100}vh`;
+      star.style.left = `${Math.random() * 100}vw`;
+      starsContainer.appendChild(star);
+    }
+
+    function appearStars() {
+      const stars = document.querySelectorAll('.star');
+      stars.forEach((star, index) => {
+        setTimeout(() => {
+          star.style.opacity = 1;
+        }, index * 50);
+      });
+    }
+    appearStars();
+  }
+
+  const paths = document.querySelectorAll('.js-top-elips path');
+  paths.forEach((path, index) => {
+    setTimeout(() => {
+      path.classList.remove('hidden');
+      path.classList.add('visible');
+    }, index * 500);
+  });
+
+  const blocks = document.querySelectorAll('.js-inview');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+        entry.target.classList.add('visible');
+      } else {
+
+      }
+    });
+  }, { threshold: 0.5 });
+
+  blocks.forEach(block => observer.observe(block));
+
+  const openAdvs = document.querySelectorAll('.js-open-adv');
+
+  if(openAdvs.length > 0) {
+    openAdvs.forEach((el) => {
+      el.addEventListener('click', () => {
+        document.querySelectorAll('.js-open-adv').forEach((all) => {
+          all.classList.remove('is-active')
+        })
+        el.classList.add('is-active');
+      })
+    })
+  }
+
+  document.querySelectorAll('.js-tabs-button[data-position]').forEach(button => {
+    button.addEventListener('click', function() {
+      const wrap = document.querySelector('.adventure-block__tab-btns');
+      const rocket = wrap.querySelector('.rocket-adv');
+      document.querySelectorAll('.js-tabs-button').forEach(btn => btn.classList.remove('is-active'));
+
+      this.classList.add('is-active');
+
+      const position = this.getBoundingClientRect();
+      const parentPosition = document.querySelector('.adventure-block__tab-btns').getBoundingClientRect();
+
+      const left = position.left - parentPosition.left + (position.width / 2);
+
+      rocket.style.left = `${left- rocket.offsetWidth / 2}px`;
+    });
+  });
+
+
+  // swiper users
+  let swiperVideos = null;
+
+  function initSwiperVideos() {
+    swiperVideos = new Swiper('.js-videos-swiper', {
+      slidesPerView: 3,
+      spaceBetween: 10,
+      centeredSlides: true,
+      loop: true,
+      lazy: {
+        loadPrevNext: true,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.js-video-next',
+        prevEl: '.js-video-prev',
+      }
+    });
+  }
+
+  window.addEventListener('load', initSwiperVideos);
+  window.addEventListener('resize', initSwiperVideos);
+
 })

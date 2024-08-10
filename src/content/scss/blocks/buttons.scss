@@ -7,6 +7,84 @@
 	position: relative;
 	transition: background-color 0.3s linear, color 0.3s linear, border-color 0.1s linear;
 	cursor: pointer;
+
+	&--def {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: rem(40);
+		padding: 0 rem(23) rem(2);
+		font-size: rem(16);
+		font-weight: bold;
+		line-height: 1;
+		border: rem(2) solid #FDFBFB;
+		border-radius: rem(40);
+		transition-property: background-color, color;
+		transition: 0.2s linear;
+	}
+
+	&--def-sec {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: rem(13) rem(29);
+		font-size: rem(21);
+		font-weight: bold;
+		line-height: 1;
+		border: rem(2) solid #FDFBFB;
+		border-radius: rem(40);
+		transition-property: background-color, color;
+		transition: 0.2s linear;
+	}
+
+	&--def-third {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: rem(13) rem(21);
+		font-size: rem(22);
+		font-weight: bold;
+		line-height: 1;
+		border: rem(2) solid #FDFBFB;
+		border-radius: rem(40);
+		transition-property: background-color, color;
+		transition: 0.2s linear;
+	}
+
+	&--dark {
+		background-color: #000;
+		color: #ffffff;
+
+		&:hover {
+			background-color: #fff;
+			color: #000;
+		}
+	}
+
+	&--white {
+		background-color: #fff;
+		color: #000;
+
+		&:hover {
+			background-color: #000;
+			color: #ffffff;
+		}
+	}
+
+	&--gray {
+		background-color: #1E1E1E;
+		color: #ffffff;
+		border: 1px solid #ec1d40;
+		border-radius: rem(14);
+
+		&:hover {
+			background-color: #ec1d40;
+		}
+
+		&.is-active {
+			background-color: #ec1d40;
+		}
+	}
 }
 
 .button-icon {
@@ -40,7 +118,7 @@
 	text-transform: uppercase;
 	font-weight: bold;
 	text-align: center;
-	padding: rem(10) rem(24);
+	padding: rem(9) rem(24) rem(11);
 	font-size: rem(20);
 	line-height: 1;
 	border-radius: rem(40);
@@ -49,6 +127,15 @@
 
 	@media(max-width: 1060px) {
 		font-size: rem(16);
+	}
+
+	&--big {
+		padding: rem(17) rem(24);
+		font-size: rem(24);
+
+		@media(max-width: 1060px) {
+			font-size: rem(20);
+		}
 	}
 
 	&:hover {

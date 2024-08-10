@@ -7,4 +7,211 @@
 			margin: rem(47) 0 0;
 		}
 	}
+
+	&--evaluation {
+		margin: 0 0 rem(100);
+	}
+
+	&--scaling {
+		margin: 0 0 100px;
+		padding: 0 0 rem(60);
+		overflow: hidden;
+	}
+
+	&--traders {
+		margin: 0 0 rem(71);
+	}
+
+	&--join {
+
+	}
+
+	&--globe {
+		margin: 0 0 rem(33);
+		position: relative;
+
+		.section__img {
+			width: 100%;
+			max-width: rem(539);
+			position: absolute;
+			top: 35%;
+			right: -5%;
+			z-index: 1;
+			transform: translateY(-50%);
+
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+
+		&::before {
+			content: '';
+			display: block;
+			width: rem(732);
+			height: rem(732);
+			background: rgb(41,12,17);
+			background: -moz-radial-gradient(circle, rgba(41,12,17,1) 0%, rgba(236,29,64,0) 86%);
+			background: -webkit-radial-gradient(circle, rgba(41,12,17,1) 0%, rgba(236,29,64,0) 86%);
+			background: radial-gradient(circle, rgba(41,12,17,1) 0%, rgba(236,29,64,0) 86%);
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#290c11",endColorstr="#ec1d40",GradientType=1);
+			position: absolute;
+			top: 3%;
+			left: -17%;
+			z-index: 1;
+		}
+	}
+
+	&--why {
+		margin: 0 0 rem(92);
+	}
+
+	&--program {
+		margin: 0 0 rem(82);
+	}
+
+	&--keys {
+		margin: 0 0 rem(100);
+		position: relative;
+
+		.container {
+			position: relative;
+			z-index: 2;
+		}
+
+		.section__mid {
+			position: absolute;
+			top: 55%;
+			left: 50%;
+			z-index: 1;
+			transform: translate(-50%, -50%);
+
+			img {
+				width: 100%;
+				max-width: rem(814);
+				transition-delay: 0.5s;
+			}
+
+			span {
+				width: 100%;
+				display: block;
+				text-align: center;
+				position: absolute;
+				top: 40%;
+				left: 50%;
+				z-index: 2;
+				font-size: rem(54);
+				text-transform: uppercase;
+				font-weight: 900;
+				background: linear-gradient(to right, #fff, rgba(#fff, 0.4));
+				-webkit-background-clip: text;
+				background-clip: text;
+				color: transparent;
+				opacity: 0;
+				transform: translateY(40px) translateX(-50%);
+				transition: opacity 0.2s 0.3s linear, transform 0.4s 0.3s linear;
+
+				&.visible {
+					opacity: 1;
+					transform: translateY(0) translateX(-50%);
+				}
+			}
+		}
+	}
+
+	&--rocket {
+		margin: 0 0 rem(67);
+	}
+
+	&--tours {
+		margin: 0 0 rem(35);
+	}
+
+	&--revive {
+		margin: 0 0 rem(31);
+		position: relative;
+		z-index: 2;
+	}
+
+	&--adventure {
+		margin: 0 0 100px;
+	}
+
+	&--challenge {
+		margin: 0 0 rem(62);
+	}
+
+	&--top {
+		padding: 14.1% 0 rem(420);
+		overflow: hidden;
+		position: relative;
+		margin: 0 0 rem(-84);
+
+		.star {
+			position: absolute;
+			z-index: 0;
+			width: 2px;
+			height: 2px;
+			background-color: white;
+			border-radius: 50%;
+			opacity: 0;
+			transition: opacity 1s linear;
+		}
+
+		&::after {
+			content: '';
+			display: block;
+			width: rem(732);
+			height: rem(732);
+			background: rgb(41,12,17);
+			background: -moz-radial-gradient(circle, rgba(41,12,17,1) 0%, rgba(236,29,64,0) 86%);
+			background: -webkit-radial-gradient(circle, rgba(41,12,17,1) 0%, rgba(236,29,64,0) 86%);
+			background: radial-gradient(circle, rgba(41,12,17,1) 0%, rgba(236,29,64,0) 86%);
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#290c11",endColorstr="#ec1d40",GradientType=1);
+			position: absolute;
+			top: -40%;
+			left: 50%;
+			transform: translateX(-50%);
+			z-index: 1;
+		}
+
+		&::before {
+			content: '';
+			display: block;
+			width: rem(732);
+			height: rem(732);
+			background: rgb(41,12,17);
+			background: -moz-radial-gradient(circle, rgba(41,12,17,1) 0%, rgba(236,29,64,0) 86%);
+			background: -webkit-radial-gradient(circle, rgba(41,12,17,1) 0%, rgba(236,29,64,0) 86%);
+			background: radial-gradient(circle, rgba(41,12,17,1) 0%, rgba(236,29,64,0) 86%);
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#290c11",endColorstr="#ec1d40",GradientType=1);
+			position: absolute;
+			top: 27%;
+			left: -20%;
+			z-index: 1;
+		}
+	}
+}
+
+.top-elips {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+	height: 115%;
+
+	svg {
+		width: 100%;
+		height: 100%;
+
+		.hidden {
+			opacity: 0;
+		}
+
+		.visible {
+			opacity: 1;
+			transition: opacity 1s ease-in-out;
+		}
+	}
 }
