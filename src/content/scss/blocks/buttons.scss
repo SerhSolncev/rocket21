@@ -27,14 +27,19 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		padding: rem(13) rem(29);
-		font-size: rem(21);
+		padding: rem(11) rem(29);
+		font-size: rem(16);
 		font-weight: bold;
 		line-height: 1;
 		border: rem(2) solid #FDFBFB;
 		border-radius: rem(40);
 		transition-property: background-color, color;
 		transition: 0.2s linear;
+
+		@media(min-width: 1024px) {
+			font-size: rem(21);
+			padding: rem(13) rem(29);
+		}
 	}
 
 	&--def-third {
@@ -81,7 +86,7 @@
 			background-color: #ec1d40;
 		}
 
-		&.is-active {
+		&.is-active,  &.opened  {
 			background-color: #ec1d40;
 		}
 	}
@@ -135,6 +140,11 @@
 
 		@media(max-width: 1060px) {
 			font-size: rem(20);
+		}
+
+		@media(max-width: 640px) {
+			font-size: rem(15);
+			padding: rem(11) rem(24);
 		}
 	}
 

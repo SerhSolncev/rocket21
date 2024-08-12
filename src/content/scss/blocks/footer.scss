@@ -1,9 +1,7 @@
 .footer {
-	padding: rem(72) 0 40px;
+	padding: rem(72) 0 rem(23);
 	position: relative;
 	overflow: hidden;
-	opacity: 0;
-	transition: opacity 0.3s linear;
 
 	&.visible {
 		opacity: 1;
@@ -42,25 +40,56 @@
 		top: 39%;
 		right: -11%;
 		z-index: 1;
+
+		@media(max-width: 560px) {
+			top: 11%;
+			right: -72%;
+		}
+	}
+
+	&__column {
+		flex-shrink: 0;
 	}
 
 	&__left {
 		flex-shrink: 0;
+
+		@media(max-width: 1150px) {
+		    max-width: rem(300);
+		}
+
+		@media(max-width: 859px) {
+		    max-width: 100%;
+			margin: 0 0 rem(35);
+		}
 	}
 
 	&__top {
 		display: flex;
 		align-self: flex-start;
 		justify-content: space-between;
-		gap: 11.5%;
+		gap: 5%;
 		position: relative;
 		z-index: 2;
+
+		@media(min-width: 1280px) {
+			gap: 11.5%;
+		}
+
+		@media(max-width: 859px) {
+		    flex-direction: column;
+		}
 	}
 
 	&__right {
 		display: flex;
 		justify-content: space-between;
 		width: 100%;
+
+		@media(max-width: 560px) {
+		    flex-direction: column;
+			gap: rem(35);
+		}
 	}
 
 	&__soc {
@@ -68,6 +97,11 @@
 		align-items: center;
 		gap: rem(15);
 		margin: rem(25) 0 0;
+		flex-wrap: wrap;
+
+		@media(min-width: 860px) and (max-width: 992px){
+			max-width: 168px;
+		}
 	}
 
 	&__sub {

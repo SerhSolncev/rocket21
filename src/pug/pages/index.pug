@@ -13,7 +13,9 @@ block content
         .container
             .top-block
                 .top-block__left.js-inview
-                    h1.top-block__title ROCKET YOUR TRADING SKILLS
+                    a(href="#").top-icon.top-icon--sec
+                        img(src='content/images/icons/icon2.png' width="85" height="85")
+                    h1.top-block__title ROCKET YOUR <br> TRADING SKILLS
                     .top-block__mark
                         img(src='content/images/pics/mark.png' width="325" height="35")
                         span 4,529 REVIEWS ON
@@ -21,6 +23,14 @@ block content
                         a(href="#").button.button--def.button--white TAKE OUR CHALLENGE
                         a(href="#").button.button--def.button--dark JOIN OUR DISCORD
                 .top-block__img.js-inview
+                    a(href="#").top-icon.top-icon--first
+                        img(src='content/images/icons/icon1.png' width="85" height="85")
+                    a(href="#").top-icon.top-icon--four
+                        img(src='content/images/icons/icon4.png' width="85" height="85")
+                    a(href="#").top-icon.top-icon--third
+                        img(src='content/images/icons/icon3.png' width="85" height="85")
+                    a(href="#").top-block__play
+                        img(src="content/images/icons/play.svg" width="100" height="100" alt="planet1")
                     img(src='content/images/pics/cosmo1-test-2.png' width="670" height="677" alt="cosmo1")
     section.section.section--rocket
         .container
@@ -42,8 +52,8 @@ block content
             .evaluation-block
                 .evaluation-block__top.js-inview
                     h2.title.title--section-two.title--ttu.title--bold.title--white EVALUATION PROCESS
-                .evaluation-block__list.js-inview
-                    .evaluation-item(style="background-image: url(content/images/pics/bg-evo.png)")
+                .evaluation-block__list
+                    .evaluation-item.js-inview(style="background-image: url(content/images/pics/bg-evo.png)")
                         .evaluation-item__body
                             .evaluation-item__numb
                                 span 1
@@ -55,7 +65,7 @@ block content
                                 img(src='content/images/empty.gif' class="lazy" data-src="content/images/pics/planet1.svg" width="164" height="164" alt="planet1")
                             .evaluation-item__back
                                 img(src='content/images/icons/m-back.svg' width="75" height="19")
-                    .evaluation-item
+                    .evaluation-item.js-inview
                         .evaluation-item__body
                             .evaluation-item__numb
                                 span 2
@@ -67,7 +77,7 @@ block content
                                 img(src='content/images/empty.gif' class="lazy" data-src="content/images/pics/planet2.svg" width="164" height="164" alt="planet1")
                             .evaluation-item__back
                                 img(src='content/images/icons/m-back.svg' width="75" height="19")
-                    .evaluation-item(style="background-image: url(content/images/pics/bg-evo.png)")
+                    .evaluation-item.js-inview(style="background-image: url(content/images/pics/bg-evo.png)")
                         .evaluation-item__body
                             .evaluation-item__numb
                                 span 3
@@ -82,10 +92,10 @@ block content
     section.section.section--scaling
         .container
             .scaling-block
-                .scaling-block__space
-                    img(src='content/images/empty.gif' class="lazy" data-src="content/images/pics/jupiter.svg" width="542" height="327" alt="planet1")
                 .scaling-block__top.js-inview
                     h2.title.title--section.title--ttu.title--bold.title--white SCALING UP
+                .scaling-block__space
+                    img(src='content/images/empty.gif' class="lazy" data-src="content/images/pics/jupiter.svg" width="542" height="327" alt="planet1")
                 .scaling-block__board(style="background-image: url(content/images/pics/scal-back.png)").js-inview
                     .scaling-block__text
                         | COMPLETE THESE TWO STAGES <br>
@@ -102,38 +112,49 @@ block content
                 .revive-block__board(style="background-image: url(content/images/pics/back-sec.svg").js-inview
                     | REVIVE <br>
                     | FEATURE
-                .revive-block__list-wrap.js-inview
-                    .revive-block__list
-                        .revive-block__item
-                            | REVIVE YOUR <span>PHASE 2</span>
-                            | ACCOUNT IF BREACHED
-                        .revive-block__item
-                            | AVAILABLE FOR 72 HOURS
-                            | AFTER BREACH
-                        .revive-block__item
-                            | ACCESSIBLE FROM
-                            | THE DASHBOARD FOR
-                            | ELIGIBLE USERS
-                    .revive-block__list
-                        .revive-block__item
-                            | SKIP PHASE 1 AND CONTINUE
-                            | THE CHALLENGE WITH
-                            | A NOMINAL FEE
-                        .revive-block__item
-                            | FEATURE AVAILABLE
-                            | ONCE PER CHALLENGE
-                        .revive-block__item
-                            | THE REACTIVATION FEE
-                            | IS NOT SUBJECT TO REFUND
-                            | ON THE FIRST PAYMENT
+                .revive-block__list-scroll.js-inview
+                    .revive-block__list-wrap
+                        .swipe-mob
+                            img(src='content/images/icons/swipe.png' width="71" height="20")
+                        .revive-block__list
+                            .revive-block__item
+                                | REVIVE YOUR <span>PHASE 2</span>
+                                | ACCOUNT IF BREACHED
+                            .revive-block__item
+                                | AVAILABLE FOR 72 HOURS
+                                | AFTER BREACH
+                            .revive-block__item
+                                | ACCESSIBLE FROM
+                                | THE DASHBOARD FOR
+                                | ELIGIBLE USERS
+                        .revive-block__list
+                            .revive-block__item
+                                | SKIP PHASE 1 AND CONTINUE
+                                | THE CHALLENGE WITH
+                                | A NOMINAL FEE
+                            .revive-block__item
+                                | FEATURE AVAILABLE
+                                | ONCE PER CHALLENGE
+                            .revive-block__item
+                                | THE REACTIVATION FEE
+                                | IS NOT SUBJECT TO REFUND
+                                | ON THE FIRST PAYMENT
     section.section.section--challenge
         .container
-            .challenge-block
+            .challenge-block.js-inview
                 .challenge-block__left
                     .challenge-block__slider
-                        .challenge-block__back.js-inview
-                            img(src='content/images/pics/bg-flame.png' width="716" height="624").js-inview
-                        .swiper.js-challenge-swiper.js-inview
+                        .challenge-block__back-top
+                            picture
+                                source(media='(min-width: 640px)', srcset='content/images/pics/bg-flame-top.png')
+                                img(src='content/images/pics/bg-flame-top-mob.png' width="189" height="35" alt="logo")
+                        .challenge-block__back-right
+                            picture
+                                img(src='content/images/pics/bg-flame-r.png' width="189" height="35" alt="logo")
+                        .challenge-block__back-left
+                            picture
+                                img(src='content/images/pics/bg-flame-l.png' width="189" height="35" alt="logo").js-inview
+                        .swiper.js-challenge-swiper
                             .swiper-wrapper
                                 .swiper-slide
                                     .challenge-block__items
@@ -167,10 +188,14 @@ block content
                                             span 10%
                                             span 10%
                                             span 10%
+                        .swiper-button-next.challenge-block__arrow.js-challenge-next
+                            img(src='content/images/icons/next.svg' width="16" height="12")
+                        .swiper-button-prev.challenge-block__arrow.js-challenge-prev
+                            img(src='content/images/icons/prev.svg' width="16" height="12")
                     .challenge-block__left-bottom
-                        a(href="#").red-btn.js-inview
+                        a(href="#").red-btn
                             .red-btn__text TAKE OUR CHALLENGE
-                .challenge-block__img.js-inview
+                .challenge-block__img
                     img(src='content/images/empty.gif' class="lazy" data-src="content/images/pics/rocket-man.png" width="573" height="706" alt="planet1").js-inview
     section.section.section--tours
         .container
@@ -196,85 +221,1228 @@ block content
                     img(src='content/images/empty.gif' class="lazy" data-src="content/images/pics/planet.svg" width="980" height="336" alt="planet1")
     section.section.section--adventure
         .container
-            .adventure-block.js-tabs-wrapper
+            .adventure-block
                 .adventure-block__title.js-inview
                     h2.title.title--section.title--ttu.title--bold.title--white CHOOSE YOUR ADVENTURE
                 .adventure-block__top.js-inview
-                    .adv-item.js-open-adv.is-active
+                    .adv-item.js-open-adv.is-active(data-id="standart")
                         .adv-item__img
                             img(src='content/images/empty.gif' class="lazy" data-src="content/images/pics/adv1.svg" width="122" height="134" alt="planet1")
                         .adv-item__body STANDARD
-                    .adv-item.js-open-adv
+                    .adv-item.js-open-adv(data-id="swing")
                         .adv-item__img
                             img(src='content/images/empty.gif' class="lazy" data-src="content/images/pics/adv2.svg" width="193" height="193" alt="planet1")
                         .adv-item__body SWING
-                    .adv-item.js-open-adv
+                    .adv-item.js-open-adv(data-id="APOLLO")
                         .adv-item__img
                             img(src='content/images/empty.gif' class="lazy" data-src="content/images/pics/adv3.svg" width="122" height="172" alt="planet1")
                         .adv-item__body APOLLO 11
-                .adventure-block__tab-wrap
-                    .adventure-block__btns.js-inview
-                        a(href="#").button.button--def.button--white REGULAR CHALLENGE
-                        a(href="#").button.button--def.button--dark SWING CHALLENGE
-                    .adventure-block__tab-btns.js-inview
-                        .rocket-adv
-                            img(src="content/images/icons/mini-rocket.svg" width="62" height="32" alt="planet1")
-                        button.button.button--def-sec.button--gray.js-tabs-button(data-position="0").is-active 5K
-                        button.button.button--def-sec.button--gray.js-tabs-button(data-position="1") 10K
-                        button.button.button--def-sec.button--gray.js-tabs-button(data-position="2") 25K
-                        button.button.button--def-sec.button--gray.js-tabs-button(data-position="3") 50K
-                        button.button.button--def-sec.button--gray.js-tabs-button(data-position="4") 100K
-                        button.button.button--def-sec.button--gray.js-tabs-button(data-position="5") 200K
-                        button.button.button--def-sec.button--gray.js-tabs-button(data-position="6") 300K
-                .adventure-table.js-inview
-                    .adventure-table__body
-                        .swiper.js-adv-swiper
-                            .swiper-wrapper
-                                .swiper-slide
-                                    .adventure-table__item
-                                        .adventure-table__item-text FAKE TEXT
-                                        .adventure-table__item-text TRADING PERIOD
-                                        .adventure-table__item-text
-                                            span PROFIT TARGET
-                                        .adventure-table__item-text MAXIMUM DAILY LOSS
-                                        .adventure-table__item-text MAXIMUM TOTALLOSS
-                                        .adventure-table__item-text MAXIMUM TRADING DAYS
-                                        .adventure-table__item-text PROFIT SPLIT
-                                        .adventure-table__item-text LEVERAGE
-                                    .adventure-table__item
-                                        .adventure-table__item-text CHALLENGE
-                                        .adventure-table__item-text UNLIMITED
-                                        .adventure-table__item-text
-                                            span 8%
-                                        .adventure-table__item-text 5%
-                                        .adventure-table__item-text 10%
-                                        .adventure-table__item-text 5 DAYS
-                                        .adventure-table__item-text X
-                                        .adventure-table__item-text 1:100
-                                .swiper-slide
-                                    .adventure-table__item
-                                        .adventure-table__item-text VERIFICATION
-                                        .adventure-table__item-text UNLIMITED
-                                        .adventure-table__item-text
-                                            span 8%
-                                        .adventure-table__item-text 5%
-                                        .adventure-table__item-text 10%
-                                        .adventure-table__item-text 5 DAYS
-                                        .adventure-table__item-text X
-                                        .adventure-table__item-text 1:100
-                                    .adventure-table__item
-                                        .adventure-table__item-text CERTIFICATION
-                                        .adventure-table__item-text INDEFINITE
-                                        .adventure-table__item-text
-                                            span 8%
-                                        .adventure-table__item-text 5%
-                                        .adventure-table__item-text 10%
-                                        .adventure-table__item-text 5 DAYS
-                                        .adventure-table__item-text X
-                                        .adventure-table__item-text 1:100
-                .adventure-block__bottom.js-inview
-                    a(href="#").red-btn.red-btn--big
-                        .red-btn__text BUY NOW! $459
+                .adventure-block__section.js-tabs-wrapper.js-inview.js-block-adv(data-id="standart").is-active
+                    .adventure-block__tab-wrap
+                        .adventure-block__btns
+                            a(href="#").button.button--def.button--white REGULAR CHALLENGE
+                            a(href="#").button.button--def.button--dark SWING CHALLENGE
+                        .adventure-block__tab-btns
+                            .rocket-adv
+                                img(src="content/images/icons/mini-rocket.svg" width="62" height="32" alt="planet1")
+                            button.button.button--def-sec.button--gray.js-tabs-button(data-position="0" data-id="table0").opened 5K
+                            button.button.button--def-sec.button--gray.js-tabs-button(data-position="1" data-id="table1") 10K
+                            button.button.button--def-sec.button--gray.js-tabs-button(data-position="2" data-id="table2") 25K
+                            button.button.button--def-sec.button--gray.js-tabs-button(data-position="3" data-id="table3") 50K
+                            button.button.button--def-sec.button--gray.js-tabs-button(data-position="4" data-id="table4") 100K
+                            button.button.button--def-sec.button--gray.js-tabs-button(data-position="5" data-id="table5") 200K
+                            button.button.button--def-sec.button--gray.js-tabs-button(data-position="6" data-id="table6") 300K
+                        .swipe-mob
+                            img(src='content/images/icons/swipe.png' width="71" height="20")
+                    .adventure-wrap.js-tabs-block(data-id="table0").opened
+                        .adventure-table.js-inview
+                            .adventure-table__body
+                                .swiper.js-adv-swiper
+                                    .swiper-wrapper
+                                        .swiper-slide
+                                            .adventure-table__item
+                                                .adventure-table__item-text FAKE TEXT
+                                                .adventure-table__item-text TRADING PERIOD
+                                                .adventure-table__item-text
+                                                    span PROFIT TARGET
+                                                .adventure-table__item-text MAXIMUM DAILY LOSS
+                                                .adventure-table__item-text MAXIMUM TOTALLOSS
+                                                .adventure-table__item-text MAXIMUM TRADING DAYS
+                                                .adventure-table__item-text PROFIT SPLIT
+                                                .adventure-table__item-text LEVERAGE
+                                            .adventure-table__item
+                                                .adventure-table__item-text CHALLENGE
+                                                .adventure-table__item-text UNLIMITED
+                                                .adventure-table__item-text
+                                                    span 8%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 10%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                                        .swiper-slide
+                                            .adventure-table__item
+                                                .adventure-table__item-text VERIFICATION
+                                                .adventure-table__item-text UNLIMITED
+                                                .adventure-table__item-text
+                                                    span 8%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 10%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                                            .adventure-table__item
+                                                .adventure-table__item-text CERTIFICATION
+                                                .adventure-table__item-text INDEFINITE
+                                                .adventure-table__item-text
+                                                    span 8%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 10%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                            .swiper-button-next.adventure-table__arrow.js-adv-next
+                                img(src='content/images/icons/next.svg' width="16" height="12")
+                            .swiper-button-prev.adventure-table__arrow.js-adv-prev
+                                img(src='content/images/icons/prev.svg' width="16" height="12")
+                        .adventure-block__bottom.js-inview
+                            a(href="#").red-btn.red-btn--big
+                                .red-btn__text BUY NOW! $459
+                    // sec
+                    .adventure-wrap.js-tabs-block(data-id="table1")
+                        .adventure-table.js-inview
+                            .adventure-table__body
+                                .swiper.js-adv-swiper
+                                    .swiper-wrapper
+                                        .swiper-slide
+                                            .adventure-table__item
+                                                .adventure-table__item-text FAKE TEXT
+                                                .adventure-table__item-text TRADING PERIOD
+                                                .adventure-table__item-text
+                                                    span PROFIT TARGET
+                                                .adventure-table__item-text MAXIMUM DAILY LOSS
+                                                .adventure-table__item-text MAXIMUM TOTALLOSS
+                                                .adventure-table__item-text MAXIMUM TRADING DAYS
+                                                .adventure-table__item-text PROFIT SPLIT
+                                                .adventure-table__item-text LEVERAGE
+                                            .adventure-table__item
+                                                .adventure-table__item-text CHALLENGE
+                                                .adventure-table__item-text UNLIMITED
+                                                .adventure-table__item-text
+                                                    span 10%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 10%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                                        .swiper-slide
+                                            .adventure-table__item
+                                                .adventure-table__item-text VERIFICATION
+                                                .adventure-table__item-text UNLIMITED
+                                                .adventure-table__item-text
+                                                    span 10%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 10%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                                            .adventure-table__item
+                                                .adventure-table__item-text CERTIFICATION
+                                                .adventure-table__item-text INDEFINITE
+                                                .adventure-table__item-text
+                                                    span 10%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 10%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                            .swiper-button-next.adventure-table__arrow.js-adv-next
+                                img(src='content/images/icons/next.svg' width="16" height="12")
+                            .swiper-button-prev.adventure-table__arrow.js-adv-prev
+                                img(src='content/images/icons/prev.svg' width="16" height="12")
+                        .adventure-block__bottom.js-inview
+                            a(href="#").red-btn.red-btn--big
+                                .red-btn__text BUY NOW! $559
+
+                    // third
+                    .adventure-wrap.js-tabs-block(data-id="table2")
+                        .adventure-table.js-inview
+                            .adventure-table__body
+                                .swiper.js-adv-swiper
+                                    .swiper-wrapper
+                                        .swiper-slide
+                                            .adventure-table__item
+                                                .adventure-table__item-text FAKE TEXT
+                                                .adventure-table__item-text TRADING PERIOD
+                                                .adventure-table__item-text
+                                                    span PROFIT TARGET
+                                                .adventure-table__item-text MAXIMUM DAILY LOSS
+                                                .adventure-table__item-text MAXIMUM TOTALLOSS
+                                                .adventure-table__item-text MAXIMUM TRADING DAYS
+                                                .adventure-table__item-text PROFIT SPLIT
+                                                .adventure-table__item-text LEVERAGE
+                                            .adventure-table__item
+                                                .adventure-table__item-text CHALLENGE
+                                                .adventure-table__item-text UNLIMITED
+                                                .adventure-table__item-text
+                                                    span 10%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 25%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                                        .swiper-slide
+                                            .adventure-table__item
+                                                .adventure-table__item-text VERIFICATION
+                                                .adventure-table__item-text UNLIMITED
+                                                .adventure-table__item-text
+                                                    span 25%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 25%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                                            .adventure-table__item
+                                                .adventure-table__item-text CERTIFICATION
+                                                .adventure-table__item-text INDEFINITE
+                                                .adventure-table__item-text
+                                                    span 25%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 25%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                            .swiper-button-next.adventure-table__arrow.js-adv-next
+                                img(src='content/images/icons/next.svg' width="16" height="12")
+                            .swiper-button-prev.adventure-table__arrow.js-adv-prev
+                                img(src='content/images/icons/prev.svg' width="16" height="12")
+                        .adventure-block__bottom.js-inview
+                            a(href="#").red-btn.red-btn--big
+                                .red-btn__text BUY NOW! $559
+                    // four
+                    .adventure-wrap.js-tabs-block(data-id="table3")
+                        .adventure-table.js-inview
+                            .adventure-table__body
+                                .swiper.js-adv-swiper
+                                    .swiper-wrapper
+                                        .swiper-slide
+                                            .adventure-table__item
+                                                .adventure-table__item-text FAKE TEXT
+                                                .adventure-table__item-text TRADING PERIOD
+                                                .adventure-table__item-text
+                                                    span PROFIT TARGET
+                                                .adventure-table__item-text MAXIMUM DAILY LOSS
+                                                .adventure-table__item-text MAXIMUM TOTALLOSS
+                                                .adventure-table__item-text MAXIMUM TRADING DAYS
+                                                .adventure-table__item-text PROFIT SPLIT
+                                                .adventure-table__item-text LEVERAGE
+                                            .adventure-table__item
+                                                .adventure-table__item-text CHALLENGE
+                                                .adventure-table__item-text UNLIMITED
+                                                .adventure-table__item-text
+                                                    span 10%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 50%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                                        .swiper-slide
+                                            .adventure-table__item
+                                                .adventure-table__item-text VERIFICATION
+                                                .adventure-table__item-text UNLIMITED
+                                                .adventure-table__item-text
+                                                    span 50%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 50%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                                            .adventure-table__item
+                                                .adventure-table__item-text CERTIFICATION
+                                                .adventure-table__item-text INDEFINITE
+                                                .adventure-table__item-text
+                                                    span 50%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 50%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                            .swiper-button-next.adventure-table__arrow.js-adv-next
+                                img(src='content/images/icons/next.svg' width="16" height="12")
+                            .swiper-button-prev.adventure-table__arrow.js-adv-prev
+                                img(src='content/images/icons/prev.svg' width="16" height="12")
+                        .adventure-block__bottom.js-inview
+                            a(href="#").red-btn.red-btn--big
+                                .red-btn__text BUY NOW! $800
+                    // five
+                    .adventure-wrap.js-tabs-block(data-id="table4")
+                        .adventure-table.js-inview
+                            .adventure-table__body
+                                .swiper.js-adv-swiper
+                                    .swiper-wrapper
+                                        .swiper-slide
+                                            .adventure-table__item
+                                                .adventure-table__item-text FAKE TEXT
+                                                .adventure-table__item-text TRADING PERIOD
+                                                .adventure-table__item-text
+                                                    span PROFIT TARGET
+                                                .adventure-table__item-text MAXIMUM DAILY LOSS
+                                                .adventure-table__item-text MAXIMUM TOTALLOSS
+                                                .adventure-table__item-text MAXIMUM TRADING DAYS
+                                                .adventure-table__item-text PROFIT SPLIT
+                                                .adventure-table__item-text LEVERAGE
+                                            .adventure-table__item
+                                                .adventure-table__item-text CHALLENGE
+                                                .adventure-table__item-text UNLIMITED
+                                                .adventure-table__item-text
+                                                    span 100%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 50%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                                        .swiper-slide
+                                            .adventure-table__item
+                                                .adventure-table__item-text VERIFICATION
+                                                .adventure-table__item-text UNLIMITED
+                                                .adventure-table__item-text
+                                                    span 100%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 100%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                                            .adventure-table__item
+                                                .adventure-table__item-text CERTIFICATION
+                                                .adventure-table__item-text INDEFINITE
+                                                .adventure-table__item-text
+                                                    span 100%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 50%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                            .swiper-button-next.adventure-table__arrow.js-adv-next
+                                img(src='content/images/icons/next.svg' width="16" height="12")
+                            .swiper-button-prev.adventure-table__arrow.js-adv-prev
+                                img(src='content/images/icons/prev.svg' width="16" height="12")
+                        .adventure-block__bottom.js-inview
+                            a(href="#").red-btn.red-btn--big
+                                .red-btn__text BUY NOW! $1000
+                    // six
+                    .adventure-wrap.js-tabs-block(data-id="table5")
+                        .adventure-table.js-inview
+                            .adventure-table__body
+                                .swiper.js-adv-swiper
+                                    .swiper-wrapper
+                                        .swiper-slide
+                                            .adventure-table__item
+                                                .adventure-table__item-text FAKE TEXT
+                                                .adventure-table__item-text TRADING PERIOD
+                                                .adventure-table__item-text
+                                                    span PROFIT TARGET
+                                                .adventure-table__item-text MAXIMUM DAILY LOSS
+                                                .adventure-table__item-text MAXIMUM TOTALLOSS
+                                                .adventure-table__item-text MAXIMUM TRADING DAYS
+                                                .adventure-table__item-text PROFIT SPLIT
+                                                .adventure-table__item-text LEVERAGE
+                                            .adventure-table__item
+                                                .adventure-table__item-text CHALLENGE
+                                                .adventure-table__item-text UNLIMITED
+                                                .adventure-table__item-text
+                                                    span 200%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 50%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                                        .swiper-slide
+                                            .adventure-table__item
+                                                .adventure-table__item-text VERIFICATION
+                                                .adventure-table__item-text UNLIMITED
+                                                .adventure-table__item-text
+                                                    span 200%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 200%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                                            .adventure-table__item
+                                                .adventure-table__item-text CERTIFICATION
+                                                .adventure-table__item-text INDEFINITE
+                                                .adventure-table__item-text
+                                                    span 200%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 50%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                            .swiper-button-next.adventure-table__arrow.js-adv-next
+                                img(src='content/images/icons/next.svg' width="16" height="12")
+                            .swiper-button-prev.adventure-table__arrow.js-adv-prev
+                                img(src='content/images/icons/prev.svg' width="16" height="12")
+                        .adventure-block__bottom.js-inview
+                            a(href="#").red-btn.red-btn--big
+                                .red-btn__text BUY NOW! $1200
+                    // seven
+                    .adventure-wrap.js-tabs-block(data-id="table6")
+                        .adventure-table.js-inview
+                            .adventure-table__body
+                                .swiper.js-adv-swiper
+                                    .swiper-wrapper
+                                        .swiper-slide
+                                            .adventure-table__item
+                                                .adventure-table__item-text FAKE TEXT
+                                                .adventure-table__item-text TRADING PERIOD
+                                                .adventure-table__item-text
+                                                    span PROFIT TARGET
+                                                .adventure-table__item-text MAXIMUM DAILY LOSS
+                                                .adventure-table__item-text MAXIMUM TOTALLOSS
+                                                .adventure-table__item-text MAXIMUM TRADING DAYS
+                                                .adventure-table__item-text PROFIT SPLIT
+                                                .adventure-table__item-text LEVERAGE
+                                            .adventure-table__item
+                                                .adventure-table__item-text CHALLENGE
+                                                .adventure-table__item-text UNLIMITED
+                                                .adventure-table__item-text
+                                                    span 200%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 50%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                                        .swiper-slide
+                                            .adventure-table__item
+                                                .adventure-table__item-text VERIFICATION
+                                                .adventure-table__item-text UNLIMITED
+                                                .adventure-table__item-text
+                                                    span 200%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 200%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                                            .adventure-table__item
+                                                .adventure-table__item-text CERTIFICATION
+                                                .adventure-table__item-text INDEFINITE
+                                                .adventure-table__item-text
+                                                    span 200%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 50%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                            .swiper-button-next.adventure-table__arrow.js-adv-next
+                                img(src='content/images/icons/next.svg' width="16" height="12")
+                            .swiper-button-prev.adventure-table__arrow.js-adv-prev
+                                img(src='content/images/icons/prev.svg' width="16" height="12")
+                        .adventure-block__bottom.js-inview
+                            a(href="#").red-btn.red-btn--big
+                                .red-btn__text BUY NOW! $1200
+                .adventure-block__section.js-tabs-wrapper.js-inview.js-block-adv(data-id="swing")
+                    .adventure-block__tab-wrap
+                        .adventure-block__btns
+                            a(href="#").button.button--def.button--white REGULAR CHALLENGE
+                            a(href="#").button.button--def.button--dark SWING CHALLENGE
+                        .adventure-block__tab-btns
+                            .rocket-adv
+                                img(src="content/images/icons/mini-rocket.svg" width="62" height="32" alt="planet1")
+                            button.button.button--def-sec.button--gray.js-tabs-button(data-position="0" data-id="table0").opened 5K
+                            button.button.button--def-sec.button--gray.js-tabs-button(data-position="1" data-id="table1") 10K
+                            button.button.button--def-sec.button--gray.js-tabs-button(data-position="2" data-id="table2") 25K
+                            button.button.button--def-sec.button--gray.js-tabs-button(data-position="3" data-id="table3") 50K
+                            button.button.button--def-sec.button--gray.js-tabs-button(data-position="4" data-id="table4") 100K
+                            button.button.button--def-sec.button--gray.js-tabs-button(data-position="5" data-id="table5") 200K
+                            button.button.button--def-sec.button--gray.js-tabs-button(data-position="6" data-id="table6") 300K
+                        .swipe-mob
+                            img(src='content/images/icons/swipe.png' width="71" height="20")
+                    .adventure-wrap.js-tabs-block(data-id="table0").opened
+                        .adventure-table.js-inview
+                            .adventure-table__body
+                                .swiper.js-adv-swiper
+                                    .swiper-wrapper
+                                        .swiper-slide
+                                            .adventure-table__item
+                                                .adventure-table__item-text FAKE TEXT
+                                                .adventure-table__item-text TRADING PERIOD
+                                                .adventure-table__item-text
+                                                    span PROFIT TARGET
+                                                .adventure-table__item-text MAXIMUM DAILY LOSS
+                                                .adventure-table__item-text MAXIMUM TOTALLOSS
+                                                .adventure-table__item-text MAXIMUM TRADING DAYS
+                                                .adventure-table__item-text PROFIT SPLIT
+                                                .adventure-table__item-text LEVERAGE
+                                            .adventure-table__item
+                                                .adventure-table__item-text CHALLENGE
+                                                .adventure-table__item-text UNLIMITED
+                                                .adventure-table__item-text
+                                                    span 8%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 10%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                                        .swiper-slide
+                                            .adventure-table__item
+                                                .adventure-table__item-text VERIFICATION
+                                                .adventure-table__item-text UNLIMITED
+                                                .adventure-table__item-text
+                                                    span 8%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 10%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                                            .adventure-table__item
+                                                .adventure-table__item-text CERTIFICATION
+                                                .adventure-table__item-text INDEFINITE
+                                                .adventure-table__item-text
+                                                    span 8%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 10%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                            .swiper-button-next.adventure-table__arrow.js-adv-next
+                                img(src='content/images/icons/next.svg' width="16" height="12")
+                            .swiper-button-prev.adventure-table__arrow.js-adv-prev
+                                img(src='content/images/icons/prev.svg' width="16" height="12")
+                        .adventure-block__bottom.js-inview
+                            a(href="#").red-btn.red-btn--big
+                                .red-btn__text BUY NOW! $459
+                    // sec
+                    .adventure-wrap.js-tabs-block(data-id="table1")
+                        .adventure-table.js-inview
+                            .adventure-table__body
+                                .swiper.js-adv-swiper
+                                    .swiper-wrapper
+                                        .swiper-slide
+                                            .adventure-table__item
+                                                .adventure-table__item-text FAKE TEXT
+                                                .adventure-table__item-text TRADING PERIOD
+                                                .adventure-table__item-text
+                                                    span PROFIT TARGET
+                                                .adventure-table__item-text MAXIMUM DAILY LOSS
+                                                .adventure-table__item-text MAXIMUM TOTALLOSS
+                                                .adventure-table__item-text MAXIMUM TRADING DAYS
+                                                .adventure-table__item-text PROFIT SPLIT
+                                                .adventure-table__item-text LEVERAGE
+                                            .adventure-table__item
+                                                .adventure-table__item-text CHALLENGE
+                                                .adventure-table__item-text UNLIMITED
+                                                .adventure-table__item-text
+                                                    span 10%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 10%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                                        .swiper-slide
+                                            .adventure-table__item
+                                                .adventure-table__item-text VERIFICATION
+                                                .adventure-table__item-text UNLIMITED
+                                                .adventure-table__item-text
+                                                    span 10%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 10%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                                            .adventure-table__item
+                                                .adventure-table__item-text CERTIFICATION
+                                                .adventure-table__item-text INDEFINITE
+                                                .adventure-table__item-text
+                                                    span 10%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 10%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                            .swiper-button-next.adventure-table__arrow.js-adv-next
+                                img(src='content/images/icons/next.svg' width="16" height="12")
+                            .swiper-button-prev.adventure-table__arrow.js-adv-prev
+                                img(src='content/images/icons/prev.svg' width="16" height="12")
+                        .adventure-block__bottom.js-inview
+                            a(href="#").red-btn.red-btn--big
+                                .red-btn__text BUY NOW! $559
+
+                    // third
+                    .adventure-wrap.js-tabs-block(data-id="table2")
+                        .adventure-table.js-inview
+                            .adventure-table__body
+                                .swiper.js-adv-swiper
+                                    .swiper-wrapper
+                                        .swiper-slide
+                                            .adventure-table__item
+                                                .adventure-table__item-text FAKE TEXT
+                                                .adventure-table__item-text TRADING PERIOD
+                                                .adventure-table__item-text
+                                                    span PROFIT TARGET
+                                                .adventure-table__item-text MAXIMUM DAILY LOSS
+                                                .adventure-table__item-text MAXIMUM TOTALLOSS
+                                                .adventure-table__item-text MAXIMUM TRADING DAYS
+                                                .adventure-table__item-text PROFIT SPLIT
+                                                .adventure-table__item-text LEVERAGE
+                                            .adventure-table__item
+                                                .adventure-table__item-text CHALLENGE
+                                                .adventure-table__item-text UNLIMITED
+                                                .adventure-table__item-text
+                                                    span 10%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 25%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                                        .swiper-slide
+                                            .adventure-table__item
+                                                .adventure-table__item-text VERIFICATION
+                                                .adventure-table__item-text UNLIMITED
+                                                .adventure-table__item-text
+                                                    span 25%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 25%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                                            .adventure-table__item
+                                                .adventure-table__item-text CERTIFICATION
+                                                .adventure-table__item-text INDEFINITE
+                                                .adventure-table__item-text
+                                                    span 25%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 25%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                            .swiper-button-next.adventure-table__arrow.js-adv-next
+                                img(src='content/images/icons/next.svg' width="16" height="12")
+                            .swiper-button-prev.adventure-table__arrow.js-adv-prev
+                                img(src='content/images/icons/prev.svg' width="16" height="12")
+                        .adventure-block__bottom.js-inview
+                            a(href="#").red-btn.red-btn--big
+                                .red-btn__text BUY NOW! $559
+                    // four
+                    .adventure-wrap.js-tabs-block(data-id="table3")
+                        .adventure-table.js-inview
+                            .adventure-table__body
+                                .swiper.js-adv-swiper
+                                    .swiper-wrapper
+                                        .swiper-slide
+                                            .adventure-table__item
+                                                .adventure-table__item-text FAKE TEXT
+                                                .adventure-table__item-text TRADING PERIOD
+                                                .adventure-table__item-text
+                                                    span PROFIT TARGET
+                                                .adventure-table__item-text MAXIMUM DAILY LOSS
+                                                .adventure-table__item-text MAXIMUM TOTALLOSS
+                                                .adventure-table__item-text MAXIMUM TRADING DAYS
+                                                .adventure-table__item-text PROFIT SPLIT
+                                                .adventure-table__item-text LEVERAGE
+                                            .adventure-table__item
+                                                .adventure-table__item-text CHALLENGE
+                                                .adventure-table__item-text UNLIMITED
+                                                .adventure-table__item-text
+                                                    span 10%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 50%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                                        .swiper-slide
+                                            .adventure-table__item
+                                                .adventure-table__item-text VERIFICATION
+                                                .adventure-table__item-text UNLIMITED
+                                                .adventure-table__item-text
+                                                    span 50%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 50%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                                            .adventure-table__item
+                                                .adventure-table__item-text CERTIFICATION
+                                                .adventure-table__item-text INDEFINITE
+                                                .adventure-table__item-text
+                                                    span 50%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 50%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                            .swiper-button-next.adventure-table__arrow.js-adv-next
+                                img(src='content/images/icons/next.svg' width="16" height="12")
+                            .swiper-button-prev.adventure-table__arrow.js-adv-prev
+                                img(src='content/images/icons/prev.svg' width="16" height="12")
+                        .adventure-block__bottom.js-inview
+                            a(href="#").red-btn.red-btn--big
+                                .red-btn__text BUY NOW! $800
+                    // five
+                    .adventure-wrap.js-tabs-block(data-id="table4")
+                        .adventure-table.js-inview
+                            .adventure-table__body
+                                .swiper.js-adv-swiper
+                                    .swiper-wrapper
+                                        .swiper-slide
+                                            .adventure-table__item
+                                                .adventure-table__item-text FAKE TEXT
+                                                .adventure-table__item-text TRADING PERIOD
+                                                .adventure-table__item-text
+                                                    span PROFIT TARGET
+                                                .adventure-table__item-text MAXIMUM DAILY LOSS
+                                                .adventure-table__item-text MAXIMUM TOTALLOSS
+                                                .adventure-table__item-text MAXIMUM TRADING DAYS
+                                                .adventure-table__item-text PROFIT SPLIT
+                                                .adventure-table__item-text LEVERAGE
+                                            .adventure-table__item
+                                                .adventure-table__item-text CHALLENGE
+                                                .adventure-table__item-text UNLIMITED
+                                                .adventure-table__item-text
+                                                    span 100%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 50%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                                        .swiper-slide
+                                            .adventure-table__item
+                                                .adventure-table__item-text VERIFICATION
+                                                .adventure-table__item-text UNLIMITED
+                                                .adventure-table__item-text
+                                                    span 100%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 100%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                                            .adventure-table__item
+                                                .adventure-table__item-text CERTIFICATION
+                                                .adventure-table__item-text INDEFINITE
+                                                .adventure-table__item-text
+                                                    span 100%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 50%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                            .swiper-button-next.adventure-table__arrow.js-adv-next
+                                img(src='content/images/icons/next.svg' width="16" height="12")
+                            .swiper-button-prev.adventure-table__arrow.js-adv-prev
+                                img(src='content/images/icons/prev.svg' width="16" height="12")
+                        .adventure-block__bottom.js-inview
+                            a(href="#").red-btn.red-btn--big
+                                .red-btn__text BUY NOW! $1000
+                    // six
+                    .adventure-wrap.js-tabs-block(data-id="table5")
+                        .adventure-table.js-inview
+                            .adventure-table__body
+                                .swiper.js-adv-swiper
+                                    .swiper-wrapper
+                                        .swiper-slide
+                                            .adventure-table__item
+                                                .adventure-table__item-text FAKE TEXT
+                                                .adventure-table__item-text TRADING PERIOD
+                                                .adventure-table__item-text
+                                                    span PROFIT TARGET
+                                                .adventure-table__item-text MAXIMUM DAILY LOSS
+                                                .adventure-table__item-text MAXIMUM TOTALLOSS
+                                                .adventure-table__item-text MAXIMUM TRADING DAYS
+                                                .adventure-table__item-text PROFIT SPLIT
+                                                .adventure-table__item-text LEVERAGE
+                                            .adventure-table__item
+                                                .adventure-table__item-text CHALLENGE
+                                                .adventure-table__item-text UNLIMITED
+                                                .adventure-table__item-text
+                                                    span 200%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 50%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                                        .swiper-slide
+                                            .adventure-table__item
+                                                .adventure-table__item-text VERIFICATION
+                                                .adventure-table__item-text UNLIMITED
+                                                .adventure-table__item-text
+                                                    span 200%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 200%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                                            .adventure-table__item
+                                                .adventure-table__item-text CERTIFICATION
+                                                .adventure-table__item-text INDEFINITE
+                                                .adventure-table__item-text
+                                                    span 200%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 50%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                            .swiper-button-next.adventure-table__arrow.js-adv-next
+                                img(src='content/images/icons/next.svg' width="16" height="12")
+                            .swiper-button-prev.adventure-table__arrow.js-adv-prev
+                                img(src='content/images/icons/prev.svg' width="16" height="12")
+                        .adventure-block__bottom.js-inview
+                            a(href="#").red-btn.red-btn--big
+                                .red-btn__text BUY NOW! $1200
+                    // seven
+                    .adventure-wrap.js-tabs-block(data-id="table6")
+                        .adventure-table.js-inview
+                            .adventure-table__body
+                                .swiper.js-adv-swiper
+                                    .swiper-wrapper
+                                        .swiper-slide
+                                            .adventure-table__item
+                                                .adventure-table__item-text FAKE TEXT
+                                                .adventure-table__item-text TRADING PERIOD
+                                                .adventure-table__item-text
+                                                    span PROFIT TARGET
+                                                .adventure-table__item-text MAXIMUM DAILY LOSS
+                                                .adventure-table__item-text MAXIMUM TOTALLOSS
+                                                .adventure-table__item-text MAXIMUM TRADING DAYS
+                                                .adventure-table__item-text PROFIT SPLIT
+                                                .adventure-table__item-text LEVERAGE
+                                            .adventure-table__item
+                                                .adventure-table__item-text CHALLENGE
+                                                .adventure-table__item-text UNLIMITED
+                                                .adventure-table__item-text
+                                                    span 200%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 50%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                                        .swiper-slide
+                                            .adventure-table__item
+                                                .adventure-table__item-text VERIFICATION
+                                                .adventure-table__item-text UNLIMITED
+                                                .adventure-table__item-text
+                                                    span 200%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 200%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                                            .adventure-table__item
+                                                .adventure-table__item-text CERTIFICATION
+                                                .adventure-table__item-text INDEFINITE
+                                                .adventure-table__item-text
+                                                    span 200%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 50%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                            .swiper-button-next.adventure-table__arrow.js-adv-next
+                                img(src='content/images/icons/next.svg' width="16" height="12")
+                            .swiper-button-prev.adventure-table__arrow.js-adv-prev
+                                img(src='content/images/icons/prev.svg' width="16" height="12")
+                        .adventure-block__bottom.js-inview
+                            a(href="#").red-btn.red-btn--big
+                                .red-btn__text BUY NOW! $1200
+                .adventure-block__section.js-tabs-wrapper.js-inview.js-block-adv(data-id="APOLLO")
+                    .adventure-block__tab-wrap
+                        .adventure-block__btns
+                            a(href="#").button.button--def.button--white REGULAR CHALLENGE
+                            a(href="#").button.button--def.button--dark SWING CHALLENGE
+                        .adventure-block__tab-btns
+                            .rocket-adv
+                                img(src="content/images/icons/mini-rocket.svg" width="62" height="32" alt="planet1")
+                            button.button.button--def-sec.button--gray.js-tabs-button(data-position="0" data-id="table0").opened 5K
+                            button.button.button--def-sec.button--gray.js-tabs-button(data-position="1" data-id="table1") 10K
+                            button.button.button--def-sec.button--gray.js-tabs-button(data-position="2" data-id="table2") 25K
+                            button.button.button--def-sec.button--gray.js-tabs-button(data-position="3" data-id="table3") 50K
+                            button.button.button--def-sec.button--gray.js-tabs-button(data-position="4" data-id="table4") 100K
+                            button.button.button--def-sec.button--gray.js-tabs-button(data-position="5" data-id="table5") 200K
+                            button.button.button--def-sec.button--gray.js-tabs-button(data-position="6" data-id="table6") 300K
+                        .swipe-mob
+                            img(src='content/images/icons/swipe.png' width="71" height="20")
+                    .adventure-wrap.js-tabs-block(data-id="table0").opened
+                        .adventure-table.js-inview
+                            .adventure-table__body
+                                .swiper.js-adv-swiper
+                                    .swiper-wrapper
+                                        .swiper-slide
+                                            .adventure-table__item
+                                                .adventure-table__item-text FAKE TEXT
+                                                .adventure-table__item-text TRADING PERIOD
+                                                .adventure-table__item-text
+                                                    span PROFIT TARGET
+                                                .adventure-table__item-text MAXIMUM DAILY LOSS
+                                                .adventure-table__item-text MAXIMUM TOTALLOSS
+                                                .adventure-table__item-text MAXIMUM TRADING DAYS
+                                                .adventure-table__item-text PROFIT SPLIT
+                                                .adventure-table__item-text LEVERAGE
+                                            .adventure-table__item
+                                                .adventure-table__item-text CHALLENGE
+                                                .adventure-table__item-text UNLIMITED
+                                                .adventure-table__item-text
+                                                    span 8%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 10%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                                        .swiper-slide
+                                            .adventure-table__item
+                                                .adventure-table__item-text VERIFICATION
+                                                .adventure-table__item-text UNLIMITED
+                                                .adventure-table__item-text
+                                                    span 8%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 10%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                                            .adventure-table__item
+                                                .adventure-table__item-text CERTIFICATION
+                                                .adventure-table__item-text INDEFINITE
+                                                .adventure-table__item-text
+                                                    span 8%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 10%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                            .swiper-button-next.adventure-table__arrow.js-adv-next
+                                img(src='content/images/icons/next.svg' width="16" height="12")
+                            .swiper-button-prev.adventure-table__arrow.js-adv-prev
+                                img(src='content/images/icons/prev.svg' width="16" height="12")
+                        .adventure-block__bottom.js-inview
+                            a(href="#").red-btn.red-btn--big
+                                .red-btn__text BUY NOW! $459
+                    // sec
+                    .adventure-wrap.js-tabs-block(data-id="table1")
+                        .adventure-table.js-inview
+                            .adventure-table__body
+                                .swiper.js-adv-swiper
+                                    .swiper-wrapper
+                                        .swiper-slide
+                                            .adventure-table__item
+                                                .adventure-table__item-text FAKE TEXT
+                                                .adventure-table__item-text TRADING PERIOD
+                                                .adventure-table__item-text
+                                                    span PROFIT TARGET
+                                                .adventure-table__item-text MAXIMUM DAILY LOSS
+                                                .adventure-table__item-text MAXIMUM TOTALLOSS
+                                                .adventure-table__item-text MAXIMUM TRADING DAYS
+                                                .adventure-table__item-text PROFIT SPLIT
+                                                .adventure-table__item-text LEVERAGE
+                                            .adventure-table__item
+                                                .adventure-table__item-text CHALLENGE
+                                                .adventure-table__item-text UNLIMITED
+                                                .adventure-table__item-text
+                                                    span 10%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 10%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                                        .swiper-slide
+                                            .adventure-table__item
+                                                .adventure-table__item-text VERIFICATION
+                                                .adventure-table__item-text UNLIMITED
+                                                .adventure-table__item-text
+                                                    span 10%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 10%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                                            .adventure-table__item
+                                                .adventure-table__item-text CERTIFICATION
+                                                .adventure-table__item-text INDEFINITE
+                                                .adventure-table__item-text
+                                                    span 10%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 10%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                            .swiper-button-next.adventure-table__arrow.js-adv-next
+                                img(src='content/images/icons/next.svg' width="16" height="12")
+                            .swiper-button-prev.adventure-table__arrow.js-adv-prev
+                                img(src='content/images/icons/prev.svg' width="16" height="12")
+                        .adventure-block__bottom.js-inview
+                            a(href="#").red-btn.red-btn--big
+                                .red-btn__text BUY NOW! $559
+
+                    // third
+                    .adventure-wrap.js-tabs-block(data-id="table2")
+                        .adventure-table.js-inview
+                            .adventure-table__body
+                                .swiper.js-adv-swiper
+                                    .swiper-wrapper
+                                        .swiper-slide
+                                            .adventure-table__item
+                                                .adventure-table__item-text FAKE TEXT
+                                                .adventure-table__item-text TRADING PERIOD
+                                                .adventure-table__item-text
+                                                    span PROFIT TARGET
+                                                .adventure-table__item-text MAXIMUM DAILY LOSS
+                                                .adventure-table__item-text MAXIMUM TOTALLOSS
+                                                .adventure-table__item-text MAXIMUM TRADING DAYS
+                                                .adventure-table__item-text PROFIT SPLIT
+                                                .adventure-table__item-text LEVERAGE
+                                            .adventure-table__item
+                                                .adventure-table__item-text CHALLENGE
+                                                .adventure-table__item-text UNLIMITED
+                                                .adventure-table__item-text
+                                                    span 10%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 25%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                                        .swiper-slide
+                                            .adventure-table__item
+                                                .adventure-table__item-text VERIFICATION
+                                                .adventure-table__item-text UNLIMITED
+                                                .adventure-table__item-text
+                                                    span 25%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 25%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                                            .adventure-table__item
+                                                .adventure-table__item-text CERTIFICATION
+                                                .adventure-table__item-text INDEFINITE
+                                                .adventure-table__item-text
+                                                    span 25%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 25%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                            .swiper-button-next.adventure-table__arrow.js-adv-next
+                                img(src='content/images/icons/next.svg' width="16" height="12")
+                            .swiper-button-prev.adventure-table__arrow.js-adv-prev
+                                img(src='content/images/icons/prev.svg' width="16" height="12")
+                        .adventure-block__bottom.js-inview
+                            a(href="#").red-btn.red-btn--big
+                                .red-btn__text BUY NOW! $559
+                    // four
+                    .adventure-wrap.js-tabs-block(data-id="table3")
+                        .adventure-table.js-inview
+                            .adventure-table__body
+                                .swiper.js-adv-swiper
+                                    .swiper-wrapper
+                                        .swiper-slide
+                                            .adventure-table__item
+                                                .adventure-table__item-text FAKE TEXT
+                                                .adventure-table__item-text TRADING PERIOD
+                                                .adventure-table__item-text
+                                                    span PROFIT TARGET
+                                                .adventure-table__item-text MAXIMUM DAILY LOSS
+                                                .adventure-table__item-text MAXIMUM TOTALLOSS
+                                                .adventure-table__item-text MAXIMUM TRADING DAYS
+                                                .adventure-table__item-text PROFIT SPLIT
+                                                .adventure-table__item-text LEVERAGE
+                                            .adventure-table__item
+                                                .adventure-table__item-text CHALLENGE
+                                                .adventure-table__item-text UNLIMITED
+                                                .adventure-table__item-text
+                                                    span 10%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 50%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                                        .swiper-slide
+                                            .adventure-table__item
+                                                .adventure-table__item-text VERIFICATION
+                                                .adventure-table__item-text UNLIMITED
+                                                .adventure-table__item-text
+                                                    span 50%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 50%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                                            .adventure-table__item
+                                                .adventure-table__item-text CERTIFICATION
+                                                .adventure-table__item-text INDEFINITE
+                                                .adventure-table__item-text
+                                                    span 50%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 50%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                            .swiper-button-next.adventure-table__arrow.js-adv-next
+                                img(src='content/images/icons/next.svg' width="16" height="12")
+                            .swiper-button-prev.adventure-table__arrow.js-adv-prev
+                                img(src='content/images/icons/prev.svg' width="16" height="12")
+                        .adventure-block__bottom.js-inview
+                            a(href="#").red-btn.red-btn--big
+                                .red-btn__text BUY NOW! $800
+                    // five
+                    .adventure-wrap.js-tabs-block(data-id="table4")
+                        .adventure-table.js-inview
+                            .adventure-table__body
+                                .swiper.js-adv-swiper
+                                    .swiper-wrapper
+                                        .swiper-slide
+                                            .adventure-table__item
+                                                .adventure-table__item-text FAKE TEXT
+                                                .adventure-table__item-text TRADING PERIOD
+                                                .adventure-table__item-text
+                                                    span PROFIT TARGET
+                                                .adventure-table__item-text MAXIMUM DAILY LOSS
+                                                .adventure-table__item-text MAXIMUM TOTALLOSS
+                                                .adventure-table__item-text MAXIMUM TRADING DAYS
+                                                .adventure-table__item-text PROFIT SPLIT
+                                                .adventure-table__item-text LEVERAGE
+                                            .adventure-table__item
+                                                .adventure-table__item-text CHALLENGE
+                                                .adventure-table__item-text UNLIMITED
+                                                .adventure-table__item-text
+                                                    span 100%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 50%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                                        .swiper-slide
+                                            .adventure-table__item
+                                                .adventure-table__item-text VERIFICATION
+                                                .adventure-table__item-text UNLIMITED
+                                                .adventure-table__item-text
+                                                    span 100%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 100%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                                            .adventure-table__item
+                                                .adventure-table__item-text CERTIFICATION
+                                                .adventure-table__item-text INDEFINITE
+                                                .adventure-table__item-text
+                                                    span 100%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 50%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                            .swiper-button-next.adventure-table__arrow.js-adv-next
+                                img(src='content/images/icons/next.svg' width="16" height="12")
+                            .swiper-button-prev.adventure-table__arrow.js-adv-prev
+                                img(src='content/images/icons/prev.svg' width="16" height="12")
+                        .adventure-block__bottom.js-inview
+                            a(href="#").red-btn.red-btn--big
+                                .red-btn__text BUY NOW! $1000
+                    // six
+                    .adventure-wrap.js-tabs-block(data-id="table5")
+                        .adventure-table.js-inview
+                            .adventure-table__body
+                                .swiper.js-adv-swiper
+                                    .swiper-wrapper
+                                        .swiper-slide
+                                            .adventure-table__item
+                                                .adventure-table__item-text FAKE TEXT
+                                                .adventure-table__item-text TRADING PERIOD
+                                                .adventure-table__item-text
+                                                    span PROFIT TARGET
+                                                .adventure-table__item-text MAXIMUM DAILY LOSS
+                                                .adventure-table__item-text MAXIMUM TOTALLOSS
+                                                .adventure-table__item-text MAXIMUM TRADING DAYS
+                                                .adventure-table__item-text PROFIT SPLIT
+                                                .adventure-table__item-text LEVERAGE
+                                            .adventure-table__item
+                                                .adventure-table__item-text CHALLENGE
+                                                .adventure-table__item-text UNLIMITED
+                                                .adventure-table__item-text
+                                                    span 200%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 50%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                                        .swiper-slide
+                                            .adventure-table__item
+                                                .adventure-table__item-text VERIFICATION
+                                                .adventure-table__item-text UNLIMITED
+                                                .adventure-table__item-text
+                                                    span 200%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 200%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                                            .adventure-table__item
+                                                .adventure-table__item-text CERTIFICATION
+                                                .adventure-table__item-text INDEFINITE
+                                                .adventure-table__item-text
+                                                    span 200%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 50%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                            .swiper-button-next.adventure-table__arrow.js-adv-next
+                                img(src='content/images/icons/next.svg' width="16" height="12")
+                            .swiper-button-prev.adventure-table__arrow.js-adv-prev
+                                img(src='content/images/icons/prev.svg' width="16" height="12")
+                        .adventure-block__bottom.js-inview
+                            a(href="#").red-btn.red-btn--big
+                                .red-btn__text BUY NOW! $1200
+                    // seven
+                    .adventure-wrap.js-tabs-block(data-id="table6")
+                        .adventure-table.js-inview
+                            .adventure-table__body
+                                .swiper.js-adv-swiper
+                                    .swiper-wrapper
+                                        .swiper-slide
+                                            .adventure-table__item
+                                                .adventure-table__item-text FAKE TEXT
+                                                .adventure-table__item-text TRADING PERIOD
+                                                .adventure-table__item-text
+                                                    span PROFIT TARGET
+                                                .adventure-table__item-text MAXIMUM DAILY LOSS
+                                                .adventure-table__item-text MAXIMUM TOTALLOSS
+                                                .adventure-table__item-text MAXIMUM TRADING DAYS
+                                                .adventure-table__item-text PROFIT SPLIT
+                                                .adventure-table__item-text LEVERAGE
+                                            .adventure-table__item
+                                                .adventure-table__item-text CHALLENGE
+                                                .adventure-table__item-text UNLIMITED
+                                                .adventure-table__item-text
+                                                    span 200%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 50%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                                        .swiper-slide
+                                            .adventure-table__item
+                                                .adventure-table__item-text VERIFICATION
+                                                .adventure-table__item-text UNLIMITED
+                                                .adventure-table__item-text
+                                                    span 200%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 200%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                                            .adventure-table__item
+                                                .adventure-table__item-text CERTIFICATION
+                                                .adventure-table__item-text INDEFINITE
+                                                .adventure-table__item-text
+                                                    span 200%
+                                                .adventure-table__item-text 5%
+                                                .adventure-table__item-text 50%
+                                                .adventure-table__item-text 5 DAYS
+                                                .adventure-table__item-text X
+                                                .adventure-table__item-text 1:100
+                            .swiper-button-next.adventure-table__arrow.js-adv-next
+                                img(src='content/images/icons/next.svg' width="16" height="12")
+                            .swiper-button-prev.adventure-table__arrow.js-adv-prev
+                                img(src='content/images/icons/prev.svg' width="16" height="12")
+                        .adventure-block__bottom.js-inview
+                            a(href="#").red-btn.red-btn--big
+                                .red-btn__text BUY NOW! $1200
     section.section.section--keys
         .section__mid
             span.js-inview KEY HIGHTLIGHTS
@@ -282,37 +1450,52 @@ block content
         .container.container--bigger
             .keys-block
                 .keys-block__list
-                    .keys-item.js-inview
-                        .keys-item__icon
-                            img(src='content/images/empty.gif' class="lazy" data-src="content/images/icons/key1.svg" width="41" height="41" alt="planet1")
-                        .keys-item__title COMPETITIVE TARGETS
-                        .keys-item__text
-                            span OUR PROFIT TARGETS TO ACHIEVE IN A SIMULATED  ENVIRONMENT ARE SOME OF THE MOST COMPETITIVE IN THE INDUSTRY
-                    .keys-item.js-inview
-                        .keys-item__icon
-                            img(src='content/images/empty.gif' class="lazy" data-src="content/images/icons/key2.svg" width="41" height="41" alt="planet1")
-                        .keys-item__title UNIQUE CHALLENGE FEATURES
-                        .keys-item__text
-                            span WE DIFFERENTIATED OUR PRODUCT WITH THE REVIVE FEATURE, A UNIQUE OFFERING THAT CAN ELEVATE YOUR EXPERIENCE
-                    .keys-item.js-inview
-                        .keys-item__icon
-                            img(src='content/images/empty.gif' class="lazy" data-src="content/images/icons/key3.svg" width="41" height="41" alt="planet1")
-                        .keys-item__title SCALING PLAN
-                        .keys-item__text
-                            span CONSISTENCY IS KEY.AFTER THREE CONSECUTIVE PROFITABLE MONTHS YOU CAN SCALE YOUR DEMO ACCOUNT UP TO 2 MILLION DOLLARS IN VIRTUAL FUNDS AND REACH NEW LEVELS
-                    .keys-item.js-inview
-                        .keys-item__title-sec K1
-                        .keys-item__text
-                            span OUR PRODUCTS WERE BUILT LEVERAGING DIRECT EXPERIENCE IN THE EXACT INDUSTRY WE OPERATE IN. FROM OUR REVIVE FEATURE TO OUR COMPETITIVE PRICING, WE STRIVE TO CONTINUOUSLY INNOVATE BY LISTENING TO OUR COMMUNITY – AS DEMONSTRATED BY OUR TRAVELS WORLDWIDE TO HEAR YOUR EXPERIENCES FIRSTHAND
-                    .keys-item.js-inview
-                        .keys-item__title-sec K2
-                        .keys-item__text
-                            span UNLOCK OUR SCALING PLAN TO EXPLORE POTENTIAL POSSIBILITIES ACCORDING TO THE SCALING PLAN, IF YOU ARE CONSISTENT, WE WILL BOOTS THE BALANCE OF YOUR ROCKET ACCOUNT BY 30% EVERY THREE MONTHS
-                    .keys-item.js-inview
-                        .keys-item__title-sec K3
-                        .keys-item__text
-                            span UNSURE OF THE GALAXY AHEAD? TRY OUR FREE COMPETITIONS, VARYING IN TRADING CONDITIONS FROM OUR CHALLENGES, TO GET A FEEL FOR OUR PRODUCT. ALONG WITH TRYING OUR PRODUCT, YOU CAN UNLOCK POTENTIAL PRIZES ALONG THE WAY
+                    .swiper.js-keys-swiper
+                        .swiper-wrapper
+                            .swiper-slide
+                                .keys-item.js-inview
+                                    .keys-item__icon
+                                        img(src='content/images/empty.gif' class="lazy" data-src="content/images/icons/key1.svg" width="41" height="41" alt="planet1")
+                                    .keys-item__title COMPETITIVE TARGETS
+                                    .keys-item__text
+                                        span OUR PROFIT TARGETS TO ACHIEVE IN A SIMULATED  ENVIRONMENT ARE SOME OF THE MOST COMPETITIVE IN THE INDUSTRY
+                            .swiper-slide
+                                .keys-item.js-inview
+                                    .keys-item__icon
+                                        img(src='content/images/empty.gif' class="lazy" data-src="content/images/icons/key2.svg" width="41" height="41" alt="planet1")
+                                    .keys-item__title UNIQUE CHALLENGE FEATURES
+                                    .keys-item__text
+                                        span WE DIFFERENTIATED OUR PRODUCT WITH THE REVIVE FEATURE, A UNIQUE OFFERING THAT CAN ELEVATE YOUR EXPERIENCE
+                            .swiper-slide
+                                .keys-item.js-inview
+                                    .keys-item__icon
+                                        img(src='content/images/empty.gif' class="lazy" data-src="content/images/icons/key3.svg" width="41" height="41" alt="planet1")
+                                    .keys-item__title SCALING PLAN
+                                    .keys-item__text
+                                        span CONSISTENCY IS KEY.AFTER THREE CONSECUTIVE PROFITABLE MONTHS YOU CAN SCALE YOUR DEMO ACCOUNT UP TO 2 MILLION DOLLARS IN VIRTUAL FUNDS AND REACH NEW LEVELS
+                    .swipe-mob
+                        img(src='content/images/icons/swipe.png' width="71" height="20")
+                .keys-block__list.js-keys-swiper
+                    .swiper.js-keys-swiper
+                        .swiper-wrapper
+                            .swiper-slide
+                                .keys-item.js-inview
+                                    .keys-item__title-sec K1
+                                    .keys-item__text
+                                        span OUR PRODUCTS WERE BUILT LEVERAGING DIRECT EXPERIENCE IN THE EXACT INDUSTRY WE OPERATE IN. FROM OUR REVIVE FEATURE TO OUR COMPETITIVE PRICING, WE STRIVE TO CONTINUOUSLY INNOVATE BY LISTENING TO OUR COMMUNITY – AS DEMONSTRATED BY OUR TRAVELS WORLDWIDE TO HEAR YOUR EXPERIENCES FIRSTHAND
+                            .swiper-slide
+                                .keys-item.js-inview
+                                    .keys-item__title-sec K2
+                                    .keys-item__text
+                                        span UNLOCK OUR SCALING PLAN TO EXPLORE POTENTIAL POSSIBILITIES ACCORDING TO THE SCALING PLAN, IF YOU ARE CONSISTENT, WE WILL BOOTS THE BALANCE OF YOUR ROCKET ACCOUNT BY 30% EVERY THREE MONTHS
+                            .swiper-slide
+                                .keys-item.js-inview
+                                    .keys-item__title-sec K3
+                                    .keys-item__text
+                                        span UNSURE OF THE GALAXY AHEAD? TRY OUR FREE COMPETITIONS, VARYING IN TRADING CONDITIONS FROM OUR CHALLENGES, TO GET A FEEL FOR OUR PRODUCT. ALONG WITH TRYING OUR PRODUCT, YOU CAN UNLOCK POTENTIAL PRIZES ALONG THE WAY
                 .keys-block__bottom
+                    .swipe-mob
+                        img(src='content/images/icons/swipe.png' width="71" height="20")
                     a(href="#").button.button--def.button--white REGISTER NOW
     section.section.section--program
         .container
@@ -320,7 +1503,7 @@ block content
                 .program-table__top.js-inview
                     h2.title.title--section.title--ttu.title--bold.title--white PROGRAM <br> COMPARISON
                 .program-table__body.js-inview
-                    .swiper.js-adv-swiper
+                    .swiper.js-prog-swiper
                         .swiper-wrapper
                             .swiper-slide
                                 .program-table__item
@@ -405,6 +1588,10 @@ block content
                                         img(src="content/images/icons/uncheck.svg" width="34" height="34" alt="planet1")
                                     .program-table__status
                                         img(src="content/images/icons/uncheck.svg" width="34" height="34" alt="planet1")
+                    .swiper-button-next.program-table__arrow.js-prog-next
+                        img(src='content/images/icons/next.svg' width="16" height="12")
+                    .swiper-button-prev.program-table__arrow.js-prog-prev
+                        img(src='content/images/icons/prev.svg' width="16" height="12")
     section.section.section--why
         .container
             .why-block
@@ -413,42 +1600,72 @@ block content
                     .simple-text
                         p COME AND JOIN US. OUR GOAL IS TO MAKE TRADING AS STRAIGHTFORWARD AS POSSIBLE. AS A RESULT, WE GIVE THE BEST TRADING COMMUNITY TO ASSIST OUR OUTSTANDING TRADERS.
                 .why-block__list
-                    -
-                        var wyse = [
-                            {
-                                icon: 'content/images/icons/w1.svg',
-                                title: 'CUSTOMER SUPPORT',
-                                text: 'OUR COSTUMER SERVICE TEAM IS AVAILABLE 24 HOURS A DAY, 7 DAYS A WEEK VIA EMAIL AND LIVE CHAT'
-                            }, {
-                                icon: 'content/images/icons/w2.svg',
-                                title: 'VIRTUAL <br> RISK',
-                                text: 'YOUR SIMULATED LOSSES ARE INSURED WHEN YOU WORK WITH US. TRADE WITHOUT THE RISK OF INCURRING DEBT'
-                            }, {
-                                icon: 'content/images/icons/w3.svg',
-                                title: 'INSTRUMENTS',
-                                text: 'THE FOLLOWING INSTRUMENTS ARE AVAILABLE TO ROCKET SIMULATED TRADERS. IN SIMULATED ENVIROMENTS, YOU CAN TRADE COMMODITIES, INDICES, AND OTHER CURRENCIES WITH NO LIMITS '
-                            }, {
-                                icon: 'content/images/icons/w3.svg',
-                                title: 'PAYMENT METHODS',
-                                text: 'WE ACCEPT CRYPTO CURRENCY MASTERCARD, AMERICAN EXPRESS, VISA AND DISCOVER PAYMENT METHODS.'
-                            }, {
-                                icon: 'content/images/icons/w4.svg',
-                                title: 'SWING <br> TRADING',
-                                text: 'TRADERS ARE PERMITTED TO HOLD SIMULATED TRADES TOWARDS THE END OF THE DAY AND ON WEEKENDS, ON OUR SWING ACCOUNTS.'
-                            },
-                            {
-                                icon: 'content/images/icons/w5.svg',
-                                title: 'SCALE UP',
-                                text: 'AFTER THREE MONTHS OF SUCCESSFUL USE OF YOUR ROCKET DEMO ACCOUNT, YOU WILL BE  INVITED TO SCALE YOUR DEMO ACCOUNT AND EXPAND YOUR GROWTH OPPORTUNITIES.'
-                            },
-                        ]
-                    each wyseItem in wyse
-                        .why-item.js-inview
-                            .why-item__body
-                                .why-item__icon
-                                    img(src='content/images/empty.gif' class="lazy" data-src=wyseItem.icon width="819" height="854" alt="planet1")
-                                .why-item__title !{wyseItem.title}
-                                .why-item__text !{wyseItem.text}
+                    .swiper.js-why-swiper
+                        .swiper-wrapper
+                            -
+                                var wyse1 = [
+                                    {
+                                        icon: 'content/images/icons/w1.svg',
+                                        title: 'CUSTOMER SUPPORT',
+                                        text: 'OUR COSTUMER SERVICE TEAM IS AVAILABLE 24 HOURS A DAY, 7 DAYS A WEEK VIA EMAIL AND LIVE CHAT'
+                                    }, {
+                                        icon: 'content/images/icons/w2.svg',
+                                        title: 'VIRTUAL <br> RISK',
+                                        text: 'YOUR SIMULATED LOSSES ARE INSURED WHEN YOU WORK WITH US. TRADE WITHOUT THE RISK OF INCURRING DEBT'
+                                    }
+                                ]
+                            -
+                                var wyse2 = [
+                                    {
+                                        icon: 'content/images/icons/w3.svg',
+                                        title: 'INSTRUMENTS',
+                                        text: 'THE FOLLOWING INSTRUMENTS ARE AVAILABLE TO ROCKET SIMULATED TRADERS. IN SIMULATED ENVIROMENTS, YOU CAN TRADE COMMODITIES, INDICES, AND OTHER CURRENCIES WITH NO LIMITS '
+                                    }, {
+                                        icon: 'content/images/icons/w3.svg',
+                                        title: 'PAYMENT METHODS',
+                                        text: 'WE ACCEPT CRYPTO CURRENCY MASTERCARD, AMERICAN EXPRESS, VISA AND DISCOVER PAYMENT METHODS.'
+                                    }
+                                ]
+                            -
+                                var wyse3 = [
+                                     {
+                                        icon: 'content/images/icons/w4.svg',
+                                        title: 'SWING <br> TRADING',
+                                        text: 'TRADERS ARE PERMITTED TO HOLD SIMULATED TRADES TOWARDS THE END OF THE DAY AND ON WEEKENDS, ON OUR SWING ACCOUNTS.'
+                                    },
+                                    {
+                                        icon: 'content/images/icons/w5.svg',
+                                        title: 'SCALE UP',
+                                        text: 'AFTER THREE MONTHS OF SUCCESSFUL USE OF YOUR ROCKET DEMO ACCOUNT, YOU WILL BE  INVITED TO SCALE YOUR DEMO ACCOUNT AND EXPAND YOUR GROWTH OPPORTUNITIES.'
+                                    },
+                                ]
+                            .swiper-slide
+                                each wyseItem in wyse1
+                                    .why-item.js-inview
+                                        .why-item__body
+                                            .why-item__icon
+                                                img(src='content/images/empty.gif' class="lazy" data-src=wyseItem.icon width="819" height="854" alt="planet1")
+                                            .why-item__title !{wyseItem.title}
+                                            .why-item__text !{wyseItem.text}
+                            .swiper-slide
+                                each wyseItem in wyse2
+                                    .why-item.js-inview
+                                        .why-item__body
+                                            .why-item__icon
+                                                img(src='content/images/empty.gif' class="lazy" data-src=wyseItem.icon width="819" height="854" alt="planet1")
+                                            .why-item__title !{wyseItem.title}
+                                            .why-item__text !{wyseItem.text}
+                            .swiper-slide
+                                each wyseItem in wyse3
+                                    .why-item.js-inview
+                                        .why-item__body
+                                            .why-item__icon
+                                                img(src='content/images/empty.gif' class="lazy" data-src=wyseItem.icon width="819" height="854" alt="planet1")
+                                            .why-item__title !{wyseItem.title}
+                                            .why-item__text !{wyseItem.text}
+
+                .swipe-mob
+                    img(src='content/images/icons/swipe.png' width="71" height="20")
     section.section.section--globe
         .section__img
             img(src='content/images/empty.gif' class="lazy" data-src="content/images/pics/gr.png" width="539" height="330" alt="planet1")
@@ -460,7 +1677,7 @@ block content
                         p TRADERS FROM ALL OVER THE WORLS ARE JOINING TO THE ROCKET 21 TEAM. JOIN US TO ROCKET YOUR RESULTS AND TO MAKE YOUR SIMULATED TRADING REACH NEW LEVELS
                     h3.title.title--small-mid.title--ttu.title--white WHERE DO THEY HEAR ABOUT US?
                 .globe-block__img.js-inview
-                    img(src='content/images/empty.gif' class="lazy" data-src="content/images/pics/man-planet.png" width="483" height="572" alt="planet1")
+                    img(src='content/images/empty.gif' class="lazy" data-src="content/images/pics/man-planet-test.png" width="483" height="572" alt="planet1")
     section.section.section--traders
         .container
             .traders-block
@@ -471,17 +1688,17 @@ block content
                         .swiper-wrapper
                             .swiper-slide
                                 .video-item
-                                    .video-item__play
+                                    .video-item__play(data-src="dQw4w9WgXcQ")
                                         img(src="content/images/icons/play.svg" width="100" height="100" alt="planet1")
                                     img(src='content/images/empty.gif' class="swiper-lazy" data-src="content/images/pics/video-pic.png" width="449" height="252" alt="planet1")
                             .swiper-slide
                                 .video-item
-                                    .video-item__play
+                                    .video-item__play(data-src="3JZ_D3ELwOQ")
                                         img(src="content/images/icons/play.svg" width="100" height="100" alt="planet1")
                                     img(src='content/images/empty.gif' class="swiper-lazy" data-src="content/images/pics/video-pic2.png" width="449" height="252" alt="planet1")
                             .swiper-slide
                                 .video-item
-                                    .video-item__play
+                                    .video-item__play(data-src="aqz-KE-bpKQ")
                                         img(src="content/images/icons/play.svg" width="100" height="100" alt="planet1")
                                     img(src='content/images/empty.gif' class="swiper-lazy" data-src="content/images/pics/video-pic3.png" width="449" height="252" alt="planet1")
                     .swiper-button-next.traders-block__arrow.js-video-next
@@ -496,6 +1713,8 @@ block content
     section.section.section--join
         .container
             .join-block(style="background-image: url(content/images/pics/scal-back.png)").js-inview
+                .join-block__bg
+                    img(src='content/images/pics/footer-test.png' width="732" height="732" alt="logo")
                 h2.title.title--section.title--ttu.title--bold.title--white JOIN OUR TEAM OF ROCKET TRADERS
                 .simple-text
                     p ACCEPT OUR ROCKET CHALLENGE AND BECOME A ROCKET TRADER IF YOU ARE READY. YOU CAN EVEN GO THOUGH THE ENTIRE PROCEDURE FOR FREE
