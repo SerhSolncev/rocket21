@@ -1,4 +1,94 @@
-mixin item(title, description)
-  .item
-    h2(class="item-title")= title
-    p(class="item-description")= description
+mixin header(name)
+  header.header.js-header
+    .container
+      .header__body
+        .logo.logo--header
+          picture
+            source(media='(min-width: 1025px)', srcset='content/images/icons/logo.svg')
+            img(src='content/images/icons/logo-mob.png' width="189" height="35" alt="logo")
+        .header__home #{name}
+        ul
+          li
+            a(href="#")
+              span FUNDED TRADERS
+          li
+            a(href="#")
+              span COMMUNITY
+              img(src='content/images/icons/mini-arr.svg' width="12" height="9" alt="mini-arr")
+            ul
+              li
+                a(href="#") item1
+              li
+                a(href="#") long item
+              li
+                a(href="#") most longer item
+          li
+            a(href="#")
+              span AFFILIATE
+          li
+            a(href="#")
+              span ABOUT US
+              img(src='content/images/icons/mini-arr.svg' width="12" height="9" alt="mini-arr")
+            ul
+              li
+                a(href="#") item1
+              li
+                a(href="#") long item
+              li
+                a(href="#") most longer item
+        button.burger.js-open-menu
+          img(src='content/images/icons/burger.svg' width="37" height="25")
+        .header__right
+          a(href="#").red-btn
+            .red-btn__text start now!
+          .lang-block
+            .lang-block__choosed
+              img(src='content/images/icons/usa.png' width="24" height="24")
+              img(src='content/images/icons/mini-arr.svg' width="12" height="9" alt="mini-arr")
+            .lang-block__body
+              a(href="#")
+                img(src='content/images/icons/spain.png' width="24" height="24")
+              a(href="#")
+                img(src='content/images/icons/columbia.png' width="24" height="24")
+  .mobile-menu.js-menu-block
+    .mobile-menu__body
+      .mobile-menu__top
+        .lang-block
+          .lang-block__choosed
+            img(src='content/images/icons/usa.png' width="24" height="24")
+            img(src='content/images/icons/mini-arr.svg' width="12" height="9" alt="mini-arr")
+          .lang-block__body
+            a(href="#")
+              img(src='content/images/icons/spain.png' width="24" height="24")
+            a(href="#")
+              img(src='content/images/icons/columbia.png' width="24" height="24")
+        img(src="content/images/icons/close.svg" width="30" height="30").js-close-menu
+      ul.mobile-menu__list.js-acc-wrap
+        li
+          a(href="#")
+            span FUNDED TRADERS
+        li.js-acc
+          a.js-open-acc
+            span COMMUNITY
+            img(src='content/images/icons/mini-arr.svg' width="12" height="9" alt="mini-arr")
+          ul.js-acc-block
+            li
+              a(href="#") item1
+            li
+              a(href="#") long item
+            li
+              a(href="#") most longer item
+        li
+          a(href="#")
+            span AFFILIATE
+        li.js-acc
+          a.js-open-acc
+            span ABOUT US
+            img(src='content/images/icons/mini-arr.svg' width="12" height="9" alt="mini-arr")
+          ul.js-acc-block
+            li
+              a(href="#") item1
+            li
+              a(href="#") long item
+            li
+              a(href="#") most longer item

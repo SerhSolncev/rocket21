@@ -1,0 +1,251 @@
+extends ../layout/base
+
+block variables
+
+    - var title='';
+    - var description='';
+    - var pageClass='main';
+    - var footer = true
+block content
+    +header('blog')
+    section.section.section--blog-page
+        .container
+            .blog-page
+                .blog-page__top
+                    h1.blog-page__title.js-inview blog
+                    .blog-page__text Lorem ipsum dolor sit amet consectetur. Aenean sagittis tellus tristique pulvinar habitant orci cum pulvinar. Auctor molestie arcu egestas sodales amet imperdiet. Eget velit posuere lacus est sit eu.
+                .blog-page__mid
+                    .blog-page__col
+                        .blog-page__m-title Popular
+                        a(href="#").blog-short
+                            .blog-short__title FOREX VS. STOCKS: WHAT’S THE DIFFERENCE, AND WHICH ONE IS RIGHT FOR YOU?
+                            .blog-short__bottom
+                                .blog-short__icon
+                                .blog-short__sub
+                                    span Jaroslav Dlask
+                                    span Category
+                                    span 12 min
+                        a(href="#").blog-short
+                            .blog-short__title FUNDING YOUR TRADING STRATEGIES: THE BENEFITS OF SIMULATED TRADING
+                            .blog-short__bottom
+                                .blog-short__icon
+                                .blog-short__sub
+                                    span Jaroslav Dlask
+                                    span Category
+                                    span 12 min
+                        a(href="#").blog-short
+                            .blog-short__title 5 AI TRADING BOTS THAT ARE BEGINNER-FRIENDLY
+                            .blog-short__bottom
+                                .blog-short__icon
+                                .blog-short__sub
+                                    span Jaroslav Dlask
+                                    span Category
+                                    span 12 min
+                    .blog-page__col
+                        .blog-page__m-title Latest
+                        a(href="#").blog-short
+                            .blog-short__img
+                                img(src='content/images/empty.gif' class="lazy" data-src="content/images/pics/post_img.jpg" width="678" height="678" alt="rocket")
+                            .blog-short__title 5 AI TRADING BOTS THAT ARE BEGINNER-FRIENDLY
+                            .blog-short__bottom
+                                .blog-short__icon
+                                .blog-short__sub
+                                    span Jaroslav Dlask
+                                    span Category
+                                    span 12 min
+    section.section.section--all-posts
+        .container
+            .all-posts.js-tabs-wrapper
+                .all-posts__top
+                    .all-posts__title Browse All Posts
+                    .tabs-buttons-wrap
+                        .tabs-buttons
+                            .tab-btn.js-tabs-button(data-id="faq1").opened Getting started
+                            .tab-btn.js-tabs-button(data-id="faq2") R21 Simulated Funded Account
+                            .tab-btn.js-tabs-button(data-id="faq3") Payouts
+                            .tab-btn.js-tabs-button(data-id="faq4") General rules
+                .all-posts__list.js-tabs-block(data-id="faq1").opened
+                    a(href="#").blog-short.blog-short--list
+                        .blog-short__img
+                            img(src='content/images/empty.gif' class="lazy" data-src="content/images/pics/post1.jpg" width="678" height="678" alt="rocket")
+                        .blog-short__title FOREX VS. STOCKS: WHAT’S THE DIFFERENCE, AND WHICH ONE IS RIGHT FOR YOU?
+                        .blog-short__bottom
+                            .blog-short__icon
+                            .blog-short__sub
+                                span Jaroslav Dlask
+                                span Category
+                                span 12 min
+                    a(href="#").blog-short.blog-short--list
+                        .blog-short__img
+                            img(src='content/images/empty.gif' class="lazy" data-src="content/images/pics/post2.jpg" width="678" height="678" alt="rocket")
+                        .blog-short__title FOREX VS. STOCKS: WHAT’S THE DIFFERENCE
+                        .blog-short__bottom
+                            .blog-short__icon
+                            .blog-short__sub
+                                span Jaroslav Dlask
+                                span Category
+                                span 12 min
+                    a(href="#").blog-short.blog-short--list
+                        .blog-short__img
+                            img(src='content/images/empty.gif' class="lazy" data-src="content/images/pics/post3.jpg" width="678" height="678" alt="rocket")
+                        .blog-short__title FOREX VS. STOCKS: WHAT’S
+                        .blog-short__bottom
+                            .blog-short__icon
+                            .blog-short__sub
+                                span Jaroslav Dlask
+                                span Category
+                                span 12 min
+                    a(href="#").blog-short.blog-short--list
+                        .blog-short__img
+                            img(src='content/images/empty.gif' class="lazy" data-src="content/images/pics/post4.jpg" width="678" height="678" alt="rocket")
+                        .blog-short__title FOREX VS. STOCKS: WHAT’S THE DIFFERENCE, AND WHICH ONE IS RIGHT FOR YOU? FOREX VS. STOCKS: WHAT’S THE DIFFERENCE, AND WHICH ONE IS RIGHT FOR YOU?
+                        .blog-short__bottom
+                            .blog-short__icon
+                            .blog-short__sub
+                                span Jaroslav Dlask
+                                span Category
+                                span 12 min
+                    a(href="#").blog-short.blog-short--list
+                        .blog-short__img
+                            img(src='content/images/empty.gif' class="lazy" data-src="content/images/pics/post5.jpg" width="678" height="678" alt="rocket")
+                        .blog-short__title FOREX VS. STOCKS: WHAT’S THE DIFFERENCE, AND WHICH ONE IS RIGHT FOR YOU?
+                        .blog-short__bottom
+                            .blog-short__icon
+                            .blog-short__sub
+                                span Jaroslav Dlask
+                                span Category
+                                span 12 min
+                    a(href="#").blog-short.blog-short--list
+                        .blog-short__img
+                            img(src='content/images/empty.gif' class="lazy" data-src="content/images/pics/post6.jpg" width="678" height="678" alt="rocket")
+                        .blog-short__title FOREX VS. STOCKS: WHAT’S THE DIFFERENCE, AND WHICH ONE IS RIGHT FOR YOU?
+                        .blog-short__bottom
+                            .blog-short__icon
+                            .blog-short__sub
+                                span Jaroslav Dlask
+                                span Category
+                                span 12 min
+                .all-posts__list.js-tabs-block(data-id="faq2")
+                    a(href="#").blog-short.blog-short--list
+                        .blog-short__img
+                            img(src='content/images/empty.gif' class="lazy" data-src="content/images/pics/post1.jpg" width="678" height="678" alt="rocket")
+                        .blog-short__title FOREX VS. STOCKS: WHAT’S THE DIFFERENCE, AND WHICH ONE IS RIGHT FOR YOU?
+                        .blog-short__bottom
+                            .blog-short__icon
+                            .blog-short__sub
+                                span Jaroslav Dlask
+                                span Category
+                                span 12 min
+                    a(href="#").blog-short.blog-short--list
+                        .blog-short__img
+                            img(src='content/images/empty.gif' class="lazy" data-src="content/images/pics/post2.jpg" width="678" height="678" alt="rocket")
+                        .blog-short__title FOREX VS. STOCKS: WHAT’S THE DIFFERENCE
+                        .blog-short__bottom
+                            .blog-short__icon
+                            .blog-short__sub
+                                span Jaroslav Dlask
+                                span Category
+                                span 12 min
+                .all-posts__list.js-tabs-block(data-id="faq3")
+                    a(href="#").blog-short.blog-short--list
+                        .blog-short__img
+                            img(src='content/images/empty.gif' class="lazy" data-src="content/images/pics/post1.jpg" width="678" height="678" alt="rocket")
+                        .blog-short__title FOREX VS. STOCKS: WHAT’S THE DIFFERENCE, AND WHICH ONE IS RIGHT FOR YOU?
+                        .blog-short__bottom
+                            .blog-short__icon
+                            .blog-short__sub
+                                span Jaroslav Dlask
+                                span Category
+                                span 12 min
+                    a(href="#").blog-short.blog-short--list
+                        .blog-short__img
+                            img(src='content/images/empty.gif' class="lazy" data-src="content/images/pics/post2.jpg" width="678" height="678" alt="rocket")
+                        .blog-short__title FOREX VS. STOCKS: WHAT’S THE DIFFERENCE
+                        .blog-short__bottom
+                            .blog-short__icon
+                            .blog-short__sub
+                                span Jaroslav Dlask
+                                span Category
+                                span 12 min
+                    a(href="#").blog-short.blog-short--list
+                        .blog-short__img
+                            img(src='content/images/empty.gif' class="lazy" data-src="content/images/pics/post3.jpg" width="678" height="678" alt="rocket")
+                        .blog-short__title FOREX VS. STOCKS: WHAT’S
+                        .blog-short__bottom
+                            .blog-short__icon
+                            .blog-short__sub
+                                span Jaroslav Dlask
+                                span Category
+                                span 12 min
+                    a(href="#").blog-short.blog-short--list
+                        .blog-short__img
+                            img(src='content/images/empty.gif' class="lazy" data-src="content/images/pics/post4.jpg" width="678" height="678" alt="rocket")
+                        .blog-short__title FOREX VS. STOCKS: WHAT’S THE DIFFERENCE, AND WHICH ONE IS RIGHT FOR YOU? FOREX VS. STOCKS: WHAT’S THE DIFFERENCE, AND WHICH ONE IS RIGHT FOR YOU?
+                        .blog-short__bottom
+                            .blog-short__icon
+                            .blog-short__sub
+                                span Jaroslav Dlask
+                                span Category
+                                span 12 min
+                .all-posts__list.js-tabs-block(data-id="faq4")
+                    a(href="#").blog-short.blog-short--list
+                        .blog-short__img
+                            img(src='content/images/empty.gif' class="lazy" data-src="content/images/pics/post1.jpg" width="678" height="678" alt="rocket")
+                        .blog-short__title FOREX VS. STOCKS: WHAT’S THE DIFFERENCE, AND WHICH ONE IS RIGHT FOR YOU?
+                        .blog-short__bottom
+                            .blog-short__icon
+                            .blog-short__sub
+                                span Jaroslav Dlask
+                                span Category
+                                span 12 min
+                    a(href="#").blog-short.blog-short--list
+                        .blog-short__img
+                            img(src='content/images/empty.gif' class="lazy" data-src="content/images/pics/post2.jpg" width="678" height="678" alt="rocket")
+                        .blog-short__title FOREX VS. STOCKS: WHAT’S THE DIFFERENCE
+                        .blog-short__bottom
+                            .blog-short__icon
+                            .blog-short__sub
+                                span Jaroslav Dlask
+                                span Category
+                                span 12 min
+                    a(href="#").blog-short.blog-short--list
+                        .blog-short__img
+                            img(src='content/images/empty.gif' class="lazy" data-src="content/images/pics/post3.jpg" width="678" height="678" alt="rocket")
+                        .blog-short__title FOREX VS. STOCKS: WHAT’S
+                        .blog-short__bottom
+                            .blog-short__icon
+                            .blog-short__sub
+                                span Jaroslav Dlask
+                                span Category
+                                span 12 min
+                    a(href="#").blog-short.blog-short--list
+                        .blog-short__img
+                            img(src='content/images/empty.gif' class="lazy" data-src="content/images/pics/post4.jpg" width="678" height="678" alt="rocket")
+                        .blog-short__title FOREX VS. STOCKS: WHAT’S THE DIFFERENCE, AND WHICH ONE IS RIGHT FOR YOU? FOREX VS. STOCKS: WHAT’S THE DIFFERENCE, AND WHICH ONE IS RIGHT FOR YOU?
+                        .blog-short__bottom
+                            .blog-short__icon
+                            .blog-short__sub
+                                span Jaroslav Dlask
+                                span Category
+                                span 12 min
+                    a(href="#").blog-short.blog-short--list
+                        .blog-short__img
+                            img(src='content/images/empty.gif' class="lazy" data-src="content/images/pics/post5.jpg" width="678" height="678" alt="rocket")
+                        .blog-short__title FOREX VS. STOCKS: WHAT’S THE DIFFERENCE, AND WHICH ONE IS RIGHT FOR YOU?
+                        .blog-short__bottom
+                            .blog-short__icon
+                            .blog-short__sub
+                                span Jaroslav Dlask
+                                span Category
+                                span 12 min
+    section.section.section--board
+        .container
+            .team-board
+                .team-board__left
+                    h2.title.title--section.title--ttu.title--bold.title--white JOIN OUR TEAM OF <br> ROCKET TRADERS
+                    .simple-text
+                        p ACCEPT OUR ROCKET CHALLENGE AND BECOME A ROCKET TRADER IF YOU ARE READY. YOU CAN EVEN GO THOUGH THE ENTIRE PROCEDURE FOR FREE
+                    a(href="#").button.button--def.button--white START ROCKET CHALLENGE
+                .team-board__img
+                    img(src='content/images/empty.gif' class="lazy" data-src="content/images/pics/cosmo2.png" width="479" height="367" alt="rocket")
+block script

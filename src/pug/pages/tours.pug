@@ -1,0 +1,359 @@
+extends ../layout/base
+
+block variables
+
+    - var title='';
+    - var description='';
+    - var pageClass='main';
+    - var footer = true
+block content
+    +header('OUR TOURS')
+    section.section.section--top-tours.js-stars
+        .container
+            .top-tours
+                .top-tours__left.js-inview
+                    h1.top-tours__title OUR TRIPS AROUND THE WORLD
+                    .simple-text.simple-text--small
+                        p Our trips around the world have been nothing short of extraordinaryadventures, filled with awe-inspiring moments and unforgettable memories.
+                        p From the bustling streets of London to the serene landscapes of Dominican Republic, each journey has offered a unique and enriching experience.
+                    .top-tours__buttons
+                        a(href="#").red-btn
+                            .red-btn__text join our community
+                .top-tours__img.js-inview
+                    img(src='content/images/pics/planet-big.png' width="889" height="889" alt="cosmo1")
+    section.section.section--country
+        .container
+            .country-block
+                .country-block__top
+                    .country-block__left.js-inview
+                        .country-block__top-title
+                            h3.country-block__title DOMINICAN REPUBLIC
+                            .country-block__icon
+                                img(src='content/images/icons/dominican.png' width="66" height="66" alt="cosmo1")
+                        p.country-block__text On our Tour of the Dominican Republic, Rocket21 was embraced by the warmth of the local people. We take pride in not only sharing experiences, but also awarding over $2M in challenges, reaffirming our commitment to the growth of our loyal traders.
+                        a(href='#').country-block__link
+                            img(src='content/images/icons/play-circle.svg' width="889" height="889" alt="cosmo1")
+                            span view recap
+                    .country-count.js-inview
+                        .country-count__img
+                            img(src='content/images/icons/cirk2.png' width="224" height="238" alt="cosmo1")
+                        .country-count__current 01
+                        .country-count__total / 6
+                .country-block__bottom
+                    .country-block__img
+                        img(src='content/images/empty.gif' class="lazy" data-src="content/images/pics/dominican-map.svg" width="518" height="518" alt="rocket")
+                        .country-block__line
+                            img(src='content/images/empty.gif' class="lazy" data-src="content/images/pics/long-line.svg" width="420" height="958" alt="rocket")
+                    .country-block__slider.js-inview
+                        .swiper.js-tour-swiper
+                            .swiper-wrapper
+                                .swiper-slide
+                                    .tour-pic
+                                        img(src='content/images/empty.gif' class="swiper-lazy" data-src="content/images/pics/sl1.png" width="296" height="340" alt="rocket")
+                                .swiper-slide
+                                    .tour-pic
+                                        img(src='content/images/empty.gif' class="swiper-lazy" data-src="content/images/pics/sl2.png" width="296" height="340" alt="rocket")
+                                .swiper-slide
+                                    .tour-pic
+                                        img(src='content/images/empty.gif' class="swiper-lazy" data-src="content/images/pics/sl1.png" width="296" height="340" alt="rocket")
+                                .swiper-slide
+                                    .tour-pic
+                                        img(src='content/images/empty.gif' class="swiper-lazy" data-src="content/images/pics/sl2.png" width="296" height="340" alt="rocket")
+                                .swiper-slide
+                                    .tour-pic
+                                        img(src='content/images/empty.gif' class="swiper-lazy" data-src="content/images/pics/sl1.png" width="296" height="340" alt="rocket")
+                                .swiper-slide
+                                    .tour-pic
+                                        img(src='content/images/empty.gif' class="swiper-lazy" data-src="content/images/pics/sl2.png" width="296" height="340" alt="rocket")
+                                .swiper-slide
+                                    .tour-pic
+                                        img(src='content/images/empty.gif' class="swiper-lazy" data-src="content/images/pics/sl1.png" width="296" height="340" alt="rocket")
+                                .swiper-slide
+                                    .tour-pic
+                                        img(src='content/images/empty.gif' class="swiper-lazy" data-src="content/images/pics/sl2.png" width="296" height="340" alt="rocket")
+                                .swiper-slide
+                                    .tour-pic
+                                        img(src='content/images/empty.gif' class="swiper-lazy" data-src="content/images/pics/sl2.png" width="296" height="340" alt="rocket")
+                            .swiper-pagination
+            .country-block
+                .country-block__top
+                    .country-block__left.js-inview
+                        .country-block__top-title
+                            h3.country-block__title COLOMBIA
+                            .country-block__icon
+                                img(src='content/images/icons/columbia.png' width="66" height="66" alt="cosmo1")
+                        p.country-block__text During our tour in Colombia Rocket21 made waves by combining trading education and generosity. Moved by the Colombian hospitality, we awarded hundreds of dollars in challenge giveaways to local traders. This visit not only strengthened ties but also reflected Rocket 21's genuine commitment to financial empowerment.
+                        a(href='#').country-block__link
+                            img(src='content/images/icons/play-circle.svg' width="889" height="889" alt="cosmo1")
+                            span view recap
+                    .country-count.js-inview
+                        .country-count__img
+                            img(src='content/images/icons/cirk2.png' width="224" height="238" alt="cosmo1")
+                        .country-count__current 02
+                        .country-count__total / 6
+                .country-block__bottom
+                    .country-block__img
+                        img(src='content/images/empty.gif' class="lazy" data-src="content/images/pics/columbia-map.svg" width="518" height="518" alt="rocket")
+                        .country-block__line
+                            img(src='content/images/empty.gif' class="lazy" data-src="content/images/pics/long-line.svg" width="420" height="958" alt="rocket")
+                    .country-block__slider.js-inview
+                        .swiper.js-tour-swiper
+                            .swiper-wrapper
+                                .swiper-slide
+                                    .tour-pic
+                                        img(src='content/images/empty.gif' class="swiper-lazy" data-src="content/images/pics/sl1.png" width="296" height="340" alt="rocket")
+                                .swiper-slide
+                                    .tour-pic
+                                        img(src='content/images/empty.gif' class="swiper-lazy" data-src="content/images/pics/sl2.png" width="296" height="340" alt="rocket")
+                                .swiper-slide
+                                    .tour-pic
+                                        img(src='content/images/empty.gif' class="swiper-lazy" data-src="content/images/pics/sl1.png" width="296" height="340" alt="rocket")
+                                .swiper-slide
+                                    .tour-pic
+                                        img(src='content/images/empty.gif' class="swiper-lazy" data-src="content/images/pics/sl2.png" width="296" height="340" alt="rocket")
+                                .swiper-slide
+                                    .tour-pic
+                                        img(src='content/images/empty.gif' class="swiper-lazy" data-src="content/images/pics/sl1.png" width="296" height="340" alt="rocket")
+                                .swiper-slide
+                                    .tour-pic
+                                        img(src='content/images/empty.gif' class="swiper-lazy" data-src="content/images/pics/sl2.png" width="296" height="340" alt="rocket")
+                                .swiper-slide
+                                    .tour-pic
+                                        img(src='content/images/empty.gif' class="swiper-lazy" data-src="content/images/pics/sl1.png" width="296" height="340" alt="rocket")
+                                .swiper-slide
+                                    .tour-pic
+                                        img(src='content/images/empty.gif' class="swiper-lazy" data-src="content/images/pics/sl2.png" width="296" height="340" alt="rocket")
+                                .swiper-slide
+                                    .tour-pic
+                                        img(src='content/images/empty.gif' class="swiper-lazy" data-src="content/images/pics/sl2.png" width="296" height="340" alt="rocket")
+                            .swiper-pagination
+            .country-block
+                .country-block__top
+                    .country-block__left.js-inview
+                        .country-block__top-title
+                            h3.country-block__title PERÚ
+                            .country-block__icon
+                                img(src='content/images/icons/peru.png' width="66" height="66" alt="cosmo1")
+                        p.country-block__text In its voyage across Peru, Rocket 21 didn't just immerse itself in the country's profound history and culture but also took the stage to offer a captivating seminar on its trading knowledge. The genuine embrace of the Peruvian populace and the lively pulse of their trading enthusiasts transformed the trip into an unforgettable encounter, highlighting Rocket 21's allegiance to the growth and backing of its dedicated members.
+                        a(href='#').country-block__link
+                            img(src='content/images/icons/play-circle.svg' width="889" height="889" alt="cosmo1")
+                            span view recap
+                    .country-count.js-inview
+                        .country-count__img
+                            img(src='content/images/icons/cirk2.png' width="224" height="238" alt="cosmo1")
+                        .country-count__current 03
+                        .country-count__total / 6
+                .country-block__bottom
+                    .country-block__img
+                        img(src='content/images/empty.gif' class="lazy" data-src="content/images/pics/peru-map.svg" width="518" height="518" alt="rocket")
+                        .country-block__line
+                            img(src='content/images/empty.gif' class="lazy" data-src="content/images/pics/long-line.svg" width="420" height="958" alt="rocket")
+                    .country-block__slider.js-inview
+                        .swiper.js-tour-swiper
+                            .swiper-wrapper
+                                .swiper-slide
+                                    .tour-pic
+                                        img(src='content/images/empty.gif' class="swiper-lazy" data-src="content/images/pics/sl1.png" width="296" height="340" alt="rocket")
+                                .swiper-slide
+                                    .tour-pic
+                                        img(src='content/images/empty.gif' class="swiper-lazy" data-src="content/images/pics/sl2.png" width="296" height="340" alt="rocket")
+                                .swiper-slide
+                                    .tour-pic
+                                        img(src='content/images/empty.gif' class="swiper-lazy" data-src="content/images/pics/sl1.png" width="296" height="340" alt="rocket")
+                                .swiper-slide
+                                    .tour-pic
+                                        img(src='content/images/empty.gif' class="swiper-lazy" data-src="content/images/pics/sl2.png" width="296" height="340" alt="rocket")
+                                .swiper-slide
+                                    .tour-pic
+                                        img(src='content/images/empty.gif' class="swiper-lazy" data-src="content/images/pics/sl1.png" width="296" height="340" alt="rocket")
+                                .swiper-slide
+                                    .tour-pic
+                                        img(src='content/images/empty.gif' class="swiper-lazy" data-src="content/images/pics/sl2.png" width="296" height="340" alt="rocket")
+                                .swiper-slide
+                                    .tour-pic
+                                        img(src='content/images/empty.gif' class="swiper-lazy" data-src="content/images/pics/sl1.png" width="296" height="340" alt="rocket")
+                                .swiper-slide
+                                    .tour-pic
+                                        img(src='content/images/empty.gif' class="swiper-lazy" data-src="content/images/pics/sl2.png" width="296" height="340" alt="rocket")
+                                .swiper-slide
+                                    .tour-pic
+                                        img(src='content/images/empty.gif' class="swiper-lazy" data-src="content/images/pics/sl2.png" width="296" height="340" alt="rocket")
+                            .swiper-pagination
+            .country-block
+                .country-block__top
+                    .country-block__left.js-inview
+                        .country-block__top-title
+                            h3.country-block__title ENGLAND
+                            .country-block__icon
+                                img(src='content/images/icons/eng.png' width="66" height="66" alt="cosmo1")
+                        p.country-block__text While in London, we at Rocket21 enjoyed a remarkable experience. The cordiality of the Londoners added to the occasion, with Rocket 21 hosting a session to impart wisdom and bolster the vibrant trading community. This trip underscored our dedication to nurturing and backing our most devoted community members.
+                        a(href='#').country-block__link
+                            img(src='content/images/icons/play-circle.svg' width="889" height="889" alt="cosmo1")
+                            span view recap
+                    .country-count.js-inview
+                        .country-count__img
+                            img(src='content/images/icons/cirk2.png' width="224" height="238" alt="cosmo1")
+                        .country-count__current 04
+                        .country-count__total / 6
+                .country-block__bottom
+                    .country-block__img
+                        img(src='content/images/empty.gif' class="lazy" data-src="content/images/pics/eng-map.svg" width="518" height="518" alt="rocket")
+                        .country-block__line
+                            img(src='content/images/empty.gif' class="lazy" data-src="content/images/pics/long-line.svg" width="420" height="958" alt="rocket")
+                    .country-block__slider.js-inview
+                        .swiper.js-tour-swiper
+                            .swiper-wrapper
+                                .swiper-slide
+                                    .tour-pic
+                                        img(src='content/images/empty.gif' class="swiper-lazy" data-src="content/images/pics/sl1.png" width="296" height="340" alt="rocket")
+                                .swiper-slide
+                                    .tour-pic
+                                        img(src='content/images/empty.gif' class="swiper-lazy" data-src="content/images/pics/sl2.png" width="296" height="340" alt="rocket")
+                                .swiper-slide
+                                    .tour-pic
+                                        img(src='content/images/empty.gif' class="swiper-lazy" data-src="content/images/pics/sl1.png" width="296" height="340" alt="rocket")
+                                .swiper-slide
+                                    .tour-pic
+                                        img(src='content/images/empty.gif' class="swiper-lazy" data-src="content/images/pics/sl2.png" width="296" height="340" alt="rocket")
+                                .swiper-slide
+                                    .tour-pic
+                                        img(src='content/images/empty.gif' class="swiper-lazy" data-src="content/images/pics/sl1.png" width="296" height="340" alt="rocket")
+                                .swiper-slide
+                                    .tour-pic
+                                        img(src='content/images/empty.gif' class="swiper-lazy" data-src="content/images/pics/sl2.png" width="296" height="340" alt="rocket")
+                                .swiper-slide
+                                    .tour-pic
+                                        img(src='content/images/empty.gif' class="swiper-lazy" data-src="content/images/pics/sl1.png" width="296" height="340" alt="rocket")
+                                .swiper-slide
+                                    .tour-pic
+                                        img(src='content/images/empty.gif' class="swiper-lazy" data-src="content/images/pics/sl2.png" width="296" height="340" alt="rocket")
+                                .swiper-slide
+                                    .tour-pic
+                                        img(src='content/images/empty.gif' class="swiper-lazy" data-src="content/images/pics/sl2.png" width="296" height="340" alt="rocket")
+                            .swiper-pagination
+            .country-block
+                .country-block__top
+                    .country-block__left.js-inview
+                        .country-block__top-title
+                            h3.country-block__title USA
+                            .country-block__icon
+                                img(src='content/images/icons/usa.png' width="66" height="66" alt="cosmo1")
+                        p.country-block__text During its visit to the USA, Rocket 21 left an indelible mark, not only for its teachings in trading but for its unprecedented gesture: awarding a Lamborghini to a prominent trader in the community. This action, beyond luxury, symbolized Rocket 21's passion and commitment to the success and recognition of its members. An experience that reflects the bold spirit of empowerment that defines them.
+                        a(href='#').country-block__link
+                            img(src='content/images/icons/play-circle.svg' width="889" height="889" alt="cosmo1")
+                            span view recap
+                    .country-count.js-inview
+                        .country-count__img
+                            img(src='content/images/icons/cirk2.png' width="224" height="238" alt="cosmo1")
+                        .country-count__current 05
+                        .country-count__total / 6
+                .country-block__bottom
+                    .country-block__img
+                        img(src='content/images/empty.gif' class="lazy" data-src="content/images/pics/usa-map.svg" width="518" height="518" alt="rocket")
+                        .country-block__line
+                            img(src='content/images/empty.gif' class="lazy" data-src="content/images/pics/long-line.svg" width="420" height="958" alt="rocket")
+                    .country-block__slider.js-inview
+                        .swiper.js-tour-swiper
+                            .swiper-wrapper
+                                .swiper-slide
+                                    .tour-pic
+                                        img(src='content/images/empty.gif' class="swiper-lazy" data-src="content/images/pics/sl1.png" width="296" height="340" alt="rocket")
+                                .swiper-slide
+                                    .tour-pic
+                                        img(src='content/images/empty.gif' class="swiper-lazy" data-src="content/images/pics/sl2.png" width="296" height="340" alt="rocket")
+                                .swiper-slide
+                                    .tour-pic
+                                        img(src='content/images/empty.gif' class="swiper-lazy" data-src="content/images/pics/sl1.png" width="296" height="340" alt="rocket")
+                                .swiper-slide
+                                    .tour-pic
+                                        img(src='content/images/empty.gif' class="swiper-lazy" data-src="content/images/pics/sl2.png" width="296" height="340" alt="rocket")
+                                .swiper-slide
+                                    .tour-pic
+                                        img(src='content/images/empty.gif' class="swiper-lazy" data-src="content/images/pics/sl1.png" width="296" height="340" alt="rocket")
+                                .swiper-slide
+                                    .tour-pic
+                                        img(src='content/images/empty.gif' class="swiper-lazy" data-src="content/images/pics/sl2.png" width="296" height="340" alt="rocket")
+                                .swiper-slide
+                                    .tour-pic
+                                        img(src='content/images/empty.gif' class="swiper-lazy" data-src="content/images/pics/sl1.png" width="296" height="340" alt="rocket")
+                                .swiper-slide
+                                    .tour-pic
+                                        img(src='content/images/empty.gif' class="swiper-lazy" data-src="content/images/pics/sl2.png" width="296" height="340" alt="rocket")
+                                .swiper-slide
+                                    .tour-pic
+                                        img(src='content/images/empty.gif' class="swiper-lazy" data-src="content/images/pics/sl2.png" width="296" height="340" alt="rocket")
+                            .swiper-pagination
+            .country-block
+                .country-block__top
+                    .country-block__left.js-inview
+                        .country-block__top-title
+                            h3.country-block__title SPAIN
+                            .country-block__icon
+                                img(src='content/images/icons/spain.png' width="66" height="66" alt="cosmo1")
+                        p.country-block__text While in London, we at Rocket21 enjoyed a remarkable experience. The cordiality of the Londoners added to the occasion, with Rocket 21 hosting a session to impart wisdom and bolster the vibrant trading community. This trip underscored our dedication to nurturing and backing our most devoted community members.
+                        a(href='#').country-block__link
+                            img(src='content/images/icons/play-circle.svg' width="889" height="889" alt="cosmo1")
+                            span view recap
+                    .country-count.js-inview
+                        .country-count__img
+                            img(src='content/images/icons/cirk2.png' width="224" height="238" alt="cosmo1")
+                        .country-count__current 06
+                        .country-count__total / 6
+                .country-block__bottom
+                    .country-block__img
+                        img(src='content/images/empty.gif' class="lazy" data-src="content/images/pics/spain-map.svg" width="518" height="518" alt="rocket")
+                    .country-block__slider.js-inview
+                        .swiper.js-tour-swiper
+                            .swiper-wrapper
+                                .swiper-slide
+                                    .tour-pic
+                                        img(src='content/images/empty.gif' class="swiper-lazy" data-src="content/images/pics/sl1.png" width="296" height="340" alt="rocket")
+                                .swiper-slide
+                                    .tour-pic
+                                        img(src='content/images/empty.gif' class="swiper-lazy" data-src="content/images/pics/sl2.png" width="296" height="340" alt="rocket")
+                                .swiper-slide
+                                    .tour-pic
+                                        img(src='content/images/empty.gif' class="swiper-lazy" data-src="content/images/pics/sl1.png" width="296" height="340" alt="rocket")
+                                .swiper-slide
+                                    .tour-pic
+                                        img(src='content/images/empty.gif' class="swiper-lazy" data-src="content/images/pics/sl2.png" width="296" height="340" alt="rocket")
+                                .swiper-slide
+                                    .tour-pic
+                                        img(src='content/images/empty.gif' class="swiper-lazy" data-src="content/images/pics/sl1.png" width="296" height="340" alt="rocket")
+                                .swiper-slide
+                                    .tour-pic
+                                        img(src='content/images/empty.gif' class="swiper-lazy" data-src="content/images/pics/sl2.png" width="296" height="340" alt="rocket")
+                                .swiper-slide
+                                    .tour-pic
+                                        img(src='content/images/empty.gif' class="swiper-lazy" data-src="content/images/pics/sl1.png" width="296" height="340" alt="rocket")
+                                .swiper-slide
+                                    .tour-pic
+                                        img(src='content/images/empty.gif' class="swiper-lazy" data-src="content/images/pics/sl2.png" width="296" height="340" alt="rocket")
+                                .swiper-slide
+                                    .tour-pic
+                                        img(src='content/images/empty.gif' class="swiper-lazy" data-src="content/images/pics/sl2.png" width="296" height="340" alt="rocket")
+                            .swiper-pagination
+    section.section.section--inf
+        .container
+            .inf-section.js-inview
+                .inf-section__list(style="background-image: url(content/images/pics/bgt.png)")
+                    .tour-item
+                        .tour-item__img
+                            img(src='content/images/empty.gif' class="lazy" data-src="content/images/pics/t1.png" width="186" height="82" alt="planet1")
+                        .tour-item__text $4M+
+                    .tour-item
+                        .tour-item__img
+                            img(src='content/images/empty.gif' class="lazy" data-src="content/images/pics/t2.png" width="186" height="82" alt="planet1")
+                        .tour-item__text 50K+
+                    .tour-item
+                        .tour-item__img
+                            img(src='content/images/empty.gif' class="lazy" data-src="content/images/pics/t3.png" width="186" height="82" alt="planet1")
+                        .tour-item__text 7+
+    section.section.section--world
+        .container
+            .word-block.js-inview
+                .word-block__title
+                    h2.title.title--section.title--ttu.title--bold.title--white WHERE IN THE WORLD SHOULD WE VISIT NEXT?
+                .word-block__img
+                    img(src='content/images/empty.gif' class="lazy" data-src="content/images/pics/map.svg" width="638" height="370" alt="planet1")
+block script

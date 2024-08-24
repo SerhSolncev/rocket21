@@ -1,0 +1,329 @@
+extends ../layout/base
+
+block variables
+
+    - var title='';
+    - var description='';
+    - var pageClass='main';
+    - var footer = true
+block content
+    +header('COMPETITIOn')
+    section.section.section--comp-top.js-stars
+        .container
+            .comp-top
+                .comp-top__left
+                    .comp-top__title ROCKET YOUR TRADING SKILLS
+                    .simple-text.simple-text--not-ttu
+                        p Lorem ipsum dolor sit amet consectetur. Elit pharetra lorem dolor id ipsum. Mi vitae ut dictumst egestas.
+                    .time-remaining.time-remaining--sec
+                        .time-remaining__title Time Remaining
+                        .time-remaining__grid(data-date-finish="2024-10-31T23:59:59").js-timer-block
+                            .time-item
+                                .time-item__numb(data-days) 0
+                                .time-item__title DAYS
+                            .time-item
+                                .time-item__numb(data-hrs) 0
+                                .time-item__title HRS
+                            .time-item
+                                .time-item__numb(data-mins) 0
+                                .time-item__title MIN
+                    .comp-top__btns
+                        a(href="#").button.button--def-four.button--red ENROLL NOW!
+                        a(href="#").button.button--def-four.button--white-sec already a user
+                .comp-top__img.js-inview
+                    img(src='content/images/pics/space.png' width="521" height="753" alt="cosmo1")
+    section.section.section--cash-reward
+        .container
+            .cash-reward
+                .cash-reward__top.js-inview
+                    h2.title.title--section.title--ttu.title--bold.title--white amazing cash reward
+                    .simple-text.simple-text--not-ttu
+                        p Earn up to $7,000 cash by simply following the competition rules and be on the top of the leaderboard
+                .cash-reward__tabs.js-tabs-wrapper
+                    .reward-tabs
+                        .reward-tabs__top
+                            .reward-btn.js-tabs-button(data-id="tab1").js-inview
+                                .reward-btn__icon
+                                    img(src='content/images/icons/second-place-medal.svg' width="112" height="114")
+                                .reward-btn__body(style="background-image: url(content/images/icons/place-back.png)")
+                                    .reward-btn__bg
+                                        img(src='content/images/icons/place-back-hover.png' width="112" height="114")
+                                    .reward-btn__place SECOND PLACE
+                                    .reward-btn__price $100K
+                                    .reward-btn__bottom  APOLLO 11 CHALLENGE
+                            .reward-btn.js-tabs-button.opened(data-id="tab2").js-inview
+                                .reward-btn__icon
+                                    img(src='content/images/icons/first-place-medal.svg' width="112" height="114")
+                                .reward-btn__body(style="background-image: url(content/images/icons/place-back.png)")
+                                    .reward-btn__bg
+                                        img(src='content/images/icons/place-back-hover.png' width="112" height="114")
+                                    .reward-btn__place FIRST PLACE
+                                    .reward-btn__price $100K
+                                    .reward-btn__bottom  APOLLO 11 CHALLENGE
+                            .reward-btn.js-tabs-button(data-id="tab3").js-inview
+                                .reward-btn__icon
+                                    img(src='content/images/icons/third-place-medal.svg' width="112" height="114")
+                                .reward-btn__body(style="background-image: url(content/images/icons/place-back.png)")
+                                    .reward-btn__bg
+                                        img(src='content/images/icons/place-back-hover.png' width="112" height="114")
+                                    .reward-btn__place THIRD PLACE
+                                    .reward-btn__price $100K
+                                    .reward-btn__bottom  APOLLO 11 CHALLENGE
+                        .reward-tabs__body.js-inview
+                            .reward-table.js-tabs-block(data-id="tab1").opened
+                                .reward-table__body.js-inview
+                                    .swiper.js-prog-swiper
+                                        .swiper-wrapper
+                                            .swiper-slide
+                                                .reward-table__item
+                                                    .reward-table__head Competition standings
+                                                    .reward-table__row
+                                                        .reward-table__place 4th
+                                                    .reward-table__row
+                                                        .reward-table__place 4th
+                                                    .reward-table__row
+                                                        .reward-table__place 4th
+                                                    .reward-table__row
+                                                        .reward-table__place 4th
+                                                    .reward-table__row
+                                                        .reward-table__place 4th
+                                                    .reward-table__row
+                                                        .reward-table__place 4th
+                                                .reward-table__item
+                                                    .reward-table__head Plan name
+                                                    .reward-table__row
+                                                        .reward-table__text Stellar 1-Step 50K Plan
+                                                    .reward-table__row
+                                                        .reward-table__text Stellar 1-Step 50K Plan
+                                                    .reward-table__row
+                                                        .reward-table__text Stellar 1-Step 50K Plan
+                                                    .reward-table__row
+                                                        .reward-table__text Stellar 1-Step 50K Plan
+                                                    .reward-table__row
+                                                        .reward-table__text Stellar 1-Step 50K Plan
+                                                    .reward-table__row
+                                                        .reward-table__text Stellar 1-Step 50K Plan
+                                            .swiper-slide
+                                                .reward-table__item
+                                                    .reward-table__head Cash Prize
+                                                    .reward-table__row
+                                                        .reward-table__text $1,000
+                                                    .reward-table__row
+                                                        .reward-table__text $1,000
+                                                    .reward-table__row
+                                                        .reward-table__text $1,000
+                                                    .reward-table__row
+                                                        .reward-table__text $1,000
+                                                    .reward-table__row
+                                                        .reward-table__text $1,000
+                                                    .reward-table__row
+                                                        .reward-table__text $1,000
+                                    .swiper-button-next.reward-table__arrow.js-prog-next
+                                        img(src='content/images/icons/next.svg' width="16" height="12")
+                                    .swiper-button-prev.reward-table__arrow.js-prog-prev
+                                        img(src='content/images/icons/prev.svg' width="16" height="12")
+                            .reward-table.js-tabs-block(data-id="tab2")
+                                .reward-table__body.js-inview
+                                    .swiper.js-prog-swiper
+                                        .swiper-wrapper
+                                            .swiper-slide
+                                                .reward-table__item
+                                                    .reward-table__head Competition standings
+                                                    .reward-table__row
+                                                        .reward-table__place 8th
+                                                    .reward-table__row
+                                                        .reward-table__place 8th
+                                                    .reward-table__row
+                                                        .reward-table__place 8th
+                                                    .reward-table__row
+                                                        .reward-table__place 8th
+                                                    .reward-table__row
+                                                        .reward-table__place 8th
+                                                    .reward-table__row
+                                                        .reward-table__place 8th
+                                                .reward-table__item
+                                                    .reward-table__head Plan name
+                                                    .reward-table__row
+                                                        .reward-table__text Stellar 1-Step 150K Plan
+                                                    .reward-table__row
+                                                        .reward-table__text Stellar 1-Step 150K Plan
+                                                    .reward-table__row
+                                                        .reward-table__text Stellar 1-Step 150K Plan
+                                                    .reward-table__row
+                                                        .reward-table__text Stellar 1-Step 150K Plan
+                                                    .reward-table__row
+                                                        .reward-table__text Stellar 1-Step 150K Plan
+                                                    .reward-table__row
+                                                        .reward-table__text Stellar 1-Step 150K Plan
+                                            .swiper-slide
+                                                .reward-table__item
+                                                    .reward-table__head Cash Prize
+                                                    .reward-table__row
+                                                        .reward-table__text $2,000
+                                                    .reward-table__row
+                                                        .reward-table__text $2,000
+                                                    .reward-table__row
+                                                        .reward-table__text $2,000
+                                                    .reward-table__row
+                                                        .reward-table__text $2,000
+                                                    .reward-table__row
+                                                        .reward-table__text $2,000
+                                                    .reward-table__row
+                                                        .reward-table__text $2,000
+                                    .swiper-button-next.reward-table__arrow.js-prog-next
+                                        img(src='content/images/icons/next.svg' width="16" height="12")
+                                    .swiper-button-prev.reward-table__arrow.js-prog-prev
+                                        img(src='content/images/icons/prev.svg' width="16" height="12")
+                            .reward-table.js-tabs-block(data-id="tab3")
+                                .reward-table__body.js-inview
+                                    .swiper.js-prog-swiper
+                                        .swiper-wrapper
+                                            .swiper-slide
+                                                .reward-table__item
+                                                    .reward-table__head Competition standings
+                                                    .reward-table__row
+                                                        .reward-table__place 10th
+                                                    .reward-table__row
+                                                        .reward-table__place 10th
+                                                    .reward-table__row
+                                                        .reward-table__place 10th
+                                                    .reward-table__row
+                                                        .reward-table__place 10th
+                                                    .reward-table__row
+                                                        .reward-table__place 10th
+                                                    .reward-table__row
+                                                        .reward-table__place 10th
+                                                .reward-table__item
+                                                    .reward-table__head Plan name
+                                                    .reward-table__row
+                                                        .reward-table__text Stellar 1-Step 1050K Plan
+                                                    .reward-table__row
+                                                        .reward-table__text Stellar 1-Step 1050K Plan
+                                                    .reward-table__row
+                                                        .reward-table__text Stellar 1-Step 1050K Plan
+                                                    .reward-table__row
+                                                        .reward-table__text Stellar 1-Step 1050K Plan
+                                                    .reward-table__row
+                                                        .reward-table__text Stellar 1-Step 1050K Plan
+                                                    .reward-table__row
+                                                        .reward-table__text Stellar 1-Step 1050K Plan
+                                            .swiper-slide
+                                                .reward-table__item
+                                                    .reward-table__head Cash Prize
+                                                    .reward-table__row
+                                                        .reward-table__text $3,000
+                                                    .reward-table__row
+                                                        .reward-table__text $3,000
+                                                    .reward-table__row
+                                                        .reward-table__text $3,000
+                                                    .reward-table__row
+                                                        .reward-table__text $3,000
+                                                    .reward-table__row
+                                                        .reward-table__text $3,000
+                                                    .reward-table__row
+                                                        .reward-table__text $3,000
+                                    .swiper-button-next.reward-table__arrow.js-prog-next
+                                        img(src='content/images/icons/next.svg' width="16" height="12")
+                                    .swiper-button-prev.reward-table__arrow.js-prog-prev
+                                        img(src='content/images/icons/prev.svg' width="16" height="12")
+    section.section.section--rules
+        .container
+            .rules-block
+                .rules-block__top.js-inview
+                    h2.title.title--section.title--ttu.title--bold.title--white COMPETITION RULES:
+                .rules-block__list
+                    .rules-item.js-inview
+                        .rules-item__title Follow all the same rules for the <br> challenges:
+                        .rules-item__sub 5% Max Daily Drawdown | 10% Max Total <br> Drawdown |  Minimum Trading Days
+                        .rules-item__text A's are not allowed, no taking advantage of unrealistic fills in the demo environment, daily Drawdown will now be calculated based on Balance or Equity whichever is higher at the end of the day
+                    .rules-item.js-inview
+                        .rules-item__title There following lot size rules apply:
+                        .rules-item__sub 5 Lot Max for Forex Pairs | 3 Lot Max for Indices | lot for Crypto, Commodities
+                        .rules-item__text Positions max open at any given time, only 1 account per person is permitted, the competition starts on the first of the month and ends on the last day of the month. If you end up being one of the winners, someone from our Support Team will reach out with the appropriate prize.
+    section.section.section--evaluation
+        .container
+            .evaluation-block
+                .evaluation-block__top.js-inview
+                    h2.title.title--section-two.title--ttu.title--bold.title--white claim your prize in <br> just 3 easy steps!
+                .evaluation-block__list
+                    .evaluation-item.evaluation-item--sec.js-inview(style="background-image: url(content/images/pics/bg-evo.png)")
+                        .evaluation-item__body
+                            .evaluation-item__numb
+                                span 1
+                                img(src='content/images/icons/cirk-back2.svg' width="75" height="19")
+                            .title.title--mid-two.title--ttu.title--bold.title--white REGISTER FOR THE COMPETITION
+                            .evaluation-item__icon
+                                img(src='content/images/empty.gif' class="lazy" data-src="content/images/icons/tr1.svg" width="164" height="164" alt="planet1")
+                            .evaluation-item__back
+                                img(src='content/images/icons/m-back.svg' width="75" height="19")
+                    .evaluation-item.evaluation-item--sec.js-inview
+                        .evaluation-item__body
+                            .evaluation-item__numb
+                                span 2
+                                img(src='content/images/icons/cirk-back2.svg' width="75" height="19")
+                            .title.title--mid-two.title--ttu.title--bold.title--white START TRADING <br> WHEN THE COMPETITIONS KICK OFF
+                            .evaluation-item__icon
+                                img(src='content/images/empty.gif' class="lazy" data-src="content/images/icons/tr2.svg" width="164" height="164" alt="planet1")
+                            .evaluation-item__back
+                                img(src='content/images/icons/m-back.svg' width="75" height="19")
+                    .evaluation-item.evaluation-item--sec.js-inview(style="background-image: url(content/images/pics/bg-evo.png)")
+                        .evaluation-item__body
+                            .evaluation-item__numb
+                                span 3
+                                img(src='content/images/icons/cirk-back2.svg' width="75" height="19")
+                            .title.title--mid-two.title--ttu.title--bold.title--white STAY ON THE <br> LEADERBOARD
+                            .evaluation-item__icon
+                                img(src='content/images/empty.gif' class="lazy" data-src="content/images/icons/tr3.svg" width="164" height="164" alt="planet1")
+                            .evaluation-item__back
+                                img(src='content/images/icons/m-back.svg' width="75" height="19")
+    section.section.section--faq
+        .container
+            .faq-block
+                .faq-block__left.js-inview
+                    h2.title.title--section.title--ttu.title--bold.title--white Frequently asked questions
+                    .faq-block__info
+                        | Haven’t found what you’re looking for? <a href="#">Contact us</a>
+                .faq-block__right.js-acc-wrap
+                    .faq-item.js-inview.js-acc.active
+                        .faq-item__btn.js-open-acc
+                            span What is Rocket?
+                            .faq-item__icon
+                        .faq-item__body.js-acc-block
+                            .faq-item__text
+                                | Lorem ipsum dolor sit amet consectetur. Sit viverra tortor duis cras hac nisl quam fermentum. Duis sagittis urna in etiam mattis porta. Consectetur egestas facilisi luctus sapien nec. Cras dictumst faucibus interdum pellentesque quam non ultricies. Aliquet ut malesuada feugiat vulputate bibendum nascetur maecenas. Sapien elementum nam ultricies auctor at dui.
+                    .faq-item.js-inview.js-acc
+                        .faq-item__btn.js-open-acc
+                            span How does Rocket work?
+                            .faq-item__icon
+                        .faq-item__body.js-acc-block
+                            .faq-item__text
+                                | Lorem ipsum dolor sit amet consectetur. Sit viverra tortor duis cras hac nisl quam fermentum. Duis sagittis urna in etiam mattis porta. Consectetur egestas facilisi luctus sapien nec. Cras dictumst faucibus interdum pellentesque quam non ultricies. Aliquet ut malesuada feugiat vulputate bibendum nascetur maecenas. Sapien elementum nam ultricies auctor at dui.
+                    .faq-item.js-inview.js-acc
+                        .faq-item__btn.js-open-acc
+                            span What are the core features of Rocket?
+                            .faq-item__icon
+                        .faq-item__body.js-acc-block
+                            .faq-item__text
+                                | Lorem ipsum dolor sit amet consectetur. Sit viverra tortor duis cras hac nisl quam fermentum. Duis sagittis urna in etiam mattis porta. Consectetur egestas facilisi luctus sapien nec. Cras dictumst faucibus interdum pellentesque quam non ultricies. Aliquet ut malesuada feugiat vulputate bibendum nascetur maecenas. Sapien elementum nam ultricies auctor at dui.
+                    .faq-item.js-inview.js-acc
+                        .faq-item__btn.js-open-acc
+                            span How much does Rocket cost?
+                            .faq-item__icon
+                        .faq-item__body.js-acc-block
+                            .faq-item__text
+                                | Lorem ipsum dolor sit amet consectetur. Sit viverra tortor duis cras hac nisl quam fermentum. Duis sagittis urna in etiam mattis porta. Consectetur egestas facilisi luctus sapien nec. Cras dictumst faucibus interdum pellentesque quam non ultricies. Aliquet ut malesuada feugiat vulputate bibendum nascetur maecenas. Sapien elementum nam ultricies auctor at dui.
+                    .faq-item.js-inview.js-acc
+                        .faq-item__btn.js-open-acc
+                            span How can I get started with Rocket?
+                            .faq-item__icon
+                        .faq-item__body.js-acc-block
+                            .faq-item__text
+                                | Lorem ipsum dolor sit amet consectetur. Sit viverra tortor duis cras hac nisl quam fermentum. Duis sagittis urna in etiam mattis porta. Consectetur egestas facilisi luctus sapien nec. Cras dictumst faucibus interdum pellentesque quam non ultricies. Aliquet ut malesuada feugiat vulputate bibendum nascetur maecenas. Sapien elementum nam ultricies auctor at dui.
+    section.section.section--join
+        .container
+            .join-block.js-inview
+                h2.title.title--section.title--ttu.title--bold.title--white JOIN OUR TEAM OF ROCKET TRADERS
+                .simple-text
+                    p ACCEPT OUR ROCKET CHALLENGE AND BECOME A ROCKET TRADER IF YOU ARE READY. YOU CAN EVEN GO THOUGH THE ENTIRE PROCEDURE FOR FREE
+                a(href="#").button.button--def.button--white START ROCKET CHALLENGE
+block script

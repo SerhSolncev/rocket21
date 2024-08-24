@@ -1,0 +1,43 @@
+extends ../layout/base
+
+block variables
+
+    - var title='';
+    - var description='';
+    - var pageClass='main';
+    - var footer = true
+block content
+    +header('contacts')
+    section.section.section--contacts
+        .container
+            .contacts-block
+                .contacts-block__title GET IN TOUCH <br> WITH US
+                .contacts-block__text For New Platform Support Related To Challenge Purchases After May 14th 2024 Contact <a href="mailto: Support21@Rocket21Challenge.com">Support21@Rocket21Challenge.com</a>
+            .contacts-block__body
+                .contacts-left
+                    .contacts-left__title Contact information
+                    .contacts-left__text Lorem ipsum dolor sit amet consectetur. Amet auctor auctor dui massa fusce orci.
+                    a(href="tel: 64648974").contacts-left__item
+                        img(src='content/images/icons/call.svg' width="24" height="24" alt="logo")
+                        span 64648974
+                    a(href="mailto: support@rocket21.com").contacts-left__item
+                        img(src='content/images/icons/message.svg' width="24" height="24" alt="logo")
+                        span support@rocket21.com
+                    .contacts-left__item
+                        img(src='content/images/icons/location.svg' width="24" height="24" alt="logo")
+                        span Miami
+                form.single-form
+                    .single-form__body
+                        .single-form__inps
+                            input(name="fname" type="text" placeholder="First name").simple-input
+                            input(name="lname" type="text" placeholder="Last name").simple-input
+                            input(name="email" type="email" placeholder="Email" required).simple-input
+                            textarea(name="message" placeholder="Message").simple-textarea
+                        .agree-inp
+                            input(type="checkbox" value="agree" checked)
+                            .agree-inp__icon
+                                img(src='content/images/icons/check.png' width="12" height="9" alt="check")
+                            .agree-inp__text Agree to our Terms of Use and Privacy Policy
+                        button.red-btn
+                            .red-btn__text send email
+block script

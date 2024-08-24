@@ -168,9 +168,19 @@
 
 		&::placeholder {
 			font-family: $mainFont;
-			font-size: rem(16);
+			font-size: inherit;
 			color: #9a9494;
 			line-height: 1;
+		}
+	}
+
+	&--sec {
+		max-width: 100%;
+		height: rem(56);
+
+		input {
+			font-size: rem(20);
+
 		}
 	}
 

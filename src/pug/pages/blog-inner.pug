@@ -1,0 +1,114 @@
+extends ../layout/base
+
+block variables
+
+    - var title='';
+    - var description='';
+    - var pageClass='main';
+    - var footer = true
+block content
+    +header('blog')
+    section.section.section--blog-inner
+        .container
+            .all-posts.js-tabs-wrapper
+                .all-posts__top
+                    .all-posts__title Browse All Posts
+                    .tabs-buttons-wrap
+                        .tabs-buttons
+                            .tab-btn.js-tabs-button(data-id="faq1").opened Getting started
+                            .tab-btn.js-tabs-button(data-id="faq2") R21 Simulated Funded Account
+                            .tab-btn.js-tabs-button(data-id="faq3") Payouts
+                            .tab-btn.js-tabs-button(data-id="faq4") General rules
+                .all-posts__article
+                    .article-block
+                        a(href="#").back-btn
+                            svg(width='16' height='13' viewbox='0 0 16 13' xmlns='http://www.w3.org/2000/svg')
+                                path(fill-rule='evenodd' clip-rule='evenodd' d='M6.33866 0.96967C6.63156 1.26256 6.63156 1.73744 6.33866 2.03033L1.81066 6.55833L6.33866 11.0863C6.63156 11.3792 6.63156 11.8541 6.33866 12.147C6.04577 12.4399 5.5709 12.4399 5.278 12.147L0.21967 7.08866C0.0790176 6.94801 0 6.75725 0 6.55833C0 6.35942 0.0790176 6.16866 0.21967 6.028L5.278 0.96967C5.5709 0.676777 6.04577 0.676777 6.33866 0.96967Z')
+                                path(fill-rule='evenodd' clip-rule='evenodd' d='M0.142578 6.55859C0.142578 6.14438 0.478365 5.80859 0.892578 5.80859H14.9176C15.3318 5.80859 15.6676 6.14438 15.6676 6.55859C15.6676 6.97281 15.3318 7.30859 14.9176 7.30859H0.892578C0.478365 7.30859 0.142578 6.97281 0.142578 6.55859Z')
+                            span back
+                    .blog-short.blog-short--inner
+                        .blog-short__img
+                            img(src='content/images/empty.gif' class="lazy" data-src="content/images/pics/post_img.jpg" width="678" height="678" alt="rocket")
+                        .blog-short__title FOREX VS. STOCKS: WHAT’S THE DIFFERENCE, AND WHICH ONE IS RIGHT FOR YOU?
+                        .blog-short__bottom
+                            .blog-short__icon
+                            .blog-short__sub
+                                span Jaroslav Dlask
+                                span Category
+                                span 12 min
+                        .blog-short__tiny
+                            p What if you could polish your trading strategies without putting any hard-earned cash on the line? That’s where simulated trading comes in, and it can be a game-changer for both beginners and seasoned traders.
+
+                            p Simulated or virtual trading gives you a risk-free playground where you can dip your toes into the world of Forex. Beginners can use simulated trading to safely navigate market turbulence and learn how to place trades. Seasoned traders, on the other hand, can test multiple trading strategies to figure out what works for them.
+
+                            p It’s like having a virtual Forex market at your fingertips. You can practice and learn from your mistakes without any real money at stake. But to receive a simulated funded account, you’ll need to sign up with an evaluation firm.
+
+                            p Let’s look at how simulated trading works and why you should consider it.
+                            blockquote
+                                h3 BANNER PROMO HERE
+                                a(href="#") REGISTER NOW
+                            h4 Earn Money on a Simulated Funded Account
+                            p A simulated funded account mimics the experience of trading with real money. Upon signing up and passing an evaluation, traders are given virtual capital. They can then use this funding to take positions on various instruments, such as Forex, indices, or cryptocurrencies.
+                            p Traders have access to the same technical tools, charts, and indicators they would use in live trading. This allows you to test real-life trading strategies and scenarios.
+                            p Even though your trades are virtual, the profits you earn from them are real. Evaluation firms use your setups to look for profitable trades in the real market.
+                            p The profits generated on your performance are split between you and the firm. The split is usually around 70–80%, but it can go up to 90% if you show exceptional results.
+                            p The most successful funded traders treat the simulated environment as if it were the live market. Say you show consistent profitability or achieve specific trading goals. You might repeatedly hit a certain percentage return or maintain a low drawdown (loss). Depending on the firm, you may receive a bigger simulated account with a higher profit split.
+                            h4 Diversify Your Portfolio
+                            p Diversifying your portfolio is a fundamental way to become a successful trader. Simulated trading offers the perfect platform to master this strategy.
+                             | For instance, you can try trading different currency pairs in the Forex market. Simulated trading lets you explore the concept of price action to learn how currencies react to different economic indicators and geopolitical events. This gives you a better idea of which pairs to pick as per your trading style and risk tolerance.
+                            p You can also practice trading across different market times. The Forex market operates 24 hours a day, five days a week. Different trading sessions, such as Asia, London, and New York, overlap during the day. This overlap usually sees heightened trading volume and more volatility. It’s the best time to test how your trading strategies work in different time zones. The volatility is also a good opportunity to find new trades in the market.
+                                | What’s more, simulated trading also helps you understand leverage and how to use it to your advantage. You get to experiment with varied leverage ratios on different pairs. Then, you can assess the impact of leverage on your trading performance and use it to diversify your trades.
+                            blockquote
+                                h3 BANNER PROMO HERE
+                                a(href="#") REGISTER NOW
+                        .blog-short__bottom
+                            a(href="#").red-btn.red-btn--big
+                                .red-btn__text START ROCKET CHALLENGE
+    section.section.section--more-articles
+        .container
+            .more-articles
+                .more-articles__title Read more blog entries
+                .more-articles__list
+                    a(href="#").blog-short.blog-short--list
+                        .blog-short__img
+                            img(src='content/images/empty.gif' class="lazy" data-src="content/images/pics/post1.jpg" width="678" height="678" alt="rocket")
+                        .blog-short__title FOREX VS. STOCKS: WHAT’S THE DIFFERENCE, AND WHICH ONE IS RIGHT FOR YOU?
+                        .blog-short__bottom
+                            .blog-short__icon
+                            .blog-short__sub
+                                span Jaroslav Dlask
+                                span Category
+                                span 12 min
+                    a(href="#").blog-short.blog-short--list
+                        .blog-short__img
+                            img(src='content/images/empty.gif' class="lazy" data-src="content/images/pics/post2.jpg" width="678" height="678" alt="rocket")
+                        .blog-short__title FOREX VS. STOCKS: WHAT’S THE DIFFERENCE
+                        .blog-short__bottom
+                            .blog-short__icon
+                            .blog-short__sub
+                                span Jaroslav Dlask
+                                span Category
+                                span 12 min
+                    a(href="#").blog-short.blog-short--list
+                        .blog-short__img
+                            img(src='content/images/empty.gif' class="lazy" data-src="content/images/pics/post3.jpg" width="678" height="678" alt="rocket")
+                        .blog-short__title FOREX VS. STOCKS: WHAT’S
+                        .blog-short__bottom
+                            .blog-short__icon
+                            .blog-short__sub
+                                span Jaroslav Dlask
+                                span Category
+                                span 12 min
+                .more-articles__bottom
+                    a(href="#").button.button--def-four.button--white-sec VIEW MORE
+    section.section.section--board
+        .container
+            .team-board
+                .team-board__left
+                    h2.title.title--section.title--ttu.title--bold.title--white JOIN OUR TEAM OF <br> ROCKET TRADERS
+                    .simple-text
+                        p ACCEPT OUR ROCKET CHALLENGE AND BECOME A ROCKET TRADER IF YOU ARE READY. YOU CAN EVEN GO THOUGH THE ENTIRE PROCEDURE FOR FREE
+                    a(href="#").button.button--def.button--white START ROCKET CHALLENGE
+                .team-board__img
+                    img(src='content/images/empty.gif' class="lazy" data-src="content/images/pics/cosmo2.png" width="479" height="367" alt="rocket")
+block script

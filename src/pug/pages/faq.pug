@@ -1,0 +1,217 @@
+extends ../layout/base
+
+block variables
+
+    - var title='';
+    - var description='';
+    - var pageClass='main';
+    - var footer = true
+block content
+    +header('faqs')
+    section.section.section--faq-top
+        .section__img
+            picture
+                source(media='(min-width: 768px)', srcset='content/images/pics/faq.png')
+                img(src='content/images/pics/faq-mob.png' width="189" height="35" alt="logo")
+        .container
+            .faq-top
+                .faq-top__sub Support
+                h1.faq-top__title.js-inview Frequently Asked Questions
+                .faq-top__text Need something cleared up? Here are our most frequently asked questions
+                .search-block.search-block--sec
+                    button.search-block__icon
+                        svg(width='25' height='25' viewbox='0 0 25 25' xmlns='http://www.w3.org/2000/svg')
+                            path(fill-rule='evenodd' clip-rule='evenodd' d='M12.1523 3.2959C7.31985 3.2959 3.40234 7.21341 3.40234 12.0459C3.40234 16.8784 7.31985 20.7959 12.1523 20.7959C16.9848 20.7959 20.9023 16.8784 20.9023 12.0459C20.9023 7.21341 16.9848 3.2959 12.1523 3.2959ZM1.90234 12.0459C1.90234 6.38498 6.49143 1.7959 12.1523 1.7959C17.8133 1.7959 22.4023 6.38498 22.4023 12.0459C22.4023 17.7068 17.8133 22.2959 12.1523 22.2959C6.49143 22.2959 1.90234 17.7068 1.90234 12.0459Z')
+                            path(fill-rule='evenodd' clip-rule='evenodd' d='M20.122 20.0156C20.4149 19.7227 20.8898 19.7227 21.1827 20.0156L23.1827 22.0156C23.4756 22.3085 23.4756 22.7833 23.1827 23.0762C22.8898 23.3691 22.4149 23.3691 22.122 23.0762L20.122 21.0762C19.8291 20.7833 19.8291 20.3085 20.122 20.0156Z')
+                    input(type="search" name="search" placeholder="Search" autocomplete="off")
+    section.section.section--faq-inner
+        .container
+            .faq-inner.js-tabs-wrapper
+                .tabs-buttons-wrap.js-inview
+                    .tabs-buttons
+                        .tab-btn.js-tabs-button(data-id="faq1").opened Getting started
+                        .tab-btn.js-tabs-button(data-id="faq2") R21 Simulated Funded Account
+                        .tab-btn.js-tabs-button(data-id="faq3") Payouts
+                        .tab-btn.js-tabs-button(data-id="faq4") General rules
+                        .tab-btn.js-tabs-button(data-id="faq5") Apollo 11 Challenge Rules
+                        .tab-btn.js-tabs-button(data-id="faq6") Dashboard
+                .faq-inner__list.js-acc-wrap.js-tabs-button(data-id="faq1").opened
+                    .faq-item.js-inview.js-acc
+                        .faq-item__btn.js-open-acc
+                            span What is Rocket?
+                            .faq-item__icon
+                        .faq-item__body.js-acc-block
+                            .faq-item__text
+                                | Lorem ipsum dolor sit amet consectetur. Sit viverra tortor duis cras hac nisl quam fermentum. Duis sagittis urna in etiam mattis porta. Consectetur egestas facilisi luctus sapien nec. Cras dictumst faucibus interdum pellentesque quam non ultricies. Aliquet ut malesuada feugiat vulputate bibendum nascetur maecenas. Sapien elementum nam ultricies auctor at dui.
+                    .faq-item.js-inview.js-acc
+                        .faq-item__btn.js-open-acc
+                            span How does Rocket work?
+                            .faq-item__icon
+                        .faq-item__body.js-acc-block
+                            .faq-item__text
+                                | Lorem ipsum dolor sit amet consectetur. Sit viverra tortor duis cras hac nisl quam fermentum. Duis sagittis urna in etiam mattis porta. Consectetur egestas facilisi luctus sapien nec. Cras dictumst faucibus interdum pellentesque quam non ultricies. Aliquet ut malesuada feugiat vulputate bibendum nascetur maecenas. Sapien elementum nam ultricies auctor at dui.
+                    .faq-item.js-inview.js-acc
+                        .faq-item__btn.js-open-acc
+                            span What are the core features of Rocket?
+                            .faq-item__icon
+                        .faq-item__body.js-acc-block
+                            .faq-item__text
+                                | Lorem ipsum dolor sit amet consectetur. Sit viverra tortor duis cras hac nisl quam fermentum. Duis sagittis urna in etiam mattis porta. Consectetur egestas facilisi luctus sapien nec. Cras dictumst faucibus interdum pellentesque quam non ultricies. Aliquet ut malesuada feugiat vulputate bibendum nascetur maecenas. Sapien elementum nam ultricies auctor at dui.
+                    .faq-item.js-inview.js-acc
+                        .faq-item__btn.js-open-acc
+                            span How much does Rocket cost?
+                            .faq-item__icon
+                        .faq-item__body.js-acc-block
+                            .faq-item__text
+                                | Lorem ipsum dolor sit amet consectetur. Sit viverra tortor duis cras hac nisl quam fermentum. Duis sagittis urna in etiam mattis porta. Consectetur egestas facilisi luctus sapien nec. Cras dictumst faucibus interdum pellentesque quam non ultricies. Aliquet ut malesuada feugiat vulputate bibendum nascetur maecenas. Sapien elementum nam ultricies auctor at dui.
+                    .faq-item.js-inview.js-acc
+                        .faq-item__btn.js-open-acc
+                            span How can I get started with Rocket?
+                            .faq-item__icon
+                        .faq-item__body.js-acc-block
+                            .faq-item__text
+                                | Lorem ipsum dolor sit amet consectetur. Sit viverra tortor duis cras hac nisl quam fermentum. Duis sagittis urna in etiam mattis porta. Consectetur egestas facilisi luctus sapien nec. Cras dictumst faucibus interdum pellentesque quam non ultricies. Aliquet ut malesuada feugiat vulputate bibendum nascetur maecenas. Sapien elementum nam ultricies auctor at dui.
+                .faq-inner__list.js-acc-wrap.js-tabs-button(data-id="faq2")
+                    .faq-item.js-inview.js-acc
+                        .faq-item__btn.js-open-acc
+                            span What is Rocket?
+                            .faq-item__icon
+                        .faq-item__body.js-acc-block
+                            .faq-item__text
+                                | Lorem ipsum dolor sit amet consectetur. Sit viverra tortor duis cras hac nisl quam fermentum. Duis sagittis urna in etiam mattis porta. Consectetur egestas facilisi luctus sapien nec. Cras dictumst faucibus interdum pellentesque quam non ultricies. Aliquet ut malesuada feugiat vulputate bibendum nascetur maecenas. Sapien elementum nam ultricies auctor at dui.
+                    .faq-item.js-inview.js-acc
+                        .faq-item__btn.js-open-acc
+                            span How does Rocket work?
+                            .faq-item__icon
+                        .faq-item__body.js-acc-block
+                            .faq-item__text
+                                | Lorem ipsum dolor sit amet consectetur. Sit viverra tortor duis cras hac nisl quam fermentum. Duis sagittis urna in etiam mattis porta. Consectetur egestas facilisi luctus sapien nec. Cras dictumst faucibus interdum pellentesque quam non ultricies. Aliquet ut malesuada feugiat vulputate bibendum nascetur maecenas. Sapien elementum nam ultricies auctor at dui.
+                    .faq-item.js-inview.js-acc
+                        .faq-item__btn.js-open-acc
+                            span What are the core features of Rocket?
+                            .faq-item__icon
+                        .faq-item__body.js-acc-block
+                            .faq-item__text
+                                | Lorem ipsum dolor sit amet consectetur. Sit viverra tortor duis cras hac nisl quam fermentum. Duis sagittis urna in etiam mattis porta. Consectetur egestas facilisi luctus sapien nec. Cras dictumst faucibus interdum pellentesque quam non ultricies. Aliquet ut malesuada feugiat vulputate bibendum nascetur maecenas. Sapien elementum nam ultricies auctor at dui.
+                .faq-inner__list.js-acc-wrap.js-tabs-button(data-id="faq3")
+                    .faq-item.js-inview.js-acc
+                        .faq-item__btn.js-open-acc
+                            span What is Rocket?
+                            .faq-item__icon
+                        .faq-item__body.js-acc-block
+                            .faq-item__text
+                                | Lorem ipsum dolor sit amet consectetur. Sit viverra tortor duis cras hac nisl quam fermentum. Duis sagittis urna in etiam mattis porta. Consectetur egestas facilisi luctus sapien nec. Cras dictumst faucibus interdum pellentesque quam non ultricies. Aliquet ut malesuada feugiat vulputate bibendum nascetur maecenas. Sapien elementum nam ultricies auctor at dui.
+                    .faq-item.js-inview.js-acc
+                        .faq-item__btn.js-open-acc
+                            span How does Rocket work?
+                            .faq-item__icon
+                        .faq-item__body.js-acc-block
+                            .faq-item__text
+                                | Lorem ipsum dolor sit amet consectetur. Sit viverra tortor duis cras hac nisl quam fermentum. Duis sagittis urna in etiam mattis porta. Consectetur egestas facilisi luctus sapien nec. Cras dictumst faucibus interdum pellentesque quam non ultricies. Aliquet ut malesuada feugiat vulputate bibendum nascetur maecenas. Sapien elementum nam ultricies auctor at dui.
+                    .faq-item.js-inview.js-acc
+                        .faq-item__btn.js-open-acc
+                            span How can I get started with Rocket?
+                            .faq-item__icon
+                        .faq-item__body.js-acc-block
+                            .faq-item__text
+                                | Lorem ipsum dolor sit amet consectetur. Sit viverra tortor duis cras hac nisl quam fermentum. Duis sagittis urna in etiam mattis porta. Consectetur egestas facilisi luctus sapien nec. Cras dictumst faucibus interdum pellentesque quam non ultricies. Aliquet ut malesuada feugiat vulputate bibendum nascetur maecenas. Sapien elementum nam ultricies auctor at dui.
+                .faq-inner__list.js-acc-wrap.js-tabs-button(data-id="faq4")
+                    .faq-item.js-inview.js-acc
+                        .faq-item__btn.js-open-acc
+                            span What is Rocket?
+                            .faq-item__icon
+                        .faq-item__body.js-acc-block
+                            .faq-item__text
+                                | Lorem ipsum dolor sit amet consectetur. Sit viverra tortor duis cras hac nisl quam fermentum. Duis sagittis urna in etiam mattis porta. Consectetur egestas facilisi luctus sapien nec. Cras dictumst faucibus interdum pellentesque quam non ultricies. Aliquet ut malesuada feugiat vulputate bibendum nascetur maecenas. Sapien elementum nam ultricies auctor at dui.
+                    .faq-item.js-inview.js-acc
+                        .faq-item__btn.js-open-acc
+                            span How does Rocket work?
+                            .faq-item__icon
+                        .faq-item__body.js-acc-block
+                            .faq-item__text
+                                | Lorem ipsum dolor sit amet consectetur. Sit viverra tortor duis cras hac nisl quam fermentum. Duis sagittis urna in etiam mattis porta. Consectetur egestas facilisi luctus sapien nec. Cras dictumst faucibus interdum pellentesque quam non ultricies. Aliquet ut malesuada feugiat vulputate bibendum nascetur maecenas. Sapien elementum nam ultricies auctor at dui.
+                    .faq-item.js-inview.js-acc
+                        .faq-item__btn.js-open-acc
+                            span What are the core features of Rocket?
+                            .faq-item__icon
+                        .faq-item__body.js-acc-block
+                            .faq-item__text
+                                | Lorem ipsum dolor sit amet consectetur. Sit viverra tortor duis cras hac nisl quam fermentum. Duis sagittis urna in etiam mattis porta. Consectetur egestas facilisi luctus sapien nec. Cras dictumst faucibus interdum pellentesque quam non ultricies. Aliquet ut malesuada feugiat vulputate bibendum nascetur maecenas. Sapien elementum nam ultricies auctor at dui.
+                    .faq-item.js-inview.js-acc
+                        .faq-item__btn.js-open-acc
+                            span How much does Rocket cost?
+                            .faq-item__icon
+                        .faq-item__body.js-acc-block
+                            .faq-item__text
+                                | Lorem ipsum dolor sit amet consectetur. Sit viverra tortor duis cras hac nisl quam fermentum. Duis sagittis urna in etiam mattis porta. Consectetur egestas facilisi luctus sapien nec. Cras dictumst faucibus interdum pellentesque quam non ultricies. Aliquet ut malesuada feugiat vulputate bibendum nascetur maecenas. Sapien elementum nam ultricies auctor at dui.
+                    .faq-item.js-inview.js-acc
+                        .faq-item__btn.js-open-acc
+                            span How can I get started with Rocket?
+                            .faq-item__icon
+                        .faq-item__body.js-acc-block
+                            .faq-item__text
+                                | Lorem ipsum dolor sit amet consectetur. Sit viverra tortor duis cras hac nisl quam fermentum. Duis sagittis urna in etiam mattis porta. Consectetur egestas facilisi luctus sapien nec. Cras dictumst faucibus interdum pellentesque quam non ultricies. Aliquet ut malesuada feugiat vulputate bibendum nascetur maecenas. Sapien elementum nam ultricies auctor at dui.
+                .faq-inner__list.js-acc-wrap.js-tabs-button(data-id="faq5")
+                    .faq-item.js-inview.js-acc
+                        .faq-item__btn.js-open-acc
+                            span What is Rocket?
+                            .faq-item__icon
+                        .faq-item__body.js-acc-block
+                            .faq-item__text
+                                | Lorem ipsum dolor sit amet consectetur. Sit viverra tortor duis cras hac nisl quam fermentum. Duis sagittis urna in etiam mattis porta. Consectetur egestas facilisi luctus sapien nec. Cras dictumst faucibus interdum pellentesque quam non ultricies. Aliquet ut malesuada feugiat vulputate bibendum nascetur maecenas. Sapien elementum nam ultricies auctor at dui.
+                    .faq-item.js-inview.js-acc
+                        .faq-item__btn.js-open-acc
+                            span How does Rocket work?
+                            .faq-item__icon
+                        .faq-item__body.js-acc-block
+                            .faq-item__text
+                                | Lorem ipsum dolor sit amet consectetur. Sit viverra tortor duis cras hac nisl quam fermentum. Duis sagittis urna in etiam mattis porta. Consectetur egestas facilisi luctus sapien nec. Cras dictumst faucibus interdum pellentesque quam non ultricies. Aliquet ut malesuada feugiat vulputate bibendum nascetur maecenas. Sapien elementum nam ultricies auctor at dui.
+                    .faq-item.js-inview.js-acc
+                        .faq-item__btn.js-open-acc
+                            span What are the core features of Rocket?
+                            .faq-item__icon
+                        .faq-item__body.js-acc-block
+                            .faq-item__text
+                                | Lorem ipsum dolor sit amet consectetur. Sit viverra tortor duis cras hac nisl quam fermentum. Duis sagittis urna in etiam mattis porta. Consectetur egestas facilisi luctus sapien nec. Cras dictumst faucibus interdum pellentesque quam non ultricies. Aliquet ut malesuada feugiat vulputate bibendum nascetur maecenas. Sapien elementum nam ultricies auctor at dui.
+                .faq-inner__list.js-acc-wrap.js-tabs-button(data-id="faq6")
+                    .faq-item.js-inview.js-acc
+                        .faq-item__btn.js-open-acc
+                            span What is Rocket?
+                            .faq-item__icon
+                        .faq-item__body.js-acc-block
+                            .faq-item__text
+                                | Lorem ipsum dolor sit amet consectetur. Sit viverra tortor duis cras hac nisl quam fermentum. Duis sagittis urna in etiam mattis porta. Consectetur egestas facilisi luctus sapien nec. Cras dictumst faucibus interdum pellentesque quam non ultricies. Aliquet ut malesuada feugiat vulputate bibendum nascetur maecenas. Sapien elementum nam ultricies auctor at dui.
+                    .faq-item.js-inview.js-acc
+                        .faq-item__btn.js-open-acc
+                            span How does Rocket work?
+                            .faq-item__icon
+                        .faq-item__body.js-acc-block
+                            .faq-item__text
+                                | Lorem ipsum dolor sit amet consectetur. Sit viverra tortor duis cras hac nisl quam fermentum. Duis sagittis urna in etiam mattis porta. Consectetur egestas facilisi luctus sapien nec. Cras dictumst faucibus interdum pellentesque quam non ultricies. Aliquet ut malesuada feugiat vulputate bibendum nascetur maecenas. Sapien elementum nam ultricies auctor at dui.
+                    .faq-item.js-inview.js-acc
+                        .faq-item__btn.js-open-acc
+                            span How can I get started with Rocket?
+                            .faq-item__icon
+                        .faq-item__body.js-acc-block
+                            .faq-item__text
+                                | Lorem ipsum dolor sit amet consectetur. Sit viverra tortor duis cras hac nisl quam fermentum. Duis sagittis urna in etiam mattis porta. Consectetur egestas facilisi luctus sapien nec. Cras dictumst faucibus interdum pellentesque quam non ultricies. Aliquet ut malesuada feugiat vulputate bibendum nascetur maecenas. Sapien elementum nam ultricies auctor at dui.
+    section.section.section--single-form
+        .container
+            .single-form-wrap
+                h2.title.title--section.title--ttu.title--bold.title--white still have questions?
+                form.single-form
+                    .single-form__body
+                        .single-form__title Contact us
+                        .single-form__inps
+                            input(name="fname" type="text" placeholder="First name").simple-input
+                            input(name="lname" type="text" placeholder="Last name").simple-input
+                            input(name="email" type="email" placeholder="Email" required).simple-input
+                            textarea(name="message" placeholder="Message").simple-textarea
+                        .agree-inp
+                            input(type="checkbox" value="agree" checked)
+                            .agree-inp__icon
+                                img(src='content/images/icons/check.png' width="12" height="9" alt="check")
+                            .agree-inp__text Agree to our Terms of Use and Privacy Policy
+                        button.red-btn
+                            .red-btn__text send email
+block script

@@ -1,0 +1,133 @@
+extends ../layout/base
+
+block variables
+
+    - var title='';
+    - var description='';
+    - var pageClass='main';
+    - var footer = true
+block content
+    +header('scaling plan')
+    section.section.section--top-scal.js-stars
+        .section__img
+            img(src="content/images/pics/scal-top.png" width="1024" height="512" alt="rocket")
+        .container
+            .top-scal
+                h1.top-scal__title.js-inview SCALING PLAN
+                .top-scal__img.js-inview
+                    img(src='content/images/empty.gif' class="lazy" data-src="content/images/pics/rocket.png" width="678" height="678" alt="rocket")
+    section.section.section--loss
+        .container
+            .loss-block
+                .loss-block__left.js-inview
+                    h4 Elementum velit sed eget
+                    p Obtaining a rocket account does not imply that the trader and our project will not collaborate in the future. On the contrary, you will learn about the incremental scaling concepts on this page. A larger account balance allows the trader to increase the size of their holdings while not increasing their risk. Keep in mind that our initiative has the same aim as yours – to find and implement successful trading strategies.
+                    p <strong>However, traders should be aware that there will be times when they do not make any money. Trading is a risky (please do not use “dangerous”) endeavor in general, and Rocket 21 does not guarantee any profits. A Rocket Account is a fully-simulated demo account […]. This system is user-friendly in terms of administration and allows our organization to actively manage risk in our chosen markets.</strong>
+                    p <strong>Vitae enim nec adipiscing eu id nisl. Quam eleifend quis molestie tristique eget dui vestibulum. Consectetur neque elementum velit fringilla aliquam ut. Ipsum gravida tincidunt enim placerat odio. Elementum velit sed eget integer enim massa fermentum ultricies. Duis purus dignissim vulputate a lectus odio et vel sit. Posuere in amet elementum cursus tortor sit lacus in ac.</strong>
+                .loss-block__right.js-inview
+                    .loss-board
+                        .loss-board__title MAXIMUM DAILY LOSS
+                        .loss-board__sub 5% OF INITIAL BALANCE
+                        .loss-board__type TRADING OBJETIVE
+                    .loss-board
+                        .loss-board__title MAXIMUM <br> OVERALL LOSS
+                        .loss-board__sub 10% OF THE INITIAL BALANCE
+                        .loss-board__type STANDARD
+    section.section.section--advantage
+        .container
+            .advantage-block
+                    -
+                        var advs = [
+                            {
+                                icon: 'content/images/icons/adv1.png',
+                                title: 'Profit Split has been upgraded to 90/10'
+                            }, {
+                                icon: 'content/images/icons/adv2.png',
+                                title: 'If the qualifying conditions are satisfied, there will be continuos increases/10'
+                            }, {
+                                icon: 'content/images/icons/adv3.png',
+                                title: 'The trading objectives stay the same'
+                            }, {
+                                icon: 'content/images/icons/adv4.png',
+                                title: 'The profit eligibility threshold is conservative and safe'
+                            }, {
+                                icon: 'content/images/icons/adv5.png',
+                                title: 'A $2 million scale-up cap per trader is a fairly liberal cap'
+                            }, {
+                                icon: 'content/images/icons/adv6.png',
+                                title: 'With each Profit Split, eligibility is evaluated automatically'
+                            },
+                        ]
+                    each adv in advs
+                        .advantage-item.js-inview
+                            .advantage-item__icon
+                                img(src='content/images/empty.gif' class="lazy" data-src=adv.icon width="678" height="678" alt="rocket")
+                            .advantage-item__text !{adv.title}
+    section.section.section--scal-text
+        .container
+            .scal-text.js-inview
+                p The Rocket Account’s capital is increased at three-month intervals. A trader must make at least 8% net profit in three consecutive monthly cycles to qualify for a capital increase (i.e., an average of at least ~2.67% net profit each month in a typical account type). At the same time, throughout the three-month period, the trader must process at least two profit splits. At the moment of scale-up, the trader’s account balance must be higher than the beginning account amount (in profit). This way, when processing the scaling, we will first process your profit split (account balance will now be equal to starting balance), then proceed with applying your initial balance increase.
+                p The progress and requirements is presented to our Rocket Traders. If you fulfill the conditions, simply indicate that you want your account scaled-up during the profit split procedure, and we’ll issue your initial balance increase to your Rocket Account for your next trading session.
+                p The foundation for calculating loss limits will change as a result, but the computation of loss limits will not change (it will remain 5% Max Daily Loss/10% Max Loss of the starting account amount after scale-up). If the trader meets the account growth rules and the two payments are finalized after another three months, they will be eligible for a further increase of the demo capital by 25% of the initial account balance on the Rocket Account. The amount of demo capital that may be added to a trader’s account is limited to $2 million per trader.
+                p Profit Split Ratio has been raised to 90/10 for Rocket Traders on the scale-up plan. Increased profit split ratio benefits newly scaled-up accounts only, not newly merged accounts into previously scaled-up accounts. The Profit Split ratio will change to 85/15 (default) if you merge a non-scaled-up account with a scaled-up account.
+    section.section.section--scal-table
+        .container
+            .scal-table-wrap
+                .scal-table-wrap__top.js-inview
+                    | THE FOLLOWING TABLE DEPICTS A SCENARIO OF ACCOUNT BALANCE AND RISK PARAMETER
+                    | DEVELOPMENT ON THE ROCKET ACCOUNT IF THE TRADER COMPLETED THE EVALUATION PROCESS
+                    | WITH A 600K USD BEGINNING ACCOUNT BALANCE AND MEETS THE CAPITAL INCREMENTS CRITERIA:
+                .scal-table-wrap__scroll
+                .scal-table-wrap__mid.js-inview
+                        .scal-table
+                            .scal-table__top
+                                span ELAPSED TIME
+                                span INITIAL BALANCE
+                                span MAXIMUM DAILY LOSS
+                                span MAXIMUM LOSS
+                            .scal-table__body
+                                .scal-table__item
+                                    span 0 MONTHS
+                                    span $600,000
+                                    span $30,000
+                                    span $60,000
+                                .scal-table__item
+                                    span 0 MONTHS
+                                    span $600,000
+                                    span $30,000
+                                    span $60,000
+                                .scal-table__item
+                                    span 0 MONTHS
+                                    span $600,000
+                                    span $30,000
+                                    span $60,000
+                                .scal-table__item
+                                    span 0 MONTHS
+                                    span $600,000
+                                    span $30,000
+                                    span $60,000
+                                .scal-table__item
+                                    span 0 MONTHS
+                                    span $600,000
+                                    span $30,000
+                                    span $60,000
+                                .scal-table__item
+                                    span 0 MONTHS
+                                    span $600,000
+                                    span $30,000
+                                    span $60,000
+                .scal-table-wrap__bottom.js-inview
+                    p As seen in the table above, under the best-case scenario, the trader will have <strong>nearly twice the balance</strong> and <strong>loss limitations in his or her Rocket Account after a year</strong> (this applies to any starting balance).
+
+                    p We think that by using this Scaling Plan, traders will be more likely to trade regularly while <strong>avoiding excessive risks</strong> and treating the Rocket Account as a long-term endeavor. Please keep in mind that large, or any, profits are not guaranteed, and trading is a risky industry in general and may not be well suited for everyone.
+    section.section.section--join-sec
+        .container
+            .join-block.join-block--sec.js-inview
+                h2.title.title--section.title--ttu.title--bold.title--white JOIN OUR TEAM OF  <br> SUCCESSFUL ROCKET TRADERS
+                .simple-text
+                    p Are you ready to become a Rocket Trader? Start our Rocket Challenge now.  <br> Free to sign up and create your Rocket21 account.
+                .join-block__btns
+                    a(href="#").button.button--def.button--white START ROCKET CHALLENGE
+                    a(href="#").button.button--def.button--dark FREE COMPETITION
+
+block script

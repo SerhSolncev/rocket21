@@ -20,6 +20,7 @@
 		border: rem(2) solid #FDFBFB;
 		border-radius: rem(40);
 		transition-property: background-color, color;
+		text-transform: uppercase;
 		transition: 0.2s linear;
 	}
 
@@ -56,6 +57,26 @@
 		transition: 0.2s linear;
 	}
 
+	&--def-four {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: rem(11) rem(29);
+		font-size: rem(16);
+		font-weight: 500;
+		line-height: 1;
+		border: rem(2) solid #FDFBFB;
+		border-radius: rem(40);
+		transition-property: background-color, color;
+		transition: 0.2s linear;
+		text-transform: uppercase;
+
+		@media(min-width: 1024px) {
+			font-size: rem(20);
+			padding: rem(9) rem(23);
+		}
+	}
+
 	&--dark {
 		background-color: #000;
 		color: #ffffff;
@@ -63,6 +84,28 @@
 		&:hover {
 			background-color: #fff;
 			color: #000;
+		}
+	}
+
+	&--red {
+		background-color: #EC1D40;
+		color: #FDFBFB;
+		border-color: #EC1D40;
+
+		&:hover {
+			background-color: #FDFBFB;
+			color: #EC1D40;
+		}
+	}
+
+	&--white-sec {
+		border: 1px solid #EC1D40;
+		background-color: #fff;
+		color: #EC1D40;
+
+		&:hover {
+			background-color: #EC1D40;
+			color: #fff;
 		}
 	}
 

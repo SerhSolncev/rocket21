@@ -1,0 +1,23 @@
+extends ../layout/base
+
+block variables
+
+    - var title='';
+    - var description='';
+    - var pageClass='main';
+    - var footer = true
+block content
+    +header('affilate')
+    section.section.section--aff-top
+        .aff-top
+            .aff-top__left.container
+                h1.aff-top__title.js-inview ROCKET YOUR TRADING SKILLS
+                a(href="#").red-btn
+                    .red-btn__text enroll now!
+            .aff-top__img
+                a(href="#").aff-top__play
+                    img(src="content/images/icons/play.svg" width="100" height="100" alt="planet1")
+                picture
+                    source(media='(min-width: 768px)', srcset='content/images/pics/affilate.jpg')
+                    img(src='content/images/pics/faq-mob.jpg' width="189" height="35" alt="logo")
+block script

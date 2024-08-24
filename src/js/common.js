@@ -336,6 +336,92 @@ document.addEventListener('DOMContentLoaded', (event) => {
   window.addEventListener('load', initSwiperChallenge);
   window.addEventListener('resize', initSwiperChallenge);
 
+
+  // swiper challenge
+  let swiperTours = null;
+
+  function adjustSliderPosition() {
+    const container = document.querySelector('.container');
+    const sliderWrap = document.querySelectorAll('.country-block');
+    let offsetLeft;
+
+    sliderWrap.forEach((elem) => {
+      const slider = elem.querySelector('.country-block__slider');
+      let direction = window.getComputedStyle(elem).direction;
+
+      if(window.innerWidth > 559) {
+        if(direction === 'ltr') {
+          offsetLeft = container.getBoundingClientRect().left + 22;
+          slider.style.right = `-${offsetLeft}px`;
+        } else {
+          offsetLeft = container.getBoundingClientRect().left + 22;
+          slider.style.left = `-${offsetLeft}px`;
+        }
+      }
+
+    })
+
+  }
+
+  adjustSliderPosition();
+
+  window.addEventListener('resize', adjustSliderPosition);
+
+  function initSwiperTours() {
+    document.querySelectorAll('.js-tour-swiper').forEach(swiperElement => {
+      const swiperId = swiperElement.getAttribute('data-id');
+      const counterElement = document.querySelector(`.country-count[data-id="${swiperId}"]`);
+
+      const swiperTours = new Swiper(swiperElement, {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        lazy: {
+          loadPrevNext: true,
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+          type: 'progressbar'
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+            slidesPerGroup: 1
+          },
+          560: {
+            slidesPerView: 2,
+            slidesPerGroup: 2
+          },
+          768: {
+            slidesPerView: 3,
+            slidesPerGroup: 3
+          },
+          992: {
+            slidesPerView: 2,
+            slidesPerGroup: 2
+          },
+          1760: {
+            slidesPerView: 3,
+            slidesPerGroup: 3
+          }
+        },
+        on: {
+          init: function() {
+
+          },
+          slideChange: function() {
+
+          }
+        }
+      });
+    });
+  }
+
+  window.addEventListener('load', initSwiperTours);
+  window.addEventListener('resize', initSwiperTours);
+
+
+
   // tabs
   document.addEventListener('click', (event) => {
     const tabsParent = event.target.closest('.js-tabs-wrapper');
